@@ -1,9 +1,13 @@
 module ChallengeRounds
   class PopulateBordaFieldsService
-    def initialize(challenge_round_id:)
+    def initialize(challenge_round_id:, challenge_leaderboard_extra: nil)
       @round       = ChallengeRound.find(challenge_round_id)
       @challenge   = @round.challenge
       @submissions = @round.submissions.where(grading_status_cd: 'graded').where.not(participant_id: nil)
+      @challenge_leaderboard_extra = challenge_leaderboard_extra
+      if @challenge_leaderboard_extra.present?
+        @submissions = @submissions.where(@challenge_leaderboard_extra.filter)
+      end
     end
   
     def call

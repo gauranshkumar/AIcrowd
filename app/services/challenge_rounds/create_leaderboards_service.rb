@@ -68,7 +68,7 @@ module ChallengeRounds
       first_submission = dynamic_filters(@submissions).first
       if !first_submission.nil? && !first_submission['meta'].nil? && !first_submission['meta']['private_borda_ranking_enabled'].nil?
         @is_borda_ranking = true
-        ChallengeRounds::PopulateBordaFieldsService.new(challenge_round_id: @challenge_round.id).call
+        ChallengeRounds::PopulateBordaFieldsService.new(challenge_round_id: @challenge_round.id, challenge_leaderboard_extra: @challenge_leaderboard_extra).call
       end
     end
 
