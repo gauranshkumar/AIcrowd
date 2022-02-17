@@ -1,8 +1,8 @@
 <% publications.each_with_index do |publication, idx| %>
-  <div class="col-12 px-1">
+  <div class="col-12 px-0">
     <li class="list-group-item py-4 flex-wrap <% if idx == publications.size - 1 %>border-0<% end %>">
 
-      <div class="col-md-10 d-flex mb-2 offset-md-2 pl-0">
+      <div class="col-md-10 d-flex mb-2 offset-md-2 pl-0 tags">
         <% publication.categories.each_with_index do |category, index| %>
           <%= link_to all_publications_path(categories: category.name) do %>
             <% if index == 0 %>
@@ -17,9 +17,9 @@
       <div class="contribution-details col-md-2 pb-3 mb-2 pl-0">
         <a href="<%= publication_path(publication) %>">
           <% if publication.thumbnail.present? %>
-            <%= image_tag publication.thumbnail.url, class: "img-fluid img-1 mr-2", alt: "" %>
+            <%= image_tag publication.thumbnail.url, class: "img-fluid img-1 mr-4", alt: "" %>
           <% else %>
-            <%= image_tag '/assets/img/user-avatar-default.svg', class: 'img-fluid img-1 mr-2' %>
+            <%= image_tag '/assets/img/user-avatar-default.svg', class: 'img-fluid img-1 mr-4' %>
           <% end %>
         </a>
       </div>
@@ -33,7 +33,7 @@
 
               <% if publication.authors.present? %>
                 <% if publication.authors[0].participant_id.present? %>
-                  <%= render partial: 'participants/get_user_profile_for_research', locals: { participant: publication.authors[0].participant, username: publication.authors[0].name } %>
+                  <%= render partial: 'participants/get_user_profile_for_research', locals: { participant: publication.authors[0].participant, username: publication.authors[0].name, class: 'mr-new1' } %>
                 <% else %>
                     <span class="text-link mr-new1">
                     <%= image_tag '/assets/img/user-avatar-default.svg', class: 'mr-1 img-sm avatar' %>
@@ -46,7 +46,7 @@
                 <div class="mob">
                   <% publication.authors[1..2].each do |author| %>
                     <% if author.participant_id.present? %>
-                      <%= render partial: 'participants/get_user_profile_for_research', locals: { participant: author.participant, username: author.name } %>
+                      <%= render partial: 'participants/get_user_profile_for_research', locals: { participant: author.participant, username: author.name, class: 'mr-new' } %>
                     <% else %>
                       <span class="text-link mr-new">
                       <%= image_tag '/assets/img/user-avatar-default.svg', class: 'mr-1 img-sm avatar' %>
@@ -58,7 +58,7 @@
                     <div class="tab">
                       <% publication.authors[3..4].each do |author| %>
                         <% if author.participant_id.present? %>
-                          <%= render partial: 'participants/get_user_profile_for_research', locals: { participant: author.participant, username: author.name } %>
+                          <%= render partial: 'participants/get_user_profile_for_research', locals: { participant: author.participant, username: author.name, class: 'mr-new' } %>
                         <% else %>
                         <span class="text-link mr-new">
                         <%= image_tag '/assets/img/user-avatar-default.svg', class: 'mr-1 img-sm avatar' %>
@@ -77,10 +77,11 @@
               <% end %>
             </div>
           </span>
-          <div class="row mt-4">
+          <div class="row mt-4 publication-cards-new">
             <div class="col-lg-6 col-sm-6">
               <div class="float-left ">
                 <p class="p-red">
+                <img src="assets/img/calendar.svg" class="img-red">
                   <%= image_tag "img/icon-calendar.png", class: "img-red" %>
                   <% if publication.publication_date.present? %>
                     <%= publication.publication_date.strftime("%b %Y") %>
@@ -92,6 +93,7 @@
             <div class="col-lg-6 col-sm-6">
               <div class="float-left ">
                 <p class="p-red d-flex">
+                <img src="assets/img/globe-solid.svg" class="img-red">
                   <%= image_tag "img/icon-venue.png", class: "img-red" %>
                   <% if publication.venues.present? %>
                     <%= link_to all_publications_path(venues: publication.venues.first.short_name), style: 'text-decoration: none;font-weight: normal;line-height: initial;' do %>
@@ -102,11 +104,12 @@
               </div>
             </div>
           </div>
-          <div class="row">
+          <div class="row publication-cards-new">
             <!-- <div class="col-lg-6 col-sm-6">
               <div class="float-left ">
 
                 <p class="p-red p-red1">
+                <img src="assets/img/quote-left-solid.svg" class="img-red">
                   <%= image_tag "img/icon-citations.png", class: "img-red" %>
                   <% if publication.no_of_citations.present? %>
                     <%= publication.no_of_citations %> Citations
@@ -118,6 +121,7 @@
               <div class="float-left">
                 <% if publication.challenge.present? %>
                 <p class="p-red d-flex">
+                <img src="assets/img/puzzle-piece-solid.svg" class="img-red">
                   <%= image_tag "img/icon-challenge.png", class: "img-red" %>
                     <%= link_to publication.challenge.challenge, challenge_path(publication.challenge), style: 'text-decoration: none;font-weight: normal;line-height: initial;' %>
                 </p>
@@ -134,7 +138,7 @@
 
       </div>
     </div>
-    <div class="col-md-10 d-flex offset-md-2 pl-0">
+    <div class="col-md-10 d-flex mt-n4 offset-md-2 pl-0">
       <div class="contribution-user-time small cursor-pointer"
            data-action="click->publications#expandAbstract"
            data-controller="publications">
@@ -142,7 +146,7 @@
           <a aria-controls="multiCollapseExample1" aria-expanded="false" class="b small"
              data-toggle="collapse"
              href="#multiCollapseExample<%= idx %>" role="button"><i
-            class="fa fa-caret-right mr-2"></i><u>Abstract</u></a>
+            class="fa fa-caret-right mt-2 mr-2"></i><u>Abstract</u></a>
         </p>
         <div class="row">
           <div class="col">
