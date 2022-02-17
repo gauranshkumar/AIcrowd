@@ -33,7 +33,7 @@
 
               <% if publication.authors.present? %>
                 <% if publication.authors[0].participant_id.present? %>
-                  <%= render partial: 'participants/get_user_profile_for_research', locals: { participant: publication.authors[0].participant, username: publication.authors[0].name, class: 'mr-new1' } %>
+                  <%= render partial: 'participants/get_user_profile_for_research', locals: { participant: publication.authors[0].participant, username: publication.authors[0].name, class: "mr-2" } %>
                 <% else %>
                     <span class="text-link mr-new1">
                     <%= image_tag '/assets/img/user-avatar-default.svg', class: 'mr-1 img-sm avatar' %>
@@ -46,7 +46,7 @@
                 <div class="mob">
                   <% publication.authors[1..2].each do |author| %>
                     <% if author.participant_id.present? %>
-                      <%= render partial: 'participants/get_user_profile_for_research', locals: { participant: author.participant, username: author.name, class: 'mr-new' } %>
+                      <%= render partial: 'participants/get_user_profile_for_research', locals: { participant: author.participant, username: author.name, class: "mr-2" } %>
                     <% else %>
                       <span class="text-link mr-new">
                       <%= image_tag '/assets/img/user-avatar-default.svg', class: 'mr-1 img-sm avatar' %>
@@ -58,7 +58,7 @@
                     <div class="tab">
                       <% publication.authors[3..4].each do |author| %>
                         <% if author.participant_id.present? %>
-                          <%= render partial: 'participants/get_user_profile_for_research', locals: { participant: author.participant, username: author.name, class: 'mr-new' } %>
+                          <%= render partial: 'participants/get_user_profile_for_research', locals: { participant: author.participant, username: author.name, class: "mr-2" } %>
                         <% else %>
                         <span class="text-link mr-new">
                         <%= image_tag '/assets/img/user-avatar-default.svg', class: 'mr-1 img-sm avatar' %>
@@ -81,10 +81,9 @@
             <div class="col-lg-6 col-sm-6">
               <div class="float-left ">
                 <p class="p-red">
-                <img src="assets/img/calendar.svg" class="img-red">
-                  <%= image_tag "img/icon-calendar.png", class: "img-red" %>
+                  <%= image_tag "img/icon-calendar.png", class: "img-red1" %>
                   <% if publication.publication_date.present? %>
-                    <%= publication.publication_date.strftime("%b %Y") %>
+                    <%= publication.publication_date.strftime("%b %Y"), style: 'text-decoration: none;font-weight: normal;line-height: initial;margin-top:1px;' %>
                   <% end %>
                 </p>
 
@@ -93,10 +92,9 @@
             <div class="col-lg-6 col-sm-6">
               <div class="float-left ">
                 <p class="p-red d-flex">
-                <img src="assets/img/globe-solid.svg" class="img-red">
-                  <%= image_tag "img/icon-venue.png", class: "img-red" %>
+                  <%= image_tag "img/icon-venue.png", class: "img-red1" %>
                   <% if publication.venues.present? %>
-                    <%= link_to all_publications_path(venues: publication.venues.first.short_name), style: 'text-decoration: none;font-weight: normal;line-height: initial;' do %>
+                    <%= link_to all_publications_path(venues: publication.venues.first.short_name), style: 'text-decoration: none;font-weight: normal;line-height: initial;margin-top:1px;' do %>
                       <%= publication.venues.first.venue %>
                     <% end %>
                   <% end %>
@@ -109,10 +107,9 @@
               <div class="float-left ">
 
                 <p class="p-red p-red1">
-                <img src="assets/img/quote-left-solid.svg" class="img-red">
-                  <%= image_tag "img/icon-citations.png", class: "img-red" %>
+                  <%= image_tag "img/icon-citations.png", class: "img-red1" %>
                   <% if publication.no_of_citations.present? %>
-                    <%= publication.no_of_citations %> Citations
+                    <%= publication.no_of_citations, style: 'text-decoration: none;font-weight: normal;line-height: initial;margin-top:1px;' %> Citations
                   <% end %>
                 </p>
               </div>
@@ -121,9 +118,8 @@
               <div class="float-left">
                 <% if publication.challenge.present? %>
                 <p class="p-red d-flex">
-                <img src="assets/img/puzzle-piece-solid.svg" class="img-red">
-                  <%= image_tag "img/icon-challenge.png", class: "img-red" %>
-                    <%= link_to publication.challenge.challenge, challenge_path(publication.challenge), style: 'text-decoration: none;font-weight: normal;line-height: initial;' %>
+                  <%= image_tag "img/icon-challenge.png", class: "img-red1" %>
+                    <%= link_to publication.challenge.challenge, challenge_path(publication.challenge), style: 'text-decoration: none;font-weight: normal;line-height: initial;margin-top:1px;' %>
                 </p>
                 <% end %>
               </div>
@@ -138,7 +134,7 @@
 
       </div>
     </div>
-    <div class="col-md-10 d-flex mt-n4 offset-md-2 pl-0">
+    <div class="col-md-10 mt-2 d-flex mt-n4 offset-md-2 pl-0">
       <div class="contribution-user-time small cursor-pointer"
            data-action="click->publications#expandAbstract"
            data-controller="publications">
