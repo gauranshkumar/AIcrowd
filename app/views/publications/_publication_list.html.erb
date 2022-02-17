@@ -1,6 +1,6 @@
 <% publications.each_with_index do |publication, idx| %>
   <div class="col-12 px-0">
-    <li class="list-group-item py-4 flex-wrap <% if idx == publications.size - 1 %>border-0<% end %>">
+    <li class="list-group-item publication py-4 flex-wrap <% if idx == publications.size - 1 %>border-0<% end %>">
 
       <div class="col-md-10 d-flex mb-2 offset-md-2 pl-0 tags">
         <% publication.categories.each_with_index do |category, index| %>
@@ -33,7 +33,7 @@
 
               <% if publication.authors.present? %>
                 <% if publication.authors[0].participant_id.present? %>
-                  <%= render partial: 'participants/get_user_profile_for_research', locals: { participant: publication.authors[0].participant, username: publication.authors[0].name, class: "mr-2" } %>
+                  <%= render partial: 'participants/get_user_profile_for_research', locals: { participant: publication.authors[0].participant, username: publication.authors[0].name, class: "mr-new" } %>
                 <% else %>
                     <span class="text-link mr-new1">
                     <%= image_tag '/assets/img/user-avatar-default.svg', class: 'mr-1 img-sm avatar' %>
@@ -46,7 +46,7 @@
                 <div class="mob">
                   <% publication.authors[1..2].each do |author| %>
                     <% if author.participant_id.present? %>
-                      <%= render partial: 'participants/get_user_profile_for_research', locals: { participant: author.participant, username: author.name, class: "mr-2" } %>
+                      <%= render partial: 'participants/get_user_profile_for_research', locals: { participant: author.participant, username: author.name, class: "mr-new" } %>
                     <% else %>
                       <span class="text-link mr-new">
                       <%= image_tag '/assets/img/user-avatar-default.svg', class: 'mr-1 img-sm avatar' %>
@@ -58,7 +58,7 @@
                     <div class="tab">
                       <% publication.authors[3..4].each do |author| %>
                         <% if author.participant_id.present? %>
-                          <%= render partial: 'participants/get_user_profile_for_research', locals: { participant: author.participant, username: author.name, class: "mr-2" } %>
+                          <%= render partial: 'participants/get_user_profile_for_research', locals: { participant: author.participant, username: author.name, class: "mr-new" } %>
                         <% else %>
                         <span class="text-link mr-new">
                         <%= image_tag '/assets/img/user-avatar-default.svg', class: 'mr-1 img-sm avatar' %>
