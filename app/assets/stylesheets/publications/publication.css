@@ -449,3 +449,8 @@ margin-bottom: 16px!important;
 .publication-bar .container-fluid{
     max-width: 100%;
 }
+@media (min-width: 768px){
+    .publication-bar .container-fluid{
+        max-width: 100%;
+    }   
+}
