@@ -53,7 +53,7 @@ Check out the research we're proud to facilitate below.</p>
     <div class="my-5">
       <p class="short-head my-4">FEATURED PUBLICATIONS <button class="btn-white-submit2 float-right" onclick="location.href='/research/all'">See all</button></p>
     </div>
-    <div class="col-12 px-0">
+    <div class="col-12 px-0 mb-3">
       <ul id="publications-div" class="list-group list-group-flush-px-0 list-group-contributions list-group-publications">
         <%= render partial: 'publication_list', locals: {publications: Publication.limit(6).order('sequence asc') } %>
       </ul>
