@@ -446,3 +446,6 @@ margin-bottom: 16px!important;
       }
     }
 
+.publication-bar .container-fluid{
+    max-width: 100%;
+}
