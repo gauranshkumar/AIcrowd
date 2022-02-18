@@ -1,8 +1,8 @@
-<div class="masthead masthead-challenge">
+<div class="masthead masthead-challenge publication">
   <div class="container-fluid">
 
     <!-- title/description/prizes -->
-    <div class="row">
+    <div class="row mt-4">
       <div class="col-sm-12 mt-sm1">
         <% @publication.categories.each_with_index do |category, index| %>
           <%= link_to all_publications_path(categories: category.name) do %>
@@ -21,7 +21,7 @@
               <% if author.participant_id.present? %>
                 <%= render partial: 'participants/get_user_profile_for_research', locals: { participant: author.participant, username: author.name } %>
               <% else %>
-                  <span class="text-link mr-1">
+                  <span class="text-link">
                   <%= image_tag '/assets/img/user-avatar-default.svg', class: 'mr-1 img-sm avatar' %>
                     <small><%= author.name %></small>
                   </span>
@@ -33,7 +33,7 @@
                   <% if author.participant_id.present? %>
                     <%= render partial: 'participants/get_user_profile_for_research', locals: { participant: author.participant, username: author.name } %>
                   <% else %>
-                  <span class="text-link mr-1">
+                  <span class="text-link">
                   <%= image_tag '/assets/img/user-avatar-default.svg', class: 'mr-1 img-sm avatar' %>
                     <small><%= author.name %></small>
                   </span>
@@ -49,7 +49,7 @@
                       <% if author.participant_id.present? %>
                         <%= render partial: 'participants/get_user_profile_for_research', locals: { participant: author.participant, username: author.name } %>
                       <% else %>
-                        <span class="text-link mr-1">
+                        <span class="text-link">
                         <%= image_tag '/assets/img/user-avatar-default.svg', class: 'mr-1 img-sm avatar' %>
                           <small><%= author.name %></small>
                         </span>
@@ -57,7 +57,7 @@
                     <% end %>
                   </h5>
                   <a aria-controls="multiCollapseExample2" aria-expanded="false"
-                     class="b small hide-button mt-3 ml-1 d-block" data-toggle="collapse"
+                     class="b small hide-button mt-3 ml-1 d-block my-3" data-toggle="collapse"
                      href="#multiCollapseExample2" id="hide-button" role="button">
                     <i class="fa fa-caret-right mr-2"></i>
                     <u>
@@ -102,19 +102,19 @@
 </div>
 
 <section class="section-p-md">
-  <div class="container-fluid">
+  <div class="container-fluid publication-cards-new">
     <div class="row flex-sm-row-reverse">
       <div class="col-lg-3 col-md-push-6 mt-sm">
         <% if @publication.publication_date.present? %>
           <div class="py-2">
-            <h5 class="red-head d-flex"><%= image_tag "img/icon-calendar.png", class: "img-red" %>DATE PUBLISHED </h5>
+            <h5 class="red-head d-flex"><%= image_tag "misc/calendar.svg", class: "img-red" %>DATE PUBLISHED </h5>
             <h5 class="grey-head"><%= @publication.publication_date.strftime("%d %b %Y") %></h5>
             <hr>
           </div>
         <% end %>
         <% if @publication.venues.present? %>
           <div class="py-2">
-            <h5 class="red-head d-flex"><%= image_tag "img/icon-venue.png", class: "img-red" %>VENUE</h5>
+            <h5 class="red-head d-flex"><%= image_tag "misc/globe-solid.svg", class: "img-red" %>VENUE</h5>
             <%= link_to all_publications_path(venues: @publication.venues.first.short_name) do %>
               <h5 class="grey-head"><%= @publication.venues.first.venue %></h5>
             <% end %>
@@ -123,14 +123,14 @@
         <% end %>
         <% if @publication.challenge.present? %>
           <div class="py-2">
-            <h5 class="red-head d-flex"><%= image_tag "img/icon-challenge.png", class: "img-red" %>Challenge </h5>
+            <h5 class="red-head d-flex"><%= image_tag "misc/puzzle-piece-solid.svg", class: "img-red" %>Challenge </h5>
             <h5 class="grey-head"><%= link_to @publication.challenge.challenge, challenge_path(@publication.challenge) %></h5>
             <hr>
           </div>
         <% end %>
         <% if @publication.no_of_citations.present? %>
           <div class="py-2">
-            <h5 class="red-head d-flex"><%= image_tag "img/icon-citations.png", class: "img-red" %>Citations</h5>
+            <h5 class="red-head d-flex"><%= image_tag "misc/quote-left-solid.svg", class: "img-red" %>Citations</h5>
             <h5 class="grey-head"><%= @publication.no_of_citations %></h5>
             <hr>
           </div>
