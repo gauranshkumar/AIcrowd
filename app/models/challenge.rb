@@ -312,7 +312,15 @@ class Challenge < ApplicationRecord
 
   def get_default_image
     num = id % 2
-    "challenges/AIcrowd-ProblemStatements-#{num}.jpg"
+    path = "/assets/images/challenges/AIcrowd-ProblemStatements-#{num}.jpeg"
+    if ENV['CLOUDFRONT_IMAGES_DOMAIN'].present?
+      domain = ENV['CLOUDFRONT_IMAGES_DOMAIN']
+      unless domain.include?("http")
+        domain = "https://" + domain
+      end
+      path = domain + path
+    end
+    return path
   end
 
   def challenge_type

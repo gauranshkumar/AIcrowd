@@ -26,7 +26,7 @@ class ImageUploader < CarrierWave::Uploader::Base
       "/images/participants/image_file/default/#{num}.png"
     elsif model.class.name == 'Challenge' && model.id
       num = model.id % 2
-      "/assets/challenges/AIcrowd-ProblemStatements-#{num}.jpg"
+      "/assets/images/challenges/AIcrowd-ProblemStatements-#{num}.jpeg"
     else
       '/assets/users/user-avatar-default.svg'
     end

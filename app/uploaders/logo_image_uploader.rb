@@ -20,7 +20,7 @@ class LogoImageUploader < CarrierWave::Uploader::Base
   def get_default_image
     if model.class.name == 'Challenge' && model.id
       num = model.id % 2
-      "challenges/AIcrowd-ProblemStatements-#{num}.jpg"
+      "/assets/images/challenges/AIcrowd-ProblemStatements-#{num}.jpeg"
     else
       '/assets/users/user-avatar-default.svg'
     end
