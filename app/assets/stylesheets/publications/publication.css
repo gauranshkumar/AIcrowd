@@ -488,3 +488,11 @@ margin-bottom: 16px!important;
     padding-top: .875rem;
     padding-bottom: .875rem;
   }
+
+  .publication-filter .filter-bar-pub{
+    border-bottom: 1px solid #D9DCDC;
+  }
+
+.publication-filter .filter-bar-pub .dropdown-toggle::after {
+    display: none;
+  }
