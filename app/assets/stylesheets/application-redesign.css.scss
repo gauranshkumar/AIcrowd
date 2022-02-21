@@ -5244,6 +5244,10 @@ input[type="button"].btn-block {
   align-items: flex-start;
 }
 
+.media-submission{
+  height:auto;
+}
+
 .media-body {
   flex: 1;
 }
@@ -7126,7 +7130,6 @@ button.bg-bronze:focus {
     display: inline-flex !important;
   }
 }
-
 @media (min-width: 1280px) {
   .d-xl-none {
     display: none !important;

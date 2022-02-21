@@ -40,10 +40,15 @@
   <% end %>
 
 </div><br>
-<div class="mr-4 p-normal-font">
-    <h4>Message</h4>
-    <span data-controller="linkify-content"><%= @submission.grading_message.to_s.html_safe %></span>
+<div class="row">
+  <div class="col-lg-6">
+    <div class="mr-4 p-normal-font">
+      <h4>Message</h4>
+      <span data-controller="linkify-content"><%= @submission.grading_message.to_s.html_safe %></span>
+    </div>
   </div>
+</div>
+
 <hr/>
 <div class="row">
 <div class="col-sm-12 col-md-6">
@@ -75,7 +80,7 @@
 <!--Detail media start-->
 <div class="col-sm-12 col-md-6">
   <% if @challenge.media_on_leaderboard %>
-    <div class="media">
+    <div class="media media-submission">
       <%= render partial: 'shared/challenges/media', locals: { mediable: @submission, submission_id: @submission.id, size: :large } %>
     </div>
   <% end %>
