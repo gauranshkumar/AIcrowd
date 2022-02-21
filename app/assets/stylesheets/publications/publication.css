@@ -392,7 +392,7 @@ margin-right: 0px!important;
     margin-left: 5px;
 }
 .publication .list-group-research-big img.avatar{
-    margin-bottom: 4px;
+    margin-bottom: 5px;
 }
 
 .new-author1{
@@ -496,3 +496,7 @@ margin-bottom: 16px!important;
 .publication-filter .filter-bar-pub .dropdown-toggle::after {
     display: none;
   }
+
+ .publication .list-group-research-big .text-link {
+    margin-bottom: 0px;
+}
