@@ -1528,7 +1528,7 @@ Adapted from GitHub theme
 /* This class is for the output subarea inside the output_area and after
    the prompt div. */
 .ipynb-notebook-container div.output_subarea {
-  overflow-x: auto;
+  // overflow-x: auto;
   padding: 0.4em;
   /* Old browsers */
   -webkit-box-flex: 1;
@@ -3155,7 +3155,9 @@ kbd,
 }
 
 .output_text {
-    max-height: 300px;
+    // max-height: 300px;
+    // overflow: auto;
+    // overflow-y: auto;
 }
 
 .ipynb-notebook-container .cell .output_text pre,
