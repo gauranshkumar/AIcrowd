@@ -386,13 +386,13 @@ margin-right: 0px!important;
   
 /* New Changes */
 .publication .avatar-group a, .publication .avatar-group span {
-    margin-left: 0px;
+    margin-left: 3px;
   }
 .publication .list-group-research img.avatar{
     margin-left: 5px;
 }
 .publication .list-group-research-big img.avatar{
-    margin-bottom: 7px;
+    margin-bottom: 7.5px;
 }
 
 .new-author1{
@@ -446,11 +446,37 @@ margin-bottom: 16px!important;
       }
     }
 
-.publication-bar .container-fluid{
+.publication-bar .container{
     max-width: 100%;
 }
-@media (min-width: 768px){
-    .publication-bar .container-fluid{
+@media (min-width: 1200px){
+    .publication-bar .container{
         max-width: 100%;
     }   
+}
+@media (min-width: 992px){ .publication-bar .container{
+    max-width: 100%;
+}}
+@media (min-width: 768px){ .publication-bar .container{
+    max-width: 100%;
+}}
+@media (min-width: 576px){ .publication-bar .container{
+    max-width: 100%;
+}}
+
+.img-red{
+    width: 15px!important;
+    height: 15px!important;
+    margin-right: 5px;
+    margin-top: -2px;
+}
+.img-red1{
+    width: 24px!important;
+    height: 24px!important;
+    margin-right: 5px;
+    margin-top: -4px;
+}
+
+.avatar-group a:first-of-type, .avatar-group span:first-of-type {
+    margin-left: 0;
 }

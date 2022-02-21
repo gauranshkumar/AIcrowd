@@ -81,7 +81,7 @@
             <div class="col-lg-6 col-sm-6">
               <div class="float-left ">
                 <p class="p-red">
-                  <%= image_tag "img/icon-calendar.png", class: "img-red" %>
+                  <%= image_tag "misc/calendar.svg", class: "img-red" %>
                   <% if publication.publication_date.present? %>
                     <%= publication.publication_date.strftime("%b %Y") %>
                   <% end %>
@@ -92,7 +92,7 @@
             <div class="col-lg-6 col-sm-6">
               <div class="float-left ">
                 <p class="p-red d-flex">
-                  <%= image_tag "img/icon-venue.png", class: "img-red" %>
+                  <%= image_tag "misc/globe-solid.svg", class: "img-red" %>
                   <% if publication.venues.present? %>
                     <%= link_to all_publications_path(venues: publication.venues.first.short_name), style: 'text-decoration: none;font-weight: normal;line-height: initial;' do %>
                       <%= publication.venues.first.venue %>
@@ -107,7 +107,7 @@
               <div class="float-left ">
 
                 <p class="p-red p-red1">
-                  <%= image_tag "img/icon-citations.png", class: "img-red" %>
+                  <%= image_tag "misc/quote-left-solid.svg", class: "img-red" %>
                   <% if publication.no_of_citations.present? %>
                     <%= publication.no_of_citations %> Citations
                   <% end %>
@@ -118,7 +118,7 @@
               <div class="float-left">
                 <% if publication.challenge.present? %>
                 <p class="p-red d-flex">
-                  <%= image_tag "img/icon-challenge.png", class: "img-red" %>
+                  <%= image_tag "misc/puzzle-piece-solid.svg", class: "img-red" %>
                     <%= link_to publication.challenge.challenge, challenge_path(publication.challenge), style: 'text-decoration: none;font-weight: normal;line-height: initial;' %>
                 </p>
                 <% end %>

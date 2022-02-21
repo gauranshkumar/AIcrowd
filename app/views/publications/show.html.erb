@@ -107,14 +107,14 @@
       <div class="col-lg-3 col-md-push-6 mt-sm">
         <% if @publication.publication_date.present? %>
           <div class="py-2">
-            <h5 class="red-head d-flex"><%= image_tag "misc/calendar.svg", class: "img-red" %>DATE PUBLISHED </h5>
+            <h5 class="red-head d-flex"><%= image_tag "misc/calendar.svg", class: "img-red1" %>DATE PUBLISHED </h5>
             <h5 class="grey-head"><%= @publication.publication_date.strftime("%d %b %Y") %></h5>
             <hr>
           </div>
         <% end %>
         <% if @publication.venues.present? %>
           <div class="py-2">
-            <h5 class="red-head d-flex"><%= image_tag "misc/globe-solid.svg", class: "img-red" %>VENUE</h5>
+            <h5 class="red-head d-flex"><%= image_tag "misc/globe-solid.svg", class: "img-red1" %>VENUE</h5>
             <%= link_to all_publications_path(venues: @publication.venues.first.short_name) do %>
               <h5 class="grey-head"><%= @publication.venues.first.venue %></h5>
             <% end %>
@@ -123,14 +123,14 @@
         <% end %>
         <% if @publication.challenge.present? %>
           <div class="py-2">
-            <h5 class="red-head d-flex"><%= image_tag "misc/puzzle-piece-solid.svg", class: "img-red" %>Challenge </h5>
+            <h5 class="red-head d-flex"><%= image_tag "misc/puzzle-piece-solid.svg", class: "img-red1" %>Challenge </h5>
             <h5 class="grey-head"><%= link_to @publication.challenge.challenge, challenge_path(@publication.challenge) %></h5>
             <hr>
           </div>
         <% end %>
         <% if @publication.no_of_citations.present? %>
           <div class="py-2">
-            <h5 class="red-head d-flex"><%= image_tag "misc/quote-left-solid.svg", class: "img-red" %>Citations</h5>
+            <h5 class="red-head d-flex"><%= image_tag "misc/quote-left-solid.svg", class: "img-red1" %>Citations</h5>
             <h5 class="grey-head"><%= @publication.no_of_citations %></h5>
             <hr>
           </div>
