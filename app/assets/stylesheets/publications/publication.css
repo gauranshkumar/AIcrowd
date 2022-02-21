@@ -484,8 +484,7 @@ margin-bottom: 16px!important;
     margin-left: 0;
 }
 
-.publication-filter .filter-bar .container-fluid {
-    display: flex;
+.publication-filter .filter-bar-pub .container-fluid {
     padding-top: .875rem;
     padding-bottom: .875rem;
   }
