@@ -392,7 +392,7 @@ margin-right: 0px!important;
     margin-left: 5px;
 }
 .publication .list-group-research-big img.avatar{
-    margin-bottom: 7.5px;
+    margin-bottom: 4px;
 }
 
 .new-author1{
@@ -437,7 +437,6 @@ margin-bottom: 16px!important;
   @media (max-width: 768.98px){
     .dropdown{
       margin: 0;
-      margin-bottom: 10px;
     }}
     @media (max-width: 350px){
       .btn-white-submit2{
@@ -463,10 +462,14 @@ margin-bottom: 16px!important;
 @media (min-width: 576px){ .publication-bar .container{
     max-width: 100%;
 }}
+@media (min-width: 1279.98px){ .publication-bar .container{
+    max-width: 100%;
+    padding: 0 2rem;
+}}
 
 .img-red{
-    width: 15px!important;
-    height: 15px!important;
+    width: 20px!important;
+    height: 20px!important;
     margin-right: 5px;
     margin-top: -2px;
 }
@@ -480,3 +483,9 @@ margin-bottom: 16px!important;
 .avatar-group a:first-of-type, .avatar-group span:first-of-type {
     margin-left: 0;
 }
+
+.publication-filter .filter-bar .container-fluid {
+    display: flex;
+    padding-top: .875rem;
+    padding-bottom: .875rem;
+  }
