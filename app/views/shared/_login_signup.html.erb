@@ -14,7 +14,7 @@
         <% end %>
       </div>
       <div class="modal-separator mt-4">or</div>
-      <%= form_for resource, as: resource_name, url: session_path(resource_name), html: { class: "login-form", data: { controller: "mixpanel", type: "loginEmail" }}, validate: true do |f| %>
+      <%= form_for resource, as: resource_name, url: session_path(resource_name), html: { id: "login_participant", class: "login-form", data: { controller: "mixpanel", type: "loginEmail" }}, validate: true do |f| %>
         <div class="modal-login-form">
             <div class="form-group">
               <label class="float-left" for="email">Email</label>
@@ -57,7 +57,7 @@
         <% end %>
       </div>
       <div class="modal-separator mt-2">or</div>
-      <%= form_for resource, as: resource_name, url: registration_path(resource_name), html: { data: { controller: "mixpanel", type: "signupEmail" }}, validate: true do |f| %>
+      <%= form_for resource, as: resource_name, url: registration_path(resource_name), html: { id: "new_participant", data: { controller: "mixpanel", type: "signupEmail" }}, validate: true do |f| %>
         <div class="modal-login-form">
           <%= render partial: 'shared/error_messages', locals: { target: resource } %>
           <form class="login-form">
