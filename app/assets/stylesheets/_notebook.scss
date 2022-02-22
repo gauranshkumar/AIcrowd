@@ -1411,7 +1411,7 @@ Adapted from GitHub theme
   flex-direction: column;
   align-items: stretch;
   z-index: 1;
-  overflow: auto;
+  overflow-x: auto;
 }
 /* class for the output area when it should be height-limited */
 .ipynb-notebook-container div.output_scroll {
@@ -1497,7 +1497,7 @@ Adapted from GitHub theme
 .ipynb-notebook-container div.output_area img.unconfined,
 .ipynb-notebook-container div.output_area svg.unconfined {
   max-width: none;
-}
+} 
 /* This is needed to protect the pre formating from global settings such
    as that of bootstrap */
 .ipynb-notebook-container .output {
@@ -1528,7 +1528,7 @@ Adapted from GitHub theme
 /* This class is for the output subarea inside the output_area and after
    the prompt div. */
 .ipynb-notebook-container div.output_subarea {
-  overflow-x: auto;
+  // overflow-x: auto;
   padding: 0.4em;
   /* Old browsers */
   -webkit-box-flex: 1;
@@ -3155,9 +3155,9 @@ kbd,
 }
 
 .output_text {
-    max-height: 300px;
-    overflow: auto;
-    overflow-y: auto;
+    // max-height: 300px;
+    // overflow: auto;
+    // overflow-y: auto;
 }
 
 .ipynb-notebook-container .cell .output_text pre,
