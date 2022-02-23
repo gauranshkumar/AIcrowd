@@ -10,17 +10,35 @@
   flex-direction: column;
 
   .text {
-    @include body-text-normal;
-    color: $color-text-light;
+    font-size: 23px;
+    line-height: 32px;
+    letter-spacing: 0.1px;
+    color: $color-text-dark;
+    font-family: "Inter";
+    @include media-query("medium") {
+      font-size: 19px;
+    }
+    @include media-query("small") {
+      font-weight: normal;
+      font-size: 14px;
+      line-height: 24px;
+    }
   }
 
   .title {
-    @include heading-5;
+    font-size: 23px;
+    line-height: 32px;
+    letter-spacing: 0.1px;
     font-family: "Inter";
     font-weight: $font-weight-medium;
+    color: $color-text-dark;
+    @include media-query("medium") {
+      font-size: 19px;
+    }
     @include media-query("small") {
-      @include body-text-normal;
       font-weight: normal;
+      font-size: 14px;
+      line-height: 24px;
     }
   }
 
