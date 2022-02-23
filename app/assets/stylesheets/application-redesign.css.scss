@@ -15875,7 +15875,9 @@ button:focus{
 .ai-ethics .red{
   color: #DE4B46;
 }
-
+.notification-drop .discussion-topic-body .dropdown-item, .notification-drop .discussion-topic-body a{
+  white-space: unset!important;
+}
 
 @import '../javascripts/ckeditor/plugins/codesnippet/lib/highlight/styles/sunburst';
 @import 'challenges/form';
