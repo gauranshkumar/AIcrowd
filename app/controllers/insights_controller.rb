@@ -76,8 +76,10 @@ class InsightsController < ApplicationController
         end
         if !country.present?
           country               ||= participant.visits.where.not(country: nil).last&.country
-          participant.country_cd = ISO3166::Country.find_all_by("name", country)
-          participant.save!
+          if country.present?
+            participant.country_cd = ISO3166::Country.find_all_by("name", country)
+            participant.save
+          end
         end
 
         country_data[country] ||= []
