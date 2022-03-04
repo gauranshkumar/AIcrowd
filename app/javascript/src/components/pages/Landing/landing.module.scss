@@ -454,7 +454,7 @@ $section-gap: 150px;
       height: 70%;
     }
 
-    @include media-query("medium") {
+    @include media-query("large") {
       display: none;
     }
   }
