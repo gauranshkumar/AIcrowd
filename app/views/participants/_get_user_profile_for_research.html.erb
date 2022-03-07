@@ -2,7 +2,7 @@
   <% if !defined?(joined_avatar) || !joined_avatar %>
     <a href="<%= participant_link(participant) %>" target="_blank">
       <span class="text-link mr-1">
-        <img class="avatar mr-1 img-sm" src="<%= participant.image_file.url %>">
+        <%= participant_avatar(participant, 'avatar mr-1 img-sm') %>
           <small><%= username %></small>
       </span>
     </a>
