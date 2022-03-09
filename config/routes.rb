@@ -282,6 +282,8 @@ Rails.application.routes.draw do
     post :shared_notebook, on: :collection
     post :downloaded_notebook, on: :collection
     post :executed_notebook, on: :collection
+    post :notebook_was_shared, on: :collection
+    post :notebook_received_download, on: :collection
   end
 
   resources :ratings, only: [:index, :create] do
