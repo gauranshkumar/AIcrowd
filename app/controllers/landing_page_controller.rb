@@ -402,7 +402,7 @@ class LandingPageController < ApplicationController
           statText: 'Completed Challenges',
         },
         {
-          count: '47k',
+          count: '55k',
           statText: 'Community Members',
         },
         {
@@ -414,7 +414,7 @@ class LandingPageController < ApplicationController
           statText: 'Research Papers Published',
         },
         {
-          count: '12 TB',
+          count: '13 TB',
           statText: 'Codes, Models & Datasets Hosted',
         },
       ]
