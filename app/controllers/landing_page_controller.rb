@@ -398,7 +398,7 @@ class LandingPageController < ApplicationController
   def get_stat_list_data
     @stat_list_data = [
         {
-          count: 230,
+          count: 244,
           statText: 'Completed Challenges',
         },
         {
@@ -406,7 +406,7 @@ class LandingPageController < ApplicationController
           statText: 'Community Members',
         },
         {
-          count: '$500k',
+          count: '$550k',
           statText: 'Awarded in Prizes',
         },
         {
