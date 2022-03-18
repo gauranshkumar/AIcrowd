@@ -87,6 +87,10 @@ class ChallengePolicy < ApplicationPolicy
     true
   end
 
+  def shared_challenge?
+    true
+  end
+
   def make_notebooks_public?
     edit?
   end

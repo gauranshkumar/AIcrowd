@@ -1,0 +1,22 @@
+<%
+  social_message = challenge.challenge + " on @aicrowdHQ\n";
+  url = "https://www.aicrowd.com/" + challenge_path(challenge.slug);
+  if current_participant.present?
+    url += "?u=" + current_participant.name;
+  end
+  description = "Thanks for sharing the challenge with your network! :)"
+  title = "Woohoo!"
+%>
+<%= render partial: 'shared/popup', locals: { 
+  title: title,
+  description: description,
+  social_message: social_message,
+  url: url,
+  image: '/assets/challenge_badges/challenges_Share_Active_first.png' } %>
+<script>
+  function share_challenge() {
+    $("#badges-modal").appendTo("body").modal("show");
+    $.ajax({url: "<%= shared_challenge_challenge_path(challenge.slug) %>" })
+  }
+</script>
+<a onclick='share_challenge()' href="#" class="btn btn-secondary btn-sm">Share</a>

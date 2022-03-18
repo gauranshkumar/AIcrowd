@@ -1,0 +1,10 @@
+<%= render partial: 'shared/badge_popup', locals: {
+    show_popup: defined?(show_popup) && show_popup,
+    badge: AicrowdBadge.new(
+        description: description,
+        image: image,
+        social_message: social_message,
+    ),
+    title: title,
+    url: url
+} %>
