@@ -1,51 +1,69 @@
-<div id="badges-popup">
-<% if current_participant&.awaiting_toasts.present? %>
-  <% aicrowd_badge = current_participant&.awaiting_toasts.last %>
-    <% if aicrowd_badge.present? %>
-      <div class="modal badges-modal" id="badges-modal" tabindex="-1" role="dialog" aria-labelledby="previewModalLabel" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-          <div class="modal-content" style="max-width: 404px; margin-top: 150px;">
-            <%= react_component("molecules/AchievementPopup/index", { icon: aicrowd_badge.image, title: "Congratulations!", description: aicrowd_badge.description, url: request.original_url, badgeTitle: aicrowd_badge.name, socialMessage: aicrowd_badge.social_message }) %>
+<%
+  toogle = false
+  if !defined?(title)
+    title = "Congratulations!"
+  end
 
-          </div>
-        </div>
+  if !defined?(badge)
+    if current_participant&.awaiting_toasts.present?
+      badge = current_participant&.awaiting_toasts.last
+      current_participant&.toggle_toasts
+    end
+  end
+
+  if !defined?(url)
+    url = request.original_url
+  end
+%>
+
+<% if badge.present? %>
+<div id="badges-popup">
+  <div class="modal badges-modal" id="badges-modal" tabindex="-1" role="dialog" aria-labelledby="previewModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content" style="max-width: 404px; margin-top: 150px;">
+        <%= react_component("molecules/AchievementPopup/index", { 
+            icon: badge.image, 
+            title: title, 
+            description: badge.description, 
+            url: url,
+            badgeTitle: badge.name, 
+            socialMessage: badge.social_message
+          }) %>
       </div>
-    <script>
-      $(document).ready(function(){
-        $('#badges-modal').appendTo("body").modal('show');
-      })
-    </script>
-    <% current_participant&.toggle_toasts %>
-  <% end %>
-<% end %>
+    </div>
+  </div>
 </div>
+<% end %>
 
 <% if defined?(show_popup) && show_popup %>
   <script>
-  $(document).ready(function () {
-      setIntervalX(function () {
-          refreshPartial()
-      }, 3000, 1);
+    $(document).ready(function(){
+      $('#badges-modal').appendTo("body").modal('show');
+    })
 
-  });
+    $(document).ready(function () {
+        setIntervalX(function () {
+            refreshPartial()
+        }, 3000, 1);
+    });
 
-  // calls action refreshing the partial
-  function refreshPartial() {
-    $.ajax({
-      url: "/badges"
-   })
-  }
+    // calls action refreshing the partial
+    function refreshPartial() {
+      $.ajax({
+        url: "/badges"
+    })
+    }
 
-  function setIntervalX(callback, delay, repetitions) {
-    var x = 0;
-    var intervalID = window.setInterval(function () {
+    function setIntervalX(callback, delay, repetitions) {
+      var x = 0;
+      var intervalID = window.setInterval(function () {
 
-       callback();
+        callback();
 
-       if (++x === repetitions) {
-           window.clearInterval(intervalID);
-       }
-    }, delay);
-  }
+        if (++x === repetitions) {
+            window.clearInterval(intervalID);
+        }
+      }, delay);
+    }
   </script>
 <% end%>

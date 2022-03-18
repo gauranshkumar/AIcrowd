@@ -1,6 +1,6 @@
 class ChallengesController < ApplicationController
   before_action :authenticate_participant!, except: [:show, :index, :notebooks]
-  before_action :set_challenge, only: [:show, :edit, :update, :clef_task, :remove_image, :remove_banner, :export, :import, :remove_invited, :remove_social_media_image, :remove_banner_mobile, :notebooks, :make_notebooks_public]
+  before_action :set_challenge, only: [:show, :edit, :update, :clef_task, :remove_image, :remove_banner, :export, :import, :remove_invited, :remove_social_media_image, :remove_banner_mobile, :notebooks, :make_notebooks_public, :shared_challenge]
   before_action :set_vote, only: [:show, :clef_task, :notebooks]
   before_action :set_follow, only: [:show, :clef_task, :notebooks]
   after_action :verify_authorized, except: [:index, :show]
@@ -219,6 +219,16 @@ class ChallengesController < ApplicationController
   def make_notebooks_public
     Post.where(challenge_id: @challenge.id).where('submission_id is not null').update_all(private: false)
     redirect_to helpers.edit_challenge_path(@challenge, step: :admin), notice: 'Challenge submissions are public now.'
+  end
+
+  def shared_challenge
+    logged_in = false
+    if current_participant.present?
+      e = ActivityMeta.new(participant_id: current_participant.id, acted_on: @challenge.id, event: "shared_challenge")
+      logged_in = true
+      e.save!
+    end
+    render json: {challenge: @challenge.challenge, logged_in: logged_in}, status: 200
   end
 
   private
