@@ -2,15 +2,17 @@ class DiscourseBadgesDailyJob < ApplicationJob
   queue_as :default
 
   def perform(*args)
-    discourse_initial_id = ENV['DISCOURSE_INITIAL_ID'].to_i
     user_badges = get_badges
     while user_badges.present? && user_badges.kind_of?(Array) do
       user_badges.each do |user_badge|
         participant = Participant.find_by(name: user_badge['username'])
-        if participant
-          badge = AicrowdBadge.find_by(id: discourse_initial_id.to_i + user_badge['badge_id'].to_i )
-          participant.add_badge(badge.name)
-          NotificationService.new(participant.id, badge, 'badge').call
+        if participant.present?
+          badge = AicrowdBadge.where(name: user_badge['badge_name'].strip,
+                                      level: [user_badge['badge_type_id'], 4]).order('level')&.first
+          if badge.present?
+            participant.add_badge(badge)
+            # NotificationService.new(participant.id, badge, 'badge').call
+          end
         end
       end
       last_id = user_badges.last['id']
