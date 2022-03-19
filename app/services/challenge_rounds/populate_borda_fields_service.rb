@@ -41,7 +41,7 @@ module ChallengeRounds
           participant_ids = @uniq_map.select{|key, hash| hash == team_id }.keys
           overall_rank = overall_rank + '_self'
           selected_submissions = selected_submissions.where(participant_id: participant_ids)
-        elsif @round.id > 800
+        else
           selected_submissions = selected_submissions.where("meta->>'private_borda_selected_for_leaderboard'='1'")
         end
         
@@ -90,10 +90,8 @@ module ChallengeRounds
       end
 
 
-      if @round.id > 800
-        @uniq_map.values.uniq.each do |team_id|
-          run_borda_count(team_id: team_id)
-        end
+      @uniq_map.values.uniq.each do |team_id|
+        run_borda_count(team_id: team_id)
       end
 
       run_borda_count()
