@@ -297,6 +297,7 @@ Rails.application.routes.draw do
   match '/cookies', to: 'pages#cookies_info', via: :get
   match '/community_guidelines', to: 'pages#community_guidelines', via: :get
   match '/ai_ethics', to: 'pages#ai_ethics', via: :get
+  match '/bug_bounty', to: 'pages#bug_bounty', via: :get
   match '/crowdai_migration', to: 'crowdai_migration#new', via: :get
   match '/crowdai_migration/save', to: 'crowdai_migration#create', via: :post
 
