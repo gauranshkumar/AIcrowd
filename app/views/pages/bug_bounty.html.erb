@@ -1,0 +1,274 @@
+<!-- masthead -->
+<div class="masthead masthead-open">
+  <div class="container-fluid">
+    <!-- title -->
+    <div class="row">
+      <div class="col-12">
+        <h1>AIcrowd Bug Bounty Program</h1>
+      </div>
+    </div>
+    <!-- /title -->
+  </div>
+</div>
+<!-- /masthead -->
+
+<!-- section -->
+<div class="section-p-md ai-ethics">
+  <div class="container-fluid">
+    <div class="row">
+      <!-- md content -->
+      <div class="col-12">
+        <div class="md-content">
+          <p>
+            Ensuring the privacy and security of our user data is a top
+            priority for AIcrowd. Therefore, if you believe you have
+            found a security vulnerability that affects any AIcrowd
+            product that is in the scope of this program, please report
+            it to us. The scope of the bug bounty program is limited to
+            the domains listed below. Below are the program requirements
+            and additional information about our program.
+          </p>
+          <p>
+            Read on for more information about the scope of the bug
+            bounty program as well as the program’s requirements.
+          </p>
+          <h1>Rewards</h1>
+          <p>
+            You will be eligible for a bounty only if you are the first
+            person to disclose an issue not previously known to us.
+            Rewards for valid bugs are paid based on the severity of the
+            qualifying bug, to be determined by AIcrowd at its sole
+            discretion. Reward amounts typically range from $100 to
+            $500.
+          </p>
+          <p>
+            The final award may be higher based on the impact of your
+            report. Bounty payments are made via TransferWise.
+          </p>
+          <h1>Targets</h1>
+          <p>In-Scope Domains</p>
+          <ul>
+            <li>www.aicrowd.com</li>
+            <li>gitlab.aicrowd.com</li>
+            <li>discourse.aicrowd.com</li>
+          </ul>
+          <p>Out-Of-Scope Domains</p>
+          <p>
+            Any domain or services other than listed in the list above
+            is out of the scope.
+          </p>
+          <h1>Rules</h1>
+          <ul>
+            <li>
+              When you are creating an AIcrowd account for test
+              purposes, please add the “bugbounty_” prefix to the
+              username of your test account.
+            </li>
+            <li>
+              Ensure that you test vulnerabilities only on accounts that
+              you own or have permission to test on.
+            </li>
+            <li>
+              Never use any findings to compromise the system,
+              exfiltrate data or pivot to other systems. Submit your
+              report as soon as you have discovered a vulnerability. We
+              will pay you based on the maximum impact of your finding.
+            </li>
+            <li>
+              If you stumble upon sensitive information, such as
+              personal information, credentials, etc., during the
+              assessment; do not save, copy, store, transfer, disclose,
+              or otherwise retain the data or personal information.
+            </li>
+            <li>
+              Do not perform social engineering, phishing, and physical
+              security attacks against AIcrowd offices, users, or
+              employees.
+            </li>
+            <li>
+              It is strictly prohibited to disclose any vulnerabilities
+              without AIcrowd’s explicit permission.
+            </li>
+            <li>Stay within the program’s scope.</li>
+            <li>The usage of automated scanners is not allowed.</li>
+            <li>
+              Be respectful when you are interacting with our team.
+            </li>
+            <li>
+              If you do not follow the rules, you may be banned from the
+              AIcrowd Bug Bounty Program.
+            </li>
+          </ul>
+
+          <p>
+            AIcrowd reserves the right to modify the rules for this
+            program or deem any submissions invalid at any time. AIcrowd
+            may cancel the bug bounty program without notice at any
+            time.
+          </p>
+          <h1>Focus Areas</h1>
+          <ul>
+            <li>Sensitive Data Exposure</li>
+            <li>Remote Code Execution (RCE)</li>
+            <li>Server-Side Request Forgery (SSRF)</li>
+            <li>Cross-site Scripting (XSS)</li>
+            <li>Cross-site Request Forgery (CSRF)</li>
+            <li>SQL Injection</li>
+            <li>XML External Entity Attacks (XXE)</li>
+            <li>
+              Access Control Vulnerabilities (Insecure Direct Object
+              Reference, Privilege Escalation, Broken Access, etc.)
+            </li>
+            <li>Path/Directory Traversal Issues</li>
+          </ul>
+          <h1>Non-Qualifying Vulnerabilities</h1>
+          <ul>
+            <li>Tab-nabbing.</li>
+            <li>
+              Click-jacking/UI-redressing, or issues only exploitable
+              via click-jacking.
+            </li>
+            <li>
+              Open redirect - unless an additional security impact can
+              be demonstrated (such as stealing an authentication token,
+              API keys etc.).
+            </li>
+            <li>Denial-of-service attacks.</li>
+            <li>Self-XSS without a reasonable attack scenario.</li>
+            <li>
+              Injecting HTML to the emails which will be sent through
+              AIcrowd.
+            </li>
+            <li>Fingerprinting on common/public services.</li>
+            <li>
+              Disclosure of known public files or directories (e.g
+              robots.txt, sitemap.xml).
+            </li>
+            <li>Information disclosure without significant impact.</li>
+            <li>
+              SSL/TLS version and configuration issues, weak ciphers or
+              expired certificates.
+            </li>
+            <li>Missing rate limits for non-critical actions.</li>
+            <li>
+              Cross-site Request Forgery (CSRF) with minimal security
+              implications (e.g Login/Logout CSRF).
+            </li>
+            <li>SPF/DKIM/DMARC related issues.</li>
+            <li>
+              Missing or misconfigured security headers (e.g CSP, HSTS)
+              which do not directly lead to a vulnerability.
+            </li>
+            <li>Missing Secure or HTTPOnly flags on cookies.</li>
+            <li>
+              Vulnerable software version disclosure without proof of
+              exploitability.
+            </li>
+            <li>Reports from automated tools.</li>
+            <li>Comma Separated Values (CSV) injection.</li>
+            <li>EXIF metadata not being stripped from images.</li>
+            <li>Brute-force attacks.</li>
+            <li>
+              Scenarios that require unlikely user interaction and/or
+              outdated OS or software version.
+            </li>
+            <li>
+              Attacks requiring Man-in-the-middle (MITM) or physical
+              access to a user's device.
+            </li>
+            <li>Bugs that do not pose any security risk.</li>
+          </ul>
+          <h1>Reporting a Bug</h1>
+          <ul>
+            <li>
+              If our security team cannot reproduce or verify an issue,
+              a report cannot be awarded.
+            </li>
+            <li>
+              Please write your report in a way that makes it easier for
+              us to reproduce the submitted issue.
+            </li>
+            <li>
+              You must send a clear textual description of the
+              vulnerability along with steps to reproduce the
+              vulnerability.
+            </li>
+            <li>
+              In order for the vulnerability report to be understandable
+              and acceptable, you may include attachments such as
+              screenshots or proof of concept code as necessary.
+            </li>
+            <li>
+              List the related URL(s) and any affected parameters.
+            </li>
+            <li>
+              Reports that only feature a video proof of concept without
+              written reproduction steps will be refused.
+            </li>
+            <li>
+              Don’t do more harm than good. You should not leave systems
+              or users in a more vulnerable state than how you found
+              them. You should not engage in testing or related
+              activities that degrade, damage, or destroy information
+              within our systems, or that may impact our users. While
+              researching a vulnerability, if you are unsure whether you
+              should continue, immediately engage with the AIcrowd Bug
+              Bounty team (hello@aicrowd.com).
+            </li>
+            <li>
+              Please be patient while AIcrowd is working on the
+              remediation process of the corresponding vulnerability.
+              Refrain from asking for additional updates before 30 days
+              have passed since your last response, as this will only
+              increase our load and cause more delays.
+            </li>
+          </ul>
+          <h1>How Severity is Determined</h1>
+          <p>
+            AIcrowd reserves the right to make a final decision
+            regarding the severity of a reported vulnerability. Upon
+            receipt of the report, we will conduct an internal
+            investigation and determine the severity of the
+            vulnerability by considering multiple factors, including but
+            not limited to:
+          </p>
+          <ul>
+            <li>The quantity of affected users and data</li>
+            <li>
+              The sensitivity and classification of the affected data,
+              and the security requirements surrounding it
+            </li>
+            <li>
+              The impact on the affected data's confidentiality,
+              integrity, or availability
+            </li>
+            <li>
+              The privilege level required to exploit the vulnerability
+            </li>
+            <li>
+              Whether user interaction is required to exploit the
+              vulnerability
+            </li>
+            <li>
+              Other, if any, mitigating factors or exploit scenario
+              requirements
+            </li>
+          </ul>
+          <p>
+            While we try to be as consistent as possible with rewards,
+            our program is evolving and rewards may change according to
+            how our program evolves over time.
+          </p>
+          <h1>Disclosure</h1>
+          <p>
+            This program does not allow disclosure. You may not publicly
+            disclose information about vulnerabilities found in this
+            program without AIcrowd’s explicit permission.
+          </p>
+        </div>
+      </div>
+      <!-- /md content -->
+    </div>
+  </div>
+</div>
+<!-- /section -->
