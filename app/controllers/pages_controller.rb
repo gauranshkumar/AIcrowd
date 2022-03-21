@@ -27,7 +27,7 @@ class PagesController < ApplicationController
     @page_title = "AI & Ethics"
   end
 
-  def ai_ethics
+  def bug_bounty
     @page_title = "Bug & Bounty"
   end
 end
