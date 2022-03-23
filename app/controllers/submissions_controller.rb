@@ -428,7 +428,8 @@ class SubmissionsController < ApplicationController
 
   def handle_artifact_based_submissions
     if is_api_request?
-      params[:submission] = {'submission_files_attributes': {} }
+      params[:submission]['submission_files_attributes'] = {}
+      
       if params[:submission_files].nil?
         redirect_or_json(root_path, "Submission file not sent.", :bad_request)
         return
