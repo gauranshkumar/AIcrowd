@@ -26,11 +26,14 @@ class EvaluationsApiService
       grader_id: grader_id,
       meta: {
         participant_id: @submission.participant.id,
+        participant_name: @submission.participant.slug,
         round_id: @submission.challenge_round_id,
         submission_id: @submission.id,
         challenge_client_name: @submission.challenge.challenge_client_name,
         domain_name: ENV['DOMAIN_NAME'],
-        aicrowd_token: @submission.challenge.organizers&.first&.api_key # ENV['AICROWD_API_KEY']
+        aicrowd_token: @submission.challenge.organizers&.first&.api_key,
+        track: @submission.clef_run_type,
+        description: @submission.description
       }.to_json,
       submission_data: {
         type: artifact.submission_type,
