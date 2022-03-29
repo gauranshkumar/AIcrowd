@@ -1,0 +1,24 @@
+<div class="blitz">
+<%= render partial: 'masthead' %>
+<div class="container-fluid">
+  <%= render partial: 'stats', locals: {stats: @stats} %>
+  <%= render partial: 'ongoing', locals: {puzzles: @ongoing_puzzles} %>
+  <div class="blitz-cards">
+    <div class="row">
+      <%= render partial: 'past', locals: {puzzles: @previous_data, title: 'My previous puzzles', minimum: 2} %>
+      <%= render partial: 'skill_matrix', locals: {data: @skill_data} %>
+    </div>
+  </div>
+
+  <div class="blitz-cards">
+    <div class="row">
+      <%= render partial: 'past', locals: {puzzles: @recommended_puzzles, title: 'Puzzles you may like', minimum: 1} %>
+      <%= render partial: 'activity' %>
+    </div>
+  </div>
+  <div class="blitz-head">
+    <h3 class="heading">trending ML apps</h3>
+  </div>
+  <%= render partial: 'webapps' %>
+</div>
+</div>

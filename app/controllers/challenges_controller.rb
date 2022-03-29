@@ -252,6 +252,14 @@ class ChallengesController < ApplicationController
       end
     end
 
+    if request.fullpath.start_with?('/blitz/puzzles')
+      @is_blitz = true
+      blitz_puzzle = BlitzPuzzle.where(challenge_id: @challenge.id).first
+      if !blitz_puzzle.present? || (blitz_puzzle.start_date > Time.now && !current_participant.admin?)
+        raise ActionController::RoutingError.new('Not Found')
+      end
+    end
+
     if !params.has_key?('meta_challenge_id') && !params.has_key?('ml_challenge_id')
       cps = ChallengeProblems.where(problem_id: @challenge.id)
       cps.each do |cp|

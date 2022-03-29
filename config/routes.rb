@@ -19,6 +19,7 @@ def challenge_routes
     get :remove_invited
     get :notebooks
     get :make_notebooks_public
+    get :shared_challenge
   end
 
   resources :teams, only: [:create, :show], param: :name, constraints: { name: %r{[^?/]+} }, format: false, controller: 'challenges/teams' do
@@ -29,6 +30,7 @@ def challenge_routes
   resources :participant_challenges, only: [:index]
   resources :events
   resources :winners, only: [:index]
+  match 'discussion', to: 'challenges/discussions#show', via: :get
   resources :submissions do
     post :filter, on: :collection
     get :export, on: :collection
@@ -88,10 +90,10 @@ Rails.application.routes.draw do
 
   constraints super_admin do
     mount Blazer::Engine => '/blazer'
+    mount Sidekiq::Web => '/sidekiq'
   end
 
   constraints admin do
-    mount Sidekiq::Web => '/sidekiq'
     begin
       ActiveAdmin.routes(self)
     rescue StandardError
@@ -264,7 +266,15 @@ Rails.application.routes.draw do
   end
 
   resources :team_members, path: "our_team", only: [:index]
-  resources :practice, only: [:index]
+  match '/blitz', to: 'blitz#index', via: :get
+  match '/blitz/dashboard', to: 'blitz#dashboard', via: :get
+  match '/blitz/puzzles', to: 'blitz#puzzles', via: :get
+  resource :blitz do
+    resources :puzzles, controller: 'challenges' do
+      challenge_routes
+    end
+  end
+
   resources :posts, path: :showcase do
     resources :votes, only: [:create, :destroy] do
       post :white_vote_create, on: :collection

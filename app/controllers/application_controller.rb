@@ -68,6 +68,13 @@ class ApplicationController < ActionController::Base
         end
       end
     end
+    if params.has_key?('puzzle_id')
+      params[:challenge_id] = params[:puzzle_id]
+      params.delete('puzzle_id')
+      if request.fullpath.start_with?('/blitz/puzzles')
+        @is_blitz = true
+      end
+    end
   end
 
   def pundit_user

@@ -1,0 +1,21 @@
+<div class="col-lg-5">
+    <div class="blitz-head">
+        <h3 class="heading">Activity</h3>
+    </div>
+    <div class="activity-heatmap-wrapper text-center card-app p-3" style="height: 186px;" data-controller="activity-heatmap" data-activity-heatmap-element-id="activity-heatmap" data-activity-heatmap-data="<%= @activity_data.to_json %>">
+
+        <div class="activity-heatmap__y-labels-wrapper">
+        <div class="activity-heatmap__y-labels">
+            <div>S</div>
+            <div>M</div>
+            <div>T</div>
+            <div>W</div>
+            <div>T</div>
+            <div>F</div>
+            <div>S</div>
+        </div>
+        <svg id="activity-heatmap"></svg>
+        </div>
+    </div>
+
+</div>

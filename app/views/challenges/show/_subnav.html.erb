@@ -23,7 +23,9 @@
       <% if challenge.dynamic_content_tab.present? %>
         <%= render partial: 'challenges/show/subnav_link', locals: {text: challenge.dynamic_content_tab, link: challenge_dynamic_contents_path(challenge)} %>
       <% end %>
-      <%= render partial: 'challenges/show/subnav_link', locals: {text: 'Rules', link: challenge_challenge_rules_path(challenge)} %>
+      <% if !@is_blitz %>
+        <%= render partial: 'challenges/show/subnav_link', locals: {text: 'Rules', link: challenge_challenge_rules_path(challenge)} %>
+      <% end %>
 
      <li class="nav-item dropdown overflow-nav">
         <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">More <svg xmlns="http://www.w3.org/2000/svg" width="10" height="5" viewBox="0 0 10 5"><polygon fill="#5D5F60" points="7 10 12 15 17 10" transform="translate(-7 -10)"/></svg>
@@ -36,7 +38,9 @@
     <% if required_terms_or_rules_path(challenge).present? %>
       <%= link_to 'Participate', required_terms_or_rules_path(challenge), class: "btn btn-primary btn-sm pull-right", data: { controller: "mixpanel", action: "click->mixpanel#challenge_participation_start" } %>
     <% else %>
-      <%= my_team_view_or_create_button(challenge) %>
+      <% if !@is_blitz %>
+        <%= my_team_view_or_create_button(challenge) %>
+      <% end %>
       <% if !challenge.meta_challenge %>
         <% if !policy(challenge).starting_soon_mode? && policy(challenge).submissions_allowed? %>
           <%= link_to 'Create Submission', new_challenge_submission_path(challenge), class: "btn btn-primary btn-sm pull-right" %>

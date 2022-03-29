@@ -25,6 +25,10 @@ module ChallengesHelper
       challenge    = Challenge.friendly.find(challenge_id)
     end
 
+    if defined?(:is_blitz) && @is_blitz
+      return nil
+    end
+
     if !policy(challenge).has_accepted_participation_terms? or !policy(challenge).has_accepted_challenge_rules?
       challenge_challenge_rules_path(challenge)
     end
@@ -198,6 +202,9 @@ module ChallengesHelper
   def meta_challenge(link, challenge)
     if is_current_page_meta_challenge_child(challenge)
       return challenge_path(params['meta_challenge_id']) + link.gsub(/^\/challenges/, "/problems")
+    end
+    if @is_blitz
+      return '/blitz/puzzles' + link.gsub(/^\/challenges/, '')
     end
     return link
   end
