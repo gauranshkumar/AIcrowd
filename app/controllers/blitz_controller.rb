@@ -1,5 +1,6 @@
 class BlitzController < ApplicationController
   before_action :set_is_subscribed
+  before_action :authenticate_participant!, except: [:index]
 
   def index
   end
@@ -22,6 +23,9 @@ class BlitzController < ApplicationController
   end
 
   def dashboard
+    if !@is_subscribed
+      redirect_to blitz_url, notice: 'Sorry, you are not subscribed to AIcrowd Blitz'
+    end
     @stats = get_stats
     @ongoing_data = ongoing_data
     @previous_data = previous_data

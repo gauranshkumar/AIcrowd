@@ -33,7 +33,7 @@ class ChallengeRulesController < ApplicationController
 
       # Check for Blitz redicts
       if !@challenge_participant.registered && ChallengeProblems.where('challenge_id = ? OR problem_id = ?', @challenge.id, @challenge.id).present?
-        redirect_to blitz_url
+        redirect_to blitz_url, notice: 'Welcome to Blitz, the puzzle you are browsing is part of the Blitz Library.'
       end
 
       @challenge_participant.challenge_rules_accepted_version = @challenge_rules.version
