@@ -133,6 +133,10 @@ class Challenge < ApplicationRecord
   after_commit :update_discourse_category, on: :update
   after_commit :update_discourse_permissions, on: :update
 
+  def to_s
+     self.challenge
+  end
+
   def record_page_view(parent_meta_challenge)
     if parent_meta_challenge.present?
       parent_meta_challenge.challenge_property.update!(page_views: parent_meta_challenge.challenge_property.page_views.to_i + 1)

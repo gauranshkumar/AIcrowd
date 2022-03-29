@@ -1,0 +1,123 @@
+<div class="blitz">
+    <%= render partial: 'masthead' %>
+    <div class="container-fluid">
+        <div class="filt-blitz">
+            <div class="blitz-head">
+                <h3 class="heading">Puzzle Library</h3>
+            </div>
+            <div class="mb-3">
+                <div class="filter mb-3">
+                    <div class="search">
+                        <input type="text" class="form-control search-input" placeholder="Search ..." />
+                    </div>
+                    <div>
+                        <a class="btn btn-secondary btn-sm pick-random">
+                            <i class="fa fa-random mr-1" aria-hidden="true"></i> Pick Random
+                        </a>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="tags">
+                            <% @categories.each do |category| %>
+                                <% if params[:category] == category.name %>
+                                    <%= link_to blitz_puzzles_url, class: "btn btn-sm text-muted border mr-2 btn-primary" do %>
+                                        <i class="fa <%= category.icon %> mr-1" aria-hidden="true"></i> <%= category.name %>
+                                    <% end %>
+                                <% else %>
+                                    <%= link_to blitz_puzzles_url(:category => category.name), class: "btn btn-sm text-muted border mr-2" do %>
+                                        <i class="fa <%= category.icon %> mr-1" aria-hidden="true"></i> <%= category.name %>
+                                    <% end %>
+                                <% end %>
+                            <% end %>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="blitz-table mb-5">
+            <!-- challenge leaderboard -->
+            <div class="table-responsive-md">
+                <table class="table table-leaderboard">
+                    <thead class="head">
+                        <tr class="text-right">
+                        <th scope="col" class="text-left">Challenge Name<i class="fa fa-sort float-right mt-1 text-muted"></i></th>
+                        <th scope="col" class="text-left">Category</th>
+                        <th scope="col" class="text-left">Difficulty</th>
+                        <th scope="col">Solved By</th>
+                        <th scope="col">Popularity</th>
+                        <th scope="col" class="text-cemter">Baseline</th>
+                        <th scope="col" class="text-cemter">Deploy</th>
+                        <th scope="col" class="text-right"></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <% @puzzles.each do |data| %>
+                            <%
+                                puzzle = data['puzzle']
+                                registered = data['registered']
+                            %>
+                            <tr <% if registered %>class="tr-active"<% end %>>
+                                <td>
+                                    <h3 class="challenge-name">
+                                        <%= link_to puzzle.challenge.challenge, blitz_puzzle_path(puzzle.challenge) %>
+                                    </h3>
+                                    <p class="challenge-desc"><%= puzzle.challenge.tagline %></p>
+                                </td>
+                                <td class="text-nowrap">
+                                    <span>
+                                        <%= link_to blitz_puzzles_url(:category => puzzle.blitz_category.name) do %>
+                                            <i class="fa <%= puzzle.blitz_category.icon %> mr-1" aria-hidden="true"></i> <%= puzzle.blitz_category.name %>
+                                        <% end %>
+                                    </span>
+                                </td>
+                                <td class="difficulty text-nowrap">
+                                    <span><img src="/assets/img/blitz/bar<%= puzzle.difficulty %>.svg" class="bar"> <%= ["Beginner", "Easy", "Medium"][puzzle.difficulty-1] %></span>
+                                </td>
+                                <td class="number"><%= puzzle.challenge.ongoing_leaderboards.count %></td>
+                                <td class="number"><%= (puzzle.challenge.submissions.count/(puzzle.challenge.ongoing_leaderboards.count+1)).ceil %></td>
+                                <td class="text-right">
+                                    <i class="fa fa-check" aria-hidden="true"></i>
+                                </td>
+                                <td class="text-right">
+                                    <i class="fa fa-check" aria-hidden="true"></i>
+                                </td>
+                                <td class="text-right">
+                                    <% if registered %>
+                                        <%= link_to "My Submissions", challenge_submissions_path(puzzle.challenge), class: "btn btn-sm btn-secondary" %>
+                                    <% else %>
+                                        <%= link_to "Participate", blitz_puzzle_path(puzzle.challenge), class: "btn btn-sm btn-secondary" %>
+                                    <% end %>
+                                </td>
+                            </tr>
+                        <% end %>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+$('th').click(function(){
+    var table = $(this).parents('table').eq(0)
+    var rows = table.find('tr:gt(0)').toArray().sort(comparer($(this).index()))
+    this.asc = !this.asc
+    if (!this.asc){rows = rows.reverse()}
+    for (var i = 0; i < rows.length; i++){table.append(rows[i])}
+})
+function comparer(index) {
+    return function(a, b) {
+        var valA = getCellValue(a, index), valB = getCellValue(b, index)
+        return $.isNumeric(valA) && $.isNumeric(valB) ? valA - valB : valA.toString().localeCompare(valB)
+    }
+}
+function getCellValue(row, index){ return $(row).children('td').eq(index).text() }
+$('.pick-random').click(function(){
+    $(this).find('.fa-random').addClass('fa-spinner').removeClass('fa-random');
+    $(this).addClass('btn-primary').removeClass('btn-secondary');
+    var selected = Math.floor(Math.random() * ($(".blitz-table tr:not('.tr-active')").length-1)) + 1;
+    document.location.href = $($(".blitz-table tr:not('.tr-active')")[selected]).find('a').last().attr('href');
+})
+</script>

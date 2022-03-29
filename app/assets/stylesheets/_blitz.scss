@@ -1,0 +1,3226 @@
+/* Blitz  Masthead */
+.blitz .masthead-challenge {
+  padding-top: 0;
+  padding-bottom: 0;
+  background: linear-gradient(
+      0deg,
+      rgba(240, 82, 77, 0.05),
+      rgba(240, 82, 77, 0.05)
+    ),
+    #ffffff;
+  min-height: 383px;
+}
+.blitz .masthead-challenge .background {
+  min-height: 383px;
+  background-image: url(/assets/img/blitz/blitz-back.svg);
+  background-repeat: no-repeat;
+  background-position: right bottom;
+  padding-top: 140px;
+}
+.blitz .masthead-challenge .blitz-head {
+  /* font-family: "Circular"; */
+  font-style: normal;
+  font-weight: 700;
+  font-size: 88px;
+  margin-left: 60px;
+  line-height: 92px;
+  color: #252627;
+}
+@media only screen and (max-width: 1500.98px) {
+  /* .blitz .masthead-challenge {
+    background-position: 29% 50%;
+  } */
+}
+@media only screen and (max-width: 1271.98px) {
+  /* .blitz .masthead-challenge {
+    background-position: 29% 50%;
+  } */
+  .blitz .masthead-challenge .blitz-head {
+    margin-left: 0;
+  }
+  .blitz .masthead-challenge .background {
+    background-size: 70%;
+    min-height: 333px;
+    background-position: right bottom;
+    padding-top: 140px;
+  }
+}
+@media only screen and (max-width: 992.98px) {
+  /* .blitz .masthead-challenge {
+    background-position: 29% 50%;
+  } */
+}
+@media only screen and (max-width: 769.98px) {
+  .blitz .masthead-challenge .background {
+    background-image: url(/assets/img/blitz/blitz-back-mobile.svg);
+    background-size: 80%;
+    background-position-y: 0px;
+  }
+  .blitz .masthead-challenge {
+    justify-content: center;
+    text-align: center;
+  }
+  .blitz .masthead-challenge .blitz-head {
+    font-weight: 700;
+    font-size: 56px;
+    line-height: 67px;
+    margin-top: 180px;
+    margin-bottom: 20px;
+  }
+}
+@media only screen and (max-width: 575.98px) {
+  /* .blitz .masthead-challenge {
+    background-image: url(/assets/img/blitz/blitz-back-mobile.png);
+    min-height: 600px;
+  } */
+}
+/* Blitz  Masthead */
+/* Blitz Webapps */
+.webapp {
+  margin-bottom: 60px;
+}
+.webapp .card-app {
+  border: 1px solid #d9dcdc;
+  box-sizing: border-box;
+  border-radius: 8px;
+  height: 300px;
+  padding: 16px;
+  position: relative;
+}
+.webapp .card-app-active {
+  box-sizing: border-box;
+  border-radius: 8px;
+  height: 300px;
+  padding: 16px;
+  position: relative;
+  background: #f8f9f9;
+  border: 1px solid #d9dcdc;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.08);
+}
+.webapp .card-app .app-img {
+  border-radius: 4px;
+  width: 100%;
+  margin-bottom: 16px;
+}
+.webapp .card-app .card-title {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  color: #292c2d;
+  margin-bottom: 0;
+}
+.webapp .card-app .card-body {
+  padding: 0;
+}
+.webapp .card-app .card-text {
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 22px;
+  color: #434547;
+}
+.webapp .card-app .card-footer {
+  border-top: none;
+  background-color: transparent;
+  display: flex;
+  margin: 0;
+  padding: 0px;
+}
+.webapp .card-app .card-footer span {
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 22px;
+  color: #434547;
+}
+.webapp .card-app .card-footer .avatar {
+  width: 24px;
+  height: 24px;
+  margin-right: 4px;
+}
+.webapp .card-app .card-footer .position {
+  position: absolute;
+  bottom: 16px !important;
+  right: 16px !important;
+}
+.webapp .card-app .card-footer .position-avatar {
+  position: absolute;
+  bottom: 16px !important;
+  left: 16px !important;
+}
+/* Blitz Webapps */
+/* Blitz Cards */
+.blitz-cards .card-app .button-blitz {
+  display: flex;
+}
+.blitz-stats .card-app {
+  border: 1px solid #d9dcdc;
+  box-sizing: border-box;
+  border-radius: 8px;
+  padding: 12px;
+  margin-bottom: 14px;
+  margin-top: 14px;
+}
+.blitz-stats .card-app .app-img {
+  border-radius: 4px;
+  margin-bottom: 8px;
+  width: 26px;
+  height: 26px;
+}
+.blitz-stats .card-app .card-body {
+  padding: 0;
+}
+.blitz-stats .card-app .card-title {
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 54px;
+  color: #292c2d;
+  margin-bottom: 0;
+}
+.blitz-stats .card-app .card-text {
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 22px;
+  color: #434547;
+  margin-bottom: 0;
+}
+.blitz-cards .card-app {
+  border: 1px solid #d9dcdc;
+  box-sizing: border-box;
+  border-radius: 8px;
+  margin-bottom: 28px;
+  margin-top: 14px;
+  padding: 16px;
+}
+.blitz-cards .card-app .app-img {
+  border-radius: 4px;
+  width: 143px;
+  height: 143px;
+}
+.blitz-cards .card-app .tags {
+  margin-bottom: 8px;
+}
+.blitz-cards .card-app .tags .fa {
+  color: #de4b46;
+}
+.blitz-cards .card-app .card-title {
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 36px;
+  color: #292c2d;
+  margin-bottom: 8px;
+}
+.blitz-cards .card-app .card-body {
+  padding: 0;
+}
+.blitz-cards .card-app .card-text {
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 24px;
+  color: #434547;
+  margin-bottom: 16px;
+}
+.blitz-cards .card-app .card-footer {
+  border-top: none;
+  background-color: transparent;
+  display: flex;
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+.blitz-cards .card-app .card-footer .stats-pie {
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 27px;
+  color: #aadf38;
+}
+.blitz-cards .card-app .card-footer .star {
+  margin-top: -3px;
+  margin-right: 8px;
+}
+.blitz-cards .card-app .card-footer .bar {
+  margin-top: -3px;
+  margin-right: 8px;
+}
+.blitz-cards .card-app .card-footer span {
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 22px;
+  color: #434547;
+}
+.blitz-cards .card-app .card-footer .avatar {
+  width: 24px;
+  height: 24px;
+  margin-right: 4px;
+}
+.blitz-cards .card-app .card-footer .position {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+}
+/* Blitz Cards */
+/* Blitz Cards Wide */
+.blitz-cards-wide .card-app {
+  border: 1px solid #d9dcdc;
+  box-sizing: border-box;
+  border-radius: 8px;
+  margin-bottom: 28px;
+  margin-top: 14px;
+  padding: 16px;
+}
+.blitz-cards-wide .card-app .app-img {
+  border-radius: 4px;
+  width: 100%;
+  height: 100%;
+}
+.blitz-cards-wide .card-app .tags {
+  margin-bottom: 4px;
+}
+.blitz-cards-wide .card-app .tags .fa {
+  color: #de4b46;
+}
+.blitz-cards-wide .card-app .card-title {
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 36px;
+  color: #292c2d;
+  margin-bottom: 0;
+}
+.blitz-cards-wide .card-app .card-body {
+  padding: 0;
+}
+.blitz-cards-wide .card-app .card-text {
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 24px;
+  color: #434547;
+  margin-top: 8px;
+  margin-bottom: 34px;
+}
+.blitz-cards-wide .card-app .button-box,
+.blitz-cards-wide .card-app .percentile {
+  margin-top: 32px;
+}
+// .blitz-cards-wide .card-app .button-box .mt-btn2 {
+//   margin-top: 12px;
+// }
+
+.blitz-cards-wide .card-app .button-box .btn-width {
+  width: 170px;
+  height: 36px;
+}
+.blitz-cards-wide .card-app .button-box .btn {
+  margin-bottom: 16px;
+}
+.blitz-cards-wide .card-app .large-head {
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 27px;
+  margin-top: 32px;
+  margin-left: 0;
+  margin-right: 0;
+  text-align: center;
+  justify-content: center;
+}
+.blitz-cards-wide .card-app .large-head .large-stats-pie {
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 27px;
+  color: #aadf38;
+  width: 100px;
+  height: 100px;
+  margin: auto;
+}
+.card-app a:hover {
+  text-decoration: none;
+}
+.blitz-cards-wide .card-app .days {
+  margin: 4px 2px;
+}
+
+.blitz-cards-wide .card-app .circle {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  display: block;
+}
+.blitz-cards-wide .card-app .circle-green {
+  background-color: #44b174;
+}
+.blitz-cards-wide .card-app .circle-grey {
+  background-color: #d9dcdc;
+}
+.blitz-cards-wide .card-app .text {
+  margin: 5px;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 18px;
+  color: #5d5f60;
+}
+.blitz-cards-wide .card-app .fa-check {
+  margin: 4px;
+}
+.blitz-cards-wide .card-app .fa-question {
+  margin: 8px;
+}
+.blitz-cards-wide .button-box {
+  text-align: center;
+  justify-content: center;
+}
+/* Blitz Cards Wide */
+/* Blitz Table */
+.blitz-table .table thead th {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  color: #5d5f60;
+}
+.blitz-table .challenge-name {
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 27px;
+  color: #292c2d;
+}
+.blitz-table .challenge-desc {
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 22px;
+  color: #5d5f60;
+}
+.blitz-table .difficulty {
+  font-size: 16px;
+  line-height: 24px;
+  color: #434547;
+  margin: 0px 8px;
+}
+.blitz-table .number {
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 27px;
+  text-align: right;
+  color: #292c2d;
+}
+.blitz-table .fa-check {
+  font-weight: 400;
+  color: #44b174;
+  font-size: 18px;
+}
+.blitz-table .table-leaderboard tr:nth-of-type(1),
+.blitz-table .table-leaderboard tr:nth-of-type(2),
+.blitz-table .table-leaderboard tr:nth-of-type(3) {
+  background-color: white;
+}
+.blitz-table .btn {
+  width: 159px;
+  height: 36px;
+  padding-top: 7px;
+}
+.blitz-head .heading {
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 27px;
+  text-transform: uppercase;
+  color: #de4b46;
+  margin-top: 40px;
+  margin-bottom: 24px;
+}
+.blitz-table .table {
+  border: none;
+}
+.blitz-table .table td,
+.blitz-table .table th {
+  padding: 16px;
+  cursor: pointer;
+}
+.blitz-table .table-responsive-md {
+  border: 1px solid #d9dcdc !important;
+  border-top: 0px !important;
+  border-bottom: 0px !important;
+}
+.blitz-table .table {
+  margin-bottom: 0;
+}
+.filt-blitz .filter {
+  display: flex;
+  justify-content: space-between;
+  padding: 0;
+  border: none;
+}
+@media only screen and (max-width: 1271.98px) {
+  .blitz-cards-wide .card-app .button-box .btn-width {
+    width: 170px;
+    height: 36px;
+  }
+}
+@media only screen and (max-width: 991.98px) {
+  .webapp .card-app {
+    height: 400px;
+  }
+  .blitz-cards .card-app .button-blitz {
+    margin-top: 16px;
+  }
+}
+@media only screen and (max-width: 900.98px) {
+  .blitz-cards-wide .card-app {
+    position: relative;
+  }
+  .blitz-cards-wide .card-container-button {
+    float: right;
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+  .blitz-cards-wide .card-app .button-box {
+    text-align: left;
+    justify-content: left;
+    margin-top: -20px;
+    display: flex;
+    margin-left: 34%;
+    margin-top: 8px;
+    position: absolute;
+    bottom: 0px;
+    right: 8px;
+  }
+  .blitz-cards-wide .card-app .button-box button {
+    display: block;
+  }
+  .blitz-cards-wide .card-app .large-head {
+    // margin-top: 16px;
+    text-align: left;
+    justify-content: left;
+  }
+  .blitz-cards-wide .card-app .button-box .mt-btn2 {
+    margin-top: 8px;
+  }
+  .blitz-cards-wide .card-app .button-box .btn1 {
+    margin-top: 8px;
+  }
+  .blitz-cards-wide .card-app .button-box .btn2 {
+    margin-left: 8px;
+  }
+  .blitz-cards-wide .card-app .button-box .btn-width {
+    width: 170px !important;
+  }
+  .blitz-cards-wide .card-container-body {
+    flex: 0 0 70%;
+    max-width: 70%;
+  }
+}
+
+@media only screen and (max-width: 767.98px) {
+  .blitz-cards-wide {
+    position: unset;
+  }
+  .blitz-cards-wide .card-app .button-box {
+    position: unset;
+  }
+
+  .webapp .card-app {
+    height: 375px;
+  }
+  .blitz-cards .card-app .img-container {
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  .blitz-cards-wide .card-app .img-container {
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  .blitz-cards-wide .card-app .card-text {
+    margin-bottom: 8px;
+  }
+  .blitz-cards .card-app .button-blitz {
+    display: block;
+    justify-content: center;
+    text-align: center;
+  }
+  .blitz-cards .card-app .button-blitz button {
+    display: block;
+    margin-top: 8px;
+    width: 100%;
+  }
+  .blitz-cards .card-app .card-footer .stats-pie {
+    margin-bottom: 24px;
+  }
+  .blitz-cards .card-app .card-footer {
+    display: block;
+  }
+  .blitz-cards-wide .card-app .button-box {
+    text-align: left;
+    justify-content: left;
+    margin-top: 0;
+    display: flex;
+    margin-left: 14px;
+    margin-top: 8px;
+  }
+  .blitz-cards-wide .card-app .button-box button {
+    display: block;
+  }
+  .blitz-cards-wide .card-app .large-head {
+    margin-top: 16px;
+    text-align: left;
+    justify-content: left;
+  }
+  .blitz-cards-wide .card-app .button-box .btn-width {
+    width: 100%;
+  }
+  .filt-blitz .filter {
+    display: block;
+    border: none;
+  }
+  .filt-blitz .filter .search {
+    margin-bottom: 16px;
+  }
+  .blitz-cards-wide .card-app .app-img {
+    width: 143px !important;
+    height: 143px !important;
+  }
+  .blitz-table .challenge-name {
+    font-size: 16px;
+    line-height: 25px;
+  }
+  .blitz-table .challenge-desc {
+    font-size: 14px;
+    line-height: 19px;
+  }
+  .blitz-cards-wide .card-app .button-box .mt-btn2 {
+    margin-top: 8px;
+  }
+  .blitz-cards-wide .card-app .button-box .btn1 {
+    margin-top: 8px;
+  }
+  .blitz-cards-wide .card-app .button-box .btn2 {
+    margin-left: 16px;
+  }
+  .blitz-cards-wide .card-app .button-box {
+    margin-left: 0;
+  }
+}
+@media only screen and (max-width: 575.98px) {
+  .blitz-cards-wide .card-app .button-box {
+    text-align: left;
+    justify-content: left;
+    margin-top: 0;
+    display: block;
+    margin-left: 0;
+  }
+  .blitz-cards-wide .card-app .button-box .btn-width {
+    width: 100% !important;
+    height: 36px;
+  }
+
+  .blitz-cards-wide .card-app .button-box .btn2 {
+    margin-left: 0px;
+  }
+
+  .blitz-cards-wide .card-app .large-head .large-stats-pie {
+    margin: unset;
+  }
+}
+/* Blitz Cards Grid */
+.blitz-cards .card-container {
+  flex: 0 0 58.33333%;
+  max-width: 58.33333%;
+  padding-left: 14px;
+  padding-right: 14px;
+}
+@media (max-width: 1279.98px) {
+  .blitz-cards .card-container {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+}
+@media (max-width: 991.98px) {
+  .blitz-cards .card-container {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+}
+@media (max-width: 767.98px) {
+  .blitz-cards .card-container {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+}
+@media (max-width: 575.98px) {
+  .blitz-cards .card-container {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+}
+/* Blitz Cards Grid */
+/* Blitz Past Card Grid */
+.blitz-cards .card-container-past {
+  flex: 0 0 58.33333%;
+  max-width: 58.33333%;
+  padding-left: 14px;
+  padding-right: 14px;
+}
+@media (max-width: 1279.98px) {
+  .blitz-cards .card-container-past {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+}
+@media (max-width: 991.98px) {
+  .blitz-cards .card-container-past {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+}
+@media (max-width: 767.98px) {
+  .blitz-cards .card-container-past {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+}
+@media (max-width: 575.98px) {
+  .blitz-cards .card-container-past {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+}
+/* Blitz Past Card Grid */
+/* Blitz Grid Stats */
+.blitz-stats .col-stats {
+  flex: 0 0 20%;
+  max-width: 20%;
+  padding-left: 14px;
+  padding-right: 14px;
+}
+.blitz-stats .blitz-cards {
+  justify-content: center;
+}
+@media (max-width: 1279.98px) {
+  .blitz-stats .col-stats-1,
+  .blitz-stats .col-stats-2,
+  .blitz-stats .col-stats-3 {
+    flex: 0 0 33.3%;
+    max-width: 33.3%;
+  }
+
+  .blitz-stats .col-stats-4,
+  .blitz-stats .col-stats-5 {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+}
+@media (max-width: 991.98px) {
+  .blitz-stats .col-stats-1,
+  .blitz-stats .col-stats-2,
+  .blitz-stats .col-stats-3 {
+    flex: 0 0 33.3%;
+    max-width: 33.3%;
+  }
+
+  .blitz-stats .col-stats-4,
+  .blitz-stats .col-stats-5 {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+}
+@media (max-width: 767.98px) {
+  .blitz-stats .col-stats-1,
+  .blitz-stats .col-stats-2,
+  .blitz-stats .col-stats-3 {
+    flex: 0 0 33.3%;
+    max-width: 33.3%;
+  }
+
+  .blitz-stats .col-stats-4,
+  .blitz-stats .col-stats-5 {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+}
+@media (max-width: 575.98px) {
+  .blitz-stats .col-stats-1,
+  .blitz-stats .col-stats-2 {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+  .blitz-stats .col-stats-3 {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .blitz-stats .col-stats-4,
+  .blitz-stats .col-stats-5 {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+}
+/* Blitz Grid Stats */
+/* Blitz Card Wide Grid */
+.blitz-cards-wide .card-container {
+  flex: 0 0 100%;
+  max-width: 100%;
+  padding-left: 14px;
+  padding-right: 14px;
+}
+.blitz-cards-wide .card-container-img {
+  flex: 0 0 16.66667%;
+  max-width: 16.66667%;
+  padding-left: 14px;
+  padding-right: 14px;
+}
+.blitz-cards-wide .card-container-body {
+  flex: 0 0 50%;
+  max-width: 50%;
+  padding-left: 14px;
+  padding-right: 14px;
+}
+.blitz-cards-wide .card-container-percentile {
+  flex: 0 0 16.66667%;
+  max-width: 16.66667%;
+  padding-left: 14px;
+  padding-right: 14px;
+}
+.blitz-cards-wide .card-container-button {
+  flex: 0 0 16.66667%;
+  max-width: 16.66667%;
+  padding-left: 14px;
+  padding-right: 14px;
+}
+.blitz-cards-wide .card-app .app-img {
+  width: 100% !important;
+  height: 100% !important;
+}
+.img-graph {
+  width: 100%;
+}
+@media (max-width: 1279.98px) {
+  .img-graph {
+    width: 100%;
+  }
+  .blitz-cards-wide .card-app .app-img {
+    width: 100% !important;
+    height: 100% !important;
+  }
+  .blitz-cards-wide .card-container-img {
+    flex: 0 0 17.66667%;
+    max-width: 17.66667%;
+  }
+  .blitz-cards-wide .card-container-body {
+    flex: 0 0 40%;
+    max-width: 40%;
+  }
+  .blitz-cards-wide .card-container-percentile {
+    flex: 0 0 16.66667%;
+    max-width: 16.66667%;
+  }
+  .blitz-cards-wide .card-container-button {
+    flex: 0 0 25%;
+    max-width: 25%;
+  }
+  .blitz-cards-wide .card-app .button-box .btn-width {
+    width: 179px;
+    height: 36px;
+  }
+}
+@media (max-width: 900.98px) {
+  .blitz-cards-wide .card-container-body {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+  .blitz-cards-wide .card-container-percentile {
+    flex: 0 0 25%;
+    max-width: 25%;
+  }
+}
+@media (max-width: 767.98px) {
+  .blitz-cards-wide .card-container-img {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+  .blitz-cards-wide .card-container-body {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+  .blitz-cards-wide .card-container-percentile {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+  .blitz-cards-wide .card-container-button {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+  .blitz-cards .card-app .img-container {
+    background: rgba(0, 0, 0, 0.2);
+    margin-left: 14px;
+    margin-right: 14px;
+  }
+  .blitz-cards-wide .card-app .button-box,
+  .blitz-cards-wide .card-app .percentile {
+    margin-top: 16px;
+  }
+  .blitz-cards-wide .card-app .app-img {
+    width: 143px !important;
+    height: 143px !important;
+  }
+  .blitz-cards-wide .card-app .card-container-img .img-box {
+    background-color: rgba(0, 0, 0, 0.2);
+  }
+}
+@media (max-width: 575.98px) {
+  .blitz-cards-wide .card-container-img {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+  .blitz-cards-wide .card-container-body {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+  .blitz-cards-wide .card-container-percentile {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+  .blitz-cards-wide .card-container-button {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+  .blitz-cards-wide .card-app .app-img {
+    width: 143px !important;
+    height: 143px !important;
+  }
+  .blitz-cards-wide .card-app .card-container-img .img-box {
+    background-color: rgba(0, 0, 0, 0.2);
+  }
+}
+/* Blitz Card Wide Grid */
+/* Blitz Webapps Grid */
+.webapp .col-web-apps {
+  flex: 0 0 25%;
+  max-width: 25%;
+  padding: 14px;
+  padding-top: 0;
+  padding-bottom: 28px;
+}
+@media (max-width: 1279.98px) {
+  .webapp .col-web-apps {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+  .webapp .card-app {
+    height: 400px;
+  }
+  .button-left,
+  .button-right {
+    top: 200px;
+  }
+  .webapp .d-1024 {
+    display: none !important;
+  }
+}
+@media (max-width: 767.98px) {
+  .webapp .card-app {
+    height: 320px;
+  }
+}
+@media (max-width: 575.98px) {
+  .webapp .col-web-apps {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+}
+@media (max-width: 380.98px) {
+  .webapp .card-app {
+    height: 320px;
+  }
+  .button-left,
+  .button-right {
+    top: 160px;
+  }
+}
+/* Blitz Webapps Grid */
+
+/* ------------------------  --------------------------- BLITZ HOMEPAGE CSS  -------------------------  ---------------------------------------- */
+.blitz-homepage .header-blitz {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 54px;
+  text-align: center;
+  text-transform: capitalize;
+  color: #de4b46;
+  margin-bottom: 0;
+}
+
+.blitz-homepage .video video {
+  width: 500px !important;
+  height: 500px !important;
+}
+.blitz-homepage .desc-container {
+  max-width: 617px;
+  text-align: center;
+  justify-content: center;
+  margin: 0 auto;
+}
+.blitz-homepage .desc-container2 {
+  max-width: 746px;
+  text-align: center;
+  justify-content: center;
+  margin: 0 auto;
+}
+.blitz-homepage .desc-container3 {
+  max-width: 758px;
+  text-align: center;
+  justify-content: center;
+  margin: 0 auto;
+}
+.blitz-homepage .desc-container4 {
+  max-width: 618px;
+  text-align: center;
+  justify-content: center;
+  margin: 0 auto;
+  margin-bottom: 56px;
+}
+.blitz-homepage .blitz-desc {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 27px;
+  text-align: center;
+  color: #434547;
+  margin-bottom: 0;
+}
+.blitz-homepage .blitz-sub-head {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 36px;
+  color: #292c2d;
+  margin: 0px 8px;
+  margin-top: 80px;
+}
+.blitz-homepage .blitz-sub-head-2 {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 36px;
+  color: #292c2d;
+  margin: 0px 8px;
+  margin-top: 120px;
+}
+.blitz-homepage .blitz-sub-head-desc {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 27px;
+  color: #5d5f60;
+  margin: 16px 0px;
+}
+
+.blitz-homepage .hr {
+  width: 148px;
+  margin: 16px auto;
+}
+.blitz-homepage .hr2 {
+  width: 100%;
+  margin: 16px auto;
+}
+.blitz-homepage .section1 .img-2 {
+  margin-top: 48px;
+}
+.blitz-homepage .webapp .col-web-apps-home .card-app {
+  height: 380px !important;
+}
+.blitz-homepage .webapp .col-web-apps-home .card-app:hover {
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.08);
+}
+.blitz-homepage .webapp .card-app .card-footer .submission {
+  font-style: normal;
+  font-weight: 600 !important;
+  font-size: 16px;
+  line-height: 24px;
+  color: #434547;
+  margin: 16px 0px;
+  margin-bottom: 0%;
+}
+
+.blitz-homepage .container-dark-1,
+.blitz-homepage .container-dark-2 {
+  background: #292c2d;
+  padding: 40px 0;
+  margin: 0 auto;
+}
+.blitz-homepage .container-dark-1 .container-dark,
+.blitz-homepage .container-dark-2 .container-dark {
+  max-width: 800px;
+  justify-content: center;
+  text-align: center;
+  margin: 0 auto;
+}
+.blitz-homepage .container-dark-1 h1,
+.blitz-homepage .container-dark-2 h1 {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 54px;
+  text-align: center;
+  text-transform: capitalize;
+  color: #ffffff;
+  margin: 8px 0px;
+}
+.blitz-homepage .container-dark-1 .desc,
+.blitz-homepage .container-dark-2 .desc {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 27px;
+  text-align: center;
+  color: #f8f9f9;
+  margin: 8px 0px;
+}
+.blitz-homepage .container-dark-1 .sub-desc,
+.blitz-homepage .container-dark-2 .sub-desc {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  color: #ffffff;
+  margin: 0px 10px;
+}
+.blitz-homepage .container-dark-1 .container-desc {
+  max-width: 800px;
+  justify-content: center;
+  text-align: center;
+  margin: 0 auto;
+}
+.blitz-homepage .container-dark-2 .container-desc {
+  max-width: 1000px;
+  justify-content: center;
+  text-align: center;
+  margin: 0 auto;
+}
+@media (max-width: 991.98px) {
+  .blitz-homepage .header-blitz {
+    font-size: 24px;
+    line-height: 36px;
+  }
+  .blitz-homepage .blitz-desc {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+  }
+  .blitz-homepage .desc-container {
+    max-width: 530px;
+  }
+  .blitz-homepage .desc-container2 {
+    max-width: 592px;
+  }
+  .blitz-homepage .desc-container3 {
+    max-width: 592px;
+  }
+  .blitz-homepage .container-dark-1 .container-desc {
+    max-width: 592px !important;
+  }
+  .blitz-homepage .container-dark-2 .container-desc {
+    max-width: 592px;
+  }
+  .blitz-homepage .container-dark-1 h1,
+  .blitz-homepage .container-dark-2 h1 {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 36px;
+    margin: 8px 0px;
+  }
+  .blitz-homepage .container-dark-1 .desc,
+  .blitz-homepage .container-dark-2 .desc {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    margin: 8px 0px;
+  }
+  .blitz-homepage .container-dark-1 .sub-desc,
+  .blitz-homepage .container-dark-2 .sub-desc {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+    margin: 0px 10px;
+  }
+  .blitz-homepage .webapp .col-web-apps-home .card-app {
+    height: 350px !important;
+  }
+}
+.section-intro .blitz-input-mobile-right {
+  display: none !important;
+}
+/*  ---  -- ----- --- -- - ---------------------------------   Section Grid Followed -------------------------------- ----------------------------- */
+/*  ---  -- ----- --- -- - ---------------------------------   Section Grid Followed -------------------------------- ----------------------------- */
+
+/* ---------------------------------------------- Section 1 Introduction ----------------------------------------------------------- */
+audio::-webkit-media-controls-timeline,
+video::-webkit-media-controls-timeline {
+  display: none;
+}
+audio::-webkit-media-controls,
+video::-webkit-media-controls {
+  display: none;
+}
+.section-intro .container-left {
+  flex: 0 0 50%;
+  max-width: 50%;
+  padding-left: 14px;
+  padding-right: 14px;
+}
+
+.section-intro .container-right {
+  flex: 0 0 50%;
+  max-width: 50%;
+  padding-left: 14px;
+  padding-right: 14px;
+  text-align: right;
+}
+
+.blitz-homepage .section-intro .text-left {
+  margin-top: 78px;
+}
+.blitz-homepage .section-intro h1 {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 56px;
+  line-height: 68px;
+  color: #292c2d;
+}
+.blitz-homepage .section-intro h1 span {
+  color: #de4b46;
+}
+.blitz-homepage .section-intro h2 {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 27px;
+  line-height: 31px;
+  color: #de4b46;
+  margin-top: 24px;
+  margin-bottom: 60px;
+}
+.blitz-homepage .section-intro .blitz-input form {
+  position: relative;
+  width: 567px;
+}
+.blitz-homepage .section-intro .blitz-input .input_1 {
+  display: block;
+  width: 567px;
+  padding: 4px 4px 4px 32px;
+  border-radius: 40px;
+  color: #5d5f60;
+  border: 1px solid #d9dcdc;
+  background: #f8f9f9;
+  height: 48px;
+}
+
+.blitz-homepage .section-intro .blitz-input .input_1::placeholder {
+  color: #5d5f60;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #5d5f60;
+  margin: 0px 10px;
+}
+
+.blitz-homepage .section-intro .blitz-input .input_2 {
+  position: absolute;
+  right: 4px;
+  top: 4px;
+  display: block;
+  width: 152px;
+  padding: 8px 24px;
+  border: none;
+  background-color: #f0524d;
+  border-radius: 30px;
+  color: #fff;
+  transition: 0.5 ease;
+  height: 40px;
+}
+.blitz-homepage .section-intro .blitz-input .input_2 .las {
+  font-size: 18px;
+}
+@media (max-width: 1279.98px) {
+  .blitz-homepage .section-intro .text-left {
+    margin-top: 40px;
+  }
+  .blitz-homepage .section-intro h1 {
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 54px;
+  }
+
+  .blitz-homepage .section-intro h2 {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 27px;
+    color: #de4b46;
+    margin-top: 24px;
+    margin-bottom: 32px;
+  }
+  .blitz-homepage .video video {
+    width: 300px !important;
+    height: 300px !important;
+  }
+}
+@media (max-width: 991.98px) {
+  .section-intro .container-left {
+    flex: 0 0 60%;
+    max-width: 60%;
+    padding-left: 14px;
+    padding-right: 14px;
+  }
+  .blitz-homepage .video video {
+    width: 100% !important;
+    height: 100% !important;
+  }
+  .section-intro .container-right {
+    flex: 0 0 40%;
+    max-width: 40%;
+    padding-left: 14px;
+    padding-right: 14px;
+    text-align: right;
+  }
+  .blitz-homepage .section-intro .blitz-input form {
+    position: relative;
+    width: 409px;
+  }
+  .blitz-homepage .section-intro .img-thunder {
+    width: 18px !important;
+    height: 36px !important;
+  }
+  .blitz-homepage .section-intro .blitz-input .input_1 {
+    display: block;
+    width: 409px;
+    padding: 4px 4px 4px 32px;
+    border-radius: 40px;
+    color: #5d5f60;
+    border: 1px solid #d9dcdc;
+    background: #f8f9f9;
+    height: 48px;
+  }
+
+  .blitz-homepage .section-intro .blitz-input .input_1::placeholder {
+    color: #5d5f60;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 22px;
+    color: #5d5f60;
+    margin: 0px 10px;
+  }
+
+  .blitz-homepage .section-intro .blitz-input .input_2 {
+    position: absolute;
+    right: 4px;
+    top: 4px;
+    display: block;
+    width: 152px;
+    padding: 8px 24px;
+    border: none;
+    background-color: #f0524d;
+    border-radius: 30px;
+    color: #fff;
+    transition: 0.5 ease;
+    height: 40px;
+  }
+}
+@media (max-width: 767.98px) {
+  .blitz-homepage .section-intro h1 {
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 34px;
+    margin-top: 40px;
+  }
+
+  .blitz-homepage .section-intro h2 {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #de4b46;
+    margin-top: 8px;
+    margin-bottom: 16px;
+  }
+  .blitz-homepage .video video {
+    width: 100% !important;
+    height: 100% !important;
+  }
+  .section-intro .container-right {
+    text-align: left;
+  }
+}
+.blitz-input-mobile {
+  display: none;
+}
+@media (max-width: 767.98px) {
+  .section-intro .container-left {
+    flex: 0 0 100%;
+    max-width: 100%;
+    padding-left: 14px;
+    padding-right: 14px;
+  }
+  .section-intro .container-right {
+    flex: 0 0 100%;
+    max-width: 100%;
+    padding-left: 14px;
+    padding-right: 14px;
+  }
+  .section-intro .container-left img {
+    width: 13px;
+    height: 26px;
+  }
+  .blitz-homepage .header-blitz {
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 27px;
+  }
+  .blitz-homepage .blitz-desc {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 22px;
+  }
+  .blitz-homepage .desc-container {
+    max-width: 530px;
+  }
+  .blitz-homepage .desc-container2 {
+    max-width: 592px;
+  }
+  .blitz-homepage .desc-container3 {
+    max-width: 592px;
+  }
+  .blitz-homepage .container-dark-1 .container-desc {
+    max-width: 592px !important;
+  }
+  .blitz-homepage .container-dark-2 .container-desc {
+    max-width: 592px;
+  }
+  .blitz-homepage .container-dark-1 h1,
+  .blitz-homepage .container-dark-2 h1 {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 36px;
+    margin: 8px 0px;
+  }
+  .blitz-homepage .container-dark-1 .desc,
+  .blitz-homepage .container-dark-2 .desc {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    margin: 8px 0px;
+  }
+  .blitz-homepage .container-dark-1 .sub-desc,
+  .blitz-homepage .container-dark-2 .sub-desc {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+    margin: 0px 10px;
+  }
+  .blitz-homepage .webapp .col-web-apps-home .card-app {
+    height: 350px !important;
+  }
+  .blitz-input-mobile {
+    display: block;
+  }
+}
+@media (max-width: 767.98px) {
+  .section-intro .container-left {
+    flex: 0 0 60%;
+    max-width: 60%;
+    padding-left: 14px;
+    padding-right: 14px;
+  }
+  .section-intro .container-right {
+    flex: 0 0 40%;
+    max-width: 40%;
+    padding-left: 14px;
+    padding-right: 14px;
+  }
+  .section-intro .blitz-input-mobile {
+    display: none !important;
+  }
+  .section-intro .blitz-input .input_1,
+  .section-intro .blitz-input .input_2 {
+    display: none !important;
+  }
+  .blitz-input-mobile-right {
+    display: block;
+    margin-bottom: 80px;
+  }
+  .blitz-homepage .blitz-input-mobile-rigth .input,
+  .blitz-homepage .blitz-input-mobile-right .btn {
+    width: 100%;
+  }
+  .blitz-homepage .blitz-input-mobile-right .input input {
+    border-radius: 40px;
+    margin-top: 16px;
+  }
+  .blitz-homepage .blitz-input-mobile-right .btn {
+    margin-top: 16px;
+  }
+  .section-intro .blitz-input {
+    display: none !important;
+  }
+  .section-intro .blitz-input-mobile-right {
+    display: block !important;
+    width: 60%;
+  }
+}
+@media (max-width: 575.98px) {
+  .section-intro .blitz-input-mobile {
+    display: block !important;
+  }
+  .section-intro .blitz-input .input_1,
+  .section-intro .blitz-input .input_2 {
+    display: block !important;
+  }
+  .section-intro .blitz-input-mobile-right {
+    display: none !important;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .section-intro .container-right {
+    text-align: center;
+  }
+  .blitz-homepage .video video {
+    width: 100% !important;
+    height: 100% !important;
+  }
+  .section-intro .container-left {
+    flex: 0 0 100%;
+    max-width: 100%;
+    padding-left: 14px;
+    padding-right: 14px;
+  }
+  .section-intro .container-right {
+    flex: 0 0 100%;
+    max-width: 100%;
+    padding-left: 14px;
+    padding-right: 14px;
+    text-align: right;
+  }
+  .blitz-homepage .container-dark-1 h1,
+  .blitz-homepage .container-dark-2 h1 {
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 27px;
+    margin: 8px 0px;
+  }
+  .blitz-homepage .container-dark-1 .desc,
+  .blitz-homepage .container-dark-2 .desc {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 22px;
+    margin: 8px 0px;
+  }
+  .blitz-homepage .container-dark-1 .sub-desc,
+  .blitz-homepage .container-dark-2 .sub-desc {
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 18px;
+    margin: 0px 10px;
+  }
+}
+/* ---------------------------------------------- Section 2 Introduction Partners ----------------------------------------------------------- */
+.blitz-homepage .aicrowd-partner {
+  margin-top: 47px;
+  margin-bottom: 100px;
+}
+.blitz-homepage .aicrowd-partner .header {
+  padding-top: 28px;
+}
+.blitz-homepage .aicrowd-partner h1 {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 24px;
+  color: #292c2d;
+}
+.blitz-homepage .aicrowd-partner h1 span {
+  color: #f0524d;
+}
+.blitz-homepage .aicrowd-partner .partner-img {
+  margin: 0 auto;
+}
+.blitz-homepage .aicrowd-partner .partner-image {
+  width: 120px !important;
+  height: 80px !important;
+}
+@media (max-width: 1279.98px) {
+  .blitz-homepage .aicrowd-partner .partner-image {
+    width: 110px !important;
+    height: auto !important;
+  }
+  .blitz-homepage .partner-hide {
+    display: none;
+  }
+}
+@media (max-width: 991.98px) {
+  .blitz-homepage .aicrowd-partner .partner-image {
+    width: 80px !important;
+    height: auto !important;
+  }
+  .blitz-homepage .aicrowd-partner .header {
+    padding-top: 18px;
+  }
+  .blitz-homepage .aicrowd-partner {
+    margin-top: 24px;
+    margin-bottom: 80px;
+  }
+}
+@media (max-width: 767.98px) {
+  .blitz-homepage .aicrowd-partner {
+    display: none;
+  }
+}
+
+/* ---------------------------------------------- Section 3 AI Coders ----------------------------------------------------------- */
+.section-ai-coders .webapp .col-web-apps-home {
+  flex: 0 0 33.3%;
+  max-width: 33.3%;
+  padding: 0 14px;
+}
+
+@media (max-width: 575.98px) {
+  .section-ai-coders .webapp .col-web-apps-home {
+    flex: 0 0 100%;
+    max-width: 100%;
+    padding: 0 14px;
+  }
+}
+.blitz-homepage .webapp .col-web-apps-home {
+  flex: 0 0 33.3%;
+  max-width: 33.3%;
+  padding: 14px;
+  padding-top: 0;
+  padding-bottom: 28px;
+}
+.blitz-homepage .webapp {
+  margin-top: 56px;
+  margin-bottom: 104px;
+  padding-left: 64.6px;
+  padding-right: 64.6px;
+}
+.blitz-homepage .section-ai-coders .webapp .col-web-apps-home .card-title {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 27px;
+  color: #292c2d;
+  margin: 0px 0px;
+}
+.blitz-homepage .section-ai-coders .webapp .col-web-apps-home .card-text {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #5d5f60;
+  margin: 8px 0px;
+}
+.blitz-homepage .section-ai-coders .webapp .col-web-apps-home .img-container {
+  margin: 0 auto;
+  justify-content: center;
+  text-align: center;
+  background: rgba(255, 173, 29, 0.08);
+  margin-bottom: 16px;
+}
+
+.blitz-homepage
+  .section-ai-coders
+  .webapp
+  .col-web-apps-home
+  .img-container
+  img {
+  width: 200px;
+  height: 145px;
+}
+
+@media (max-width: 991.98px) {
+  .blitz-homepage .webapp {
+    margin-top: 40px;
+    margin-bottom: 80px;
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+  .blitz-homepage
+    .section-ai-coders
+    .webapp
+    .col-web-apps-home
+    .img-container
+    img {
+    width: 185px;
+    height: 125px;
+  }
+}
+@media (max-width: 1279.98px) {
+  .blitz-homepage .webapp .col-web-apps-home {
+    padding: 7px;
+  }
+}
+
+/* ---------------------------------------------- Section 4 Unlock ----------------------------------------------------------- */
+.blitz-homepage .unlock .blitz-input form {
+  position: relative;
+  width: 567px;
+  margin-top: 24px;
+  margin-bottom: 104px;
+}
+.blitz-homepage .unlock .blitz-input .input_1 {
+  display: block;
+  width: 567px;
+  padding: 4px 4px 4px 32px;
+  border-radius: 40px;
+  color: #5d5f60;
+  border: 1px solid #d9dcdc;
+  background: #f8f9f9;
+  height: 48px;
+}
+.blitz-homepage .unlock .blitz-input .input_1::placeholder {
+  color: #5d5f60;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #5d5f60;
+  margin: 0px 10px;
+}
+.blitz-homepage .unlock .blitz-input .input_2 {
+  position: absolute;
+  right: 4px;
+  top: 4px;
+  display: block;
+  width: 152px;
+  padding: 8px 24px;
+  border: none;
+  background-color: #f0524d;
+  border-radius: 30px;
+  color: #fff;
+  transition: 0.5 ease;
+  height: 40px;
+}
+.blitz-homepage .unlock .blitz-input .input_2 .las {
+  font-size: 18px;
+}
+.blitz-homepage .unlock .blitz-input .input_2:active {
+  transform: scale(0.9);
+}
+.blitz-homepage .container-dark-1 .blitz-input form {
+  position: relative;
+  width: 564px;
+  margin: 0 auto;
+  margin-top: 40px;
+  margin-bottom: 16px;
+}
+.blitz-homepage .container-dark-1 .blitz-input .input_1 {
+  display: block;
+  width: 100%;
+  padding: 4px 4px 4px 32px;
+  border-radius: 40px;
+  color: #5d5f60;
+  border: 1px solid #d9dcdc;
+  background: #f8f9f9;
+  height: 48px;
+}
+.blitz-homepage .container-dark-1 .blitz-input .input_1::placeholder {
+  color: #5d5f60;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 23px;
+  color: #5d5f60;
+  margin: 0px 10px;
+}
+.blitz-homepage .container-dark-1 .blitz-input .input_2 {
+  position: absolute;
+  right: 4px;
+  top: 4px;
+  display: block;
+  width: 183px;
+  padding: 8px 24px;
+  border: none;
+  background-color: #f0524d;
+  border-radius: 30px;
+  color: #fff;
+  transition: 0.5 ease;
+  height: 40px;
+}
+.blitz-homepage .container-dark-1 .blitz-input .input_2 .las {
+  font-size: 18px;
+}
+.blitz-homepage .container-dark-1 .blitz-input .input_2:active {
+  transform: scale(0.9);
+}
+.blitz-homepage .container-dark-2 .blitz-input form {
+  position: relative;
+  width: 564px;
+  margin: 0 auto;
+  margin-top: 40px;
+  margin-bottom: 16px;
+}
+.blitz-homepage .container-dark-2 .blitz-input .input_1 {
+  display: block;
+  width: 100%;
+  padding: 4px 4px 4px 32px;
+  border-radius: 40px;
+  color: #5d5f60;
+  border: 1px solid #d9dcdc;
+  background: #f8f9f9;
+  height: 48px;
+}
+input:focus {
+  outline: none;
+}
+.blitz-homepage .container-dark-2 .blitz-input .input_1::placeholder {
+  color: #5d5f60;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 23px;
+  color: #5d5f60;
+  margin: 0px 10px;
+}
+.blitz-homepage .container-dark-2 .blitz-input .input_2 {
+  position: absolute;
+  right: 4px;
+  top: 4px;
+  display: block;
+  width: 219px;
+  padding: 8px 24px;
+  border: none;
+  background-color: #f0524d;
+  border-radius: 30px;
+  color: #fff;
+  transition: 0.5 ease;
+  height: 40px;
+}
+.blitz-homepage .container-dark-2 .blitz-input .input_2 .las {
+  font-size: 18px;
+}
+.blitz-homepage .container-dark-2 .blitz-input .input_2:active {
+  transform: scale(0.9);
+}
+@media (max-width: 1279.98px) {
+  .blitz-homepage .unlock .blitz-input form {
+    position: relative;
+    width: 470px;
+    margin-top: 24px;
+    margin-bottom: 104px;
+  }
+  .blitz-homepage .unlock .blitz-input .input_1 {
+    display: block;
+    width: 470px;
+    padding: 4px 4px 4px 32px;
+    border-radius: 40px;
+    color: #5d5f60;
+    border: 1px solid #d9dcdc;
+    background: #f8f9f9;
+    height: 48px;
+  }
+  .blitz-homepage .unlock .blitz-input .input_1::placeholder {
+    color: #5d5f60;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 22px;
+    color: #5d5f60;
+    margin: 0px 10px;
+  }
+  .blitz-homepage .unlock .blitz-input .input_2 {
+    position: absolute;
+    right: 4px;
+    top: 4px;
+    display: block;
+    width: 152px;
+    padding: 8px 24px;
+    border: none;
+    background-color: #f0524d;
+    border-radius: 30px;
+    color: #fff;
+    transition: 0.5 ease;
+    height: 40px;
+  }
+  .blitz-homepage .section-ai-coders .webapp .col-web-apps-home .card-title {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+  }
+  .blitz-homepage .section-ai-coders .webapp .col-web-apps-home .card-text {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 22px;
+  }
+  .blitz-homepage .webapp .card-app .card-footer .submission {
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 21px;
+  }
+  .section-ai-coders .webapp .cards-ai .position-avatar {
+    position: absolute;
+    bottom: 46px !important;
+    left: 16px !important;
+  }
+
+  .section-ai-coders .webapp .cards-ai .position {
+    position: absolute;
+    bottom: 16px !important;
+    left: 16px !important;
+  }
+  .blitz-homepage .flex-ai .webapp .col-web-apps-home .card-title {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+  }
+  .blitz-homepage .flex-ai .webapp .col-web-apps-home .card-text {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 22px;
+  }
+
+  .flex-ai .webapp .cards-ai .position-avatar {
+    position: absolute;
+    bottom: 46px !important;
+    left: 16px !important;
+  }
+
+  .flex-ai .webapp .cards-ai .position {
+    position: absolute;
+    bottom: 16px !important;
+    left: 16px !important;
+  }
+  .blitz-homepage .section-ai-coders .webapp .col-web-apps-home .card-app {
+    height: 330px !important;
+  }
+  .blitz-homepage .flex-ai .webapp .col-web-apps-home .card-app {
+    height: 330px !important;
+  }
+  .blitz-homepage
+    .section-ai-coders
+    .webapp
+    .col-web-apps-home
+    .img-container
+    img {
+    width: 200px;
+    height: 115px;
+  }
+}
+@media (max-width: 767.98px) {
+  .blitz-homepage .section-ai-coders .webapp .col-web-apps-home .card-app {
+    height: 380px !important;
+  }
+  .blitz-homepage .webapp .col-web-apps-home {
+    flex: 0 0 33.3%;
+    max-width: 33.3%;
+  }
+}
+@media (max-width: 575.98px) {
+  .blitz-homepage .webapp .col-web-apps-home {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+}
+/* ---------------------------------------------- Section 5 No- Nonsense ----------------------------------------------------------- */
+.section-nonsense .first-left-container {
+  padding: 0 14px;
+  flex: 0 0 41.66667%;
+  max-width: 41.66667%;
+  text-align: left;
+}
+.section-nonsense .first-right-container {
+  padding: 0 14px;
+  flex: 0 0 58.33333%;
+  max-width: 58.33333%;
+}
+.section-nonsense .second-left-container {
+  padding: 0 14px;
+  flex: 0 0 66.66667%;
+  max-width: 66.66667%;
+}
+.section-nonsense .second-right-container {
+  padding: 0 14px;
+  flex: 0 0 33.33333%;
+  max-width: 33.33333%;
+  text-align: right;
+}
+.blitz-homepage .section1 {
+  margin-top: 56px;
+  margin-bottom: 104px;
+  padding-left: 128.6px;
+  padding-right: 128.6px;
+}
+@media (max-width: 1279.98px) {
+  .blitz-homepage .section1 {
+    margin-top: 56px;
+    margin-bottom: 104px;
+    padding-left: 88.6px;
+    padding-right: 88.6px;
+  }
+}
+@media (max-width: 991.98px) {
+  .blitz-homepage .section1 {
+    margin-top: 48px;
+    margin-bottom: 80px;
+    padding-left: 42.6px;
+    padding-right: 42.6px;
+  }
+  .section-nonsense .first-left-container {
+    padding: 0 14px;
+    flex: 0 0 33.33333%;
+    max-width: 33.33333%;
+  }
+  .section-nonsense .first-right-container {
+    padding: 0 14px;
+    flex: 0 0 66.66667%;
+    max-width: 66.66667%;
+  }
+  .section-nonsense .second-left-container {
+    padding: 0 14px;
+    flex: 0 0 66.66667%;
+    max-width: 66.66667%;
+  }
+  .section-nonsense .second-right-container {
+    padding: 0 14px;
+    flex: 0 0 33.33333%;
+    max-width: 33.33333%;
+  }
+  .section-nonsense .first-left-container img {
+    width: 100%;
+    margin-top: 16px;
+  }
+  .section-nonsense .second-right-container img {
+    width: 100%;
+    margin-top: 16px;
+  }
+  .blitz-homepage .blitz-sub-head {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 27px;
+    color: #292c2d;
+    margin: 0px 8px;
+    margin-top: 40px;
+  }
+  .blitz-homepage .blitz-sub-head-2 {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 27px;
+    color: #292c2d;
+    margin: 0px 8px;
+    margin-top: 60px;
+  }
+  .blitz-homepage .blitz-sub-head-desc {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #5d5f60;
+    margin: 16px 0px;
+  }
+}
+@media (max-width: 767.98px) {
+  .blitz-homepage .section1 {
+    margin-top: 48px;
+    margin-bottom: 80px;
+    padding-left: 42.6px;
+    padding-right: 42.6px;
+  }
+  .section-nonsense .first-left-container {
+    padding: 0 14px;
+    flex: 0 0 100%;
+    max-width: 100%;
+    text-align: center;
+  }
+  .section-nonsense .first-right-container {
+    padding: 0 14px;
+    flex: 0 0 100%;
+    max-width: 100%;
+    max-width: 500px;
+  }
+  .section-nonsense .second-left-container {
+    padding: 0 14px;
+    flex: 0 0 100%;
+    max-width: 100%;
+    max-width: 500px;
+  }
+  .section-nonsense .second-right-container {
+    padding: 0 14px;
+    flex: 0 0 100%;
+    max-width: 100%;
+    text-align: center;
+  }
+  .section-nonsense .first-left-container img {
+    width: 200px;
+    height: 200px;
+    margin-top: 16px;
+  }
+  .section-nonsense .second-right-container img {
+    width: 200px;
+    height: 200px;
+    margin-top: 16px;
+  }
+  .blitz-homepage .blitz-sub-head {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+    color: #292c2d;
+    margin: 0px;
+  }
+  .blitz-homepage .blitz-sub-head-2 {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+    color: #292c2d;
+    margin: 0px;
+  }
+  .blitz-homepage .blitz-sub-head-desc {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 22px;
+    color: #5d5f60;
+    margin: 16px 0px;
+  }
+  .blitz-homepage .hr2 {
+    margin: 8px auto;
+  }
+  .section-nonsense .second-container .row {
+    display: block !important;
+  }
+  .blitz-homepage .flex-ai .webapp .col-web-apps-home .card-app {
+    height: 400px !important;
+  }
+  .blitz-homepage .section-nonsense .icon {
+    width: 24px !important;
+    height: 24px !important;
+  }
+}
+@media (max-width: 575.98px) {
+  .blitz-homepage .section1 {
+    margin-top: 48px;
+    margin-bottom: 80px;
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+}
+/* ---------------------------------------------- Section 6 Find Your AI Tribe ----------------------------------------------------------- */
+.blitz-homepage .image-collage {
+  position: relative;
+  padding-left: 82.6px;
+  padding-right: 82.6px;
+}
+.blitz-homepage .image-collage .image-collage-2 {
+  width: 100%;
+  height: 100%;
+  margin-top: 56px;
+  border-radius: 8px;
+  margin-bottom: 104px;
+}
+@media (max-width: 991.98px) {
+  .blitz-homepage .image-collage {
+    position: relative;
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+  .blitz-homepage .image-collage .image-collage-2 {
+    margin-bottom: 80px;
+    margin-top: 40px;
+  }
+  .blitz-homepage .container-dark-2 .blitz-input form,
+  .blitz-homepage .container-dark-1 .blitz-input form {
+    margin-top: 24px;
+    margin-bottom: 16px;
+  }
+}
+/* ---------------------------------------------- Section 7 Flex AI Skills ----------------------------------------------------------- */
+
+/* ---------------------------------------------- Section 8 ML Portfolio ----------------------------------------------------------- */
+
+/* ---------------------------------------------- Section 9 Testimonials ----------------------------------------------------------- */
+.blitz-homepage .testimonial-section {
+  margin-top: 56px;
+}
+.blitz-homepage
+  .testimonial-section
+  .testimonials
+  .testimonial-card
+  .test-background {
+  position: absolute;
+  z-index: 999;
+  right: 0px;
+  bottom: 0px;
+}
+.blitz-homepage .testimonial-section .testimonials {
+  margin-top: 56px;
+  margin-bottom: 104px;
+}
+.blitz-homepage .testimonial-section .testimonials .testimonial-card {
+  width: 494px;
+  height: 203px;
+  background: #ffffff;
+  border-radius: 8px;
+  padding: 24px;
+  margin: 0px 20px;
+  border: 1px solid #dce0e8;
+  position: relative;
+}
+.blitz-homepage .testimonial-section .testimonials .testimonial-card p {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #292c2d;
+}
+.blitz-homepage .testimonial-section .testimonials .testimonial-card .avatar {
+  width: 30px;
+  height: 30px;
+  margin-right: 8px;
+  margin-top: 16px;
+}
+.blitz-homepage .testimonial-section .testimonials .testimonial-card p {
+  margin-bottom: 0;
+}
+.blitz-homepage .testimonial-section .testimonials .testimonial-card .author {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 22px;
+  color: #434547;
+  margin: 0px 0px;
+  margin-top: -12px;
+}
+.blitz-homepage .testimonial-section .testimonials .testimonial-card .location {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 22px;
+  color: #5d5f60;
+  margin: 0px 0px;
+  margin-left: 42px;
+  margin-top: -12px;
+  margin-bottom: 24px;
+}
+
+/* ---------------------------------------------- Section 10 Pink Bar ----------------------------------------------------------- */
+.blitz-homepage .section-pink .container-pink {
+  padding: 40px;
+  background: #f0524d;
+  margin: 0px auto;
+}
+.blitz-homepage .section-pink .container-pink h1 {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 54px;
+  text-align: center;
+  text-transform: capitalize;
+  color: #ffffff;
+  margin: 0px 10px;
+}
+@media (max-width: 991.98px) {
+  .blitz-homepage .section-pink .container-pink {
+    padding: 32px 28px;
+  }
+  .blitz-homepage .section-pink .container-pink h1 {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 36px;
+  }
+}
+@media (max-width: 767.98px) {
+  .blitz-homepage .section-pink .container-pink {
+    padding: 32px 16px;
+  }
+  .blitz-homepage .section-pink .container-pink h1 {
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 27px;
+  }
+}
+/* ---------------------------------------------- Section 11 FAQ ----------------------------------------------------------- */
+.faq-section .faq-container {
+  padding: 0 14px;
+  flex: 0 0 50%;
+  max-width: 50%;
+}
+.blitz-homepage .faq-section {
+  margin-bottom: 104px;
+}
+.blitz-homepage .faq-section .desc-container {
+  margin-bottom: 56px;
+  margin-top: 16px;
+}
+.blitz-homepage .faq-section .faq-heading {
+  margin-top: 45px;
+  margin-bottom: 15px;
+  text-align: left;
+  font-weight: 400;
+  font-size: 30px;
+  background: #ffffff;
+}
+.blitz-homepage .faq-section summary {
+  text-align: left;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 27px;
+  color: #292c2d;
+  background: #ffffff;
+}
+.blitz-homepage .faq-section .faq-question {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 90%;
+}
+.blitz-homepage .faq-section details[open] .faq-question {
+  white-space: normal !important;
+  overflow: hidden;
+  text-overflow: unset !important;
+}
+.blitz-homepage .faq-section .faq-card {
+  border: 1px solid #dce0e8;
+  border-radius: 6px;
+  padding: 16px;
+  margin: 24px 0;
+  list-style: none;
+  position: relative;
+  cursor: pointer;
+  background: #ffffff;
+}
+.blitz-homepage .faq-section .header-blitz {
+  margin-top: 104px;
+}
+.blitz-homepage .faq-section .faq-open-icon {
+  font-size: 22px;
+  position: absolute;
+  top: 18px;
+  right: 24px;
+  font-weight: 700;
+}
+.blitz-homepage .faq-section details[open] .faq-open-icon {
+  top: 18px;
+  right: 24px;
+}
+.blitz-homepage .faq-section details > summary {
+  list-style: none;
+}
+.blitz-homepage .faq-section details > summary::-webkit-details-marker {
+  display: none;
+}
+.blitz-homepage .faq-section details[open] .faq-card-spoiler {
+  display: inline-block;
+  color: #8b8b9a;
+  text-align: left;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 27px;
+  color: #5d5f60;
+  margin: 16px 0px;
+  margin-bottom: 0;
+}
+.blitz-homepage .faq-section .faq-aftertext {
+  text-align: left;
+  color: #8b8b9a;
+}
+.blitz-homepage .faq-section .faq-background {
+  background-image: url(../../assets/img/blitz/faqs.svg);
+  background-size: 100%;
+}
+@media (max-width: 1279.98px) {
+  .blitz-homepage .faq-section .faq-question {
+    width: 92%;
+  }
+}
+@media (max-width: 991.98px) {
+  .blitz-homepage .faq-section .faq-question {
+    width: 98%;
+  }
+  .blitz-homepage .faq-section {
+    margin-bottom: 80px;
+  }
+  .blitz-homepage .faq-section .header-blitz {
+    margin-top: 80px;
+  }
+  .faq-section {
+    padding-left: 68.5px;
+    padding-right: 68.5px;
+  }
+  .faq-section .faq-container {
+    padding: 0 14px;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+  .blitz-homepage .faq-section .desc-container {
+    margin-bottom: 40px;
+    margin-top: 16px;
+  }
+  .blitz-homepage .faq-section .faq-card {
+    padding: 8px 16px;
+    margin: 16px 0;
+  }
+  .blitz-homepage .faq-section summary {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 22px;
+  }
+  .blitz-homepage .faq-section .faq-open-icon {
+    font-size: 22px;
+    position: absolute;
+    top: 8px;
+    right: 16px;
+    font-weight: 700;
+  }
+  .blitz-homepage .faq-section details[open] .faq-open-icon {
+    top: 8px;
+    right: 16px;
+  }
+  .blitz-homepage .faq-section details[open] .faq-card-spoiler {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 22px;
+    margin: 8px 0;
+  }
+  .mt-faq {
+    margin-top: 0 !important;
+  }
+  @media (max-width: 767.98px) {
+    .faq-section {
+      padding-left: 0;
+      padding-right: 0;
+    }
+    .blitz-homepage .faq-section .faq-question {
+      white-space: normal !important;
+      overflow: hidden;
+      text-overflow: unset !important;
+      width: 90%;
+    }
+    .multi-line-text-truncate {
+      overflow: hidden;
+
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      margin: 0px;
+    }
+    .blitz-homepage .faq-section details[open] .faq-question {
+      white-space: normal !important;
+      overflow: hidden;
+      text-overflow: unset !important;
+    }
+
+    .blitz-homepage .faq-section details[open] .multi-line-text-truncate {
+      -webkit-line-clamp: 3;
+    }
+    .blitz-homepage .faq-section {
+      margin-bottom: 80px !important;
+    }
+    .blitz-homepage .faq-section .faq-background {
+      background-image: none;
+      background-size: 100%;
+    }
+  }
+}
+
+/* ---------------------------------------------- Section 12 Container Unlock Black ----------------------------------------------------------- */
+
+/* ---------------------------------------------- Section 13 Story of Blitz ----------------------------------------------------------- */
+.story-blitz .left-container {
+  padding: 0 14px;
+  flex: 0 0 50%;
+  max-width: 50%;
+}
+.story-blitz .right-container {
+  padding: 0 14px;
+  flex: 0 0 50%;
+  max-width: 50%;
+}
+.blitz-homepage .story-blitz {
+  padding-left: 64.6px;
+  padding-right: 64.6px;
+}
+.blitz-homepage .story-blitz h1 {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 54px;
+  text-transform: capitalize;
+  color: #de4b46;
+  margin: 16px 0px;
+  margin-bottom: 16px;
+  margin-top: 104px;
+}
+.blitz-homepage .story-blitz .img-thunder {
+  width: 24px;
+  height: 48px;
+}
+
+.blitz-homepage .story-blitz .hr {
+  width: 148px;
+  margin: 16px 0;
+}
+.blitz-homepage .story-blitz p {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 27px;
+  color: #5d5f60;
+  flex: none;
+  order: 2;
+  flex-grow: 0;
+  margin: 16px 0px;
+}
+.blitz-homepage .story-blitz .img-right {
+  text-align: right;
+  margin-top: 10px;
+  position: unset;
+  width: unset;
+}
+.blitz-homepage .unlock .box {
+  max-width: 567px;
+  margin: 0 auto;
+  margin-bottom: 104px;
+}
+.blitz-homepage .unlock .box h1 {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 36px;
+  text-align: center;
+  color: #292c2d;
+}
+@media (max-width: 1279.98px) {
+  .blitz-homepage .story-blitz {
+    padding-left: 44.6px;
+    padding-right: 44.6px;
+  }
+}
+@media (max-width: 991.98px) {
+  .blitz-homepage .unlock .box h1 {
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 27px;
+  }
+  .blitz-homepage .story-blitz .img-thunder {
+    width: 10px;
+    height: 20px;
+  }
+  .story-blitz .left-container {
+    padding: 0 14px;
+    flex: 0 0 58.33333%;
+    max-width: 58.33333%;
+  }
+  .story-blitz .right-container {
+    padding: 0 14px;
+    flex: 0 0 41.11111%;
+    max-width: 41.11111%;
+  }
+  .blitz-homepage .story-blitz {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .blitz-homepage .story-blitz h1 {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 36px;
+    margin-top: 80px;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 27px;
+  }
+  .blitz-homepage .story-blitz p {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    margin: 16px 0;
+  }
+  .blitz-homepage .story-blitz .img-right {
+    margin-top: 100px;
+  }
+  .blitz-homepage .story-blitz .img-right img {
+    width: 70%;
+  }
+  .blitz-homepage .unlock .box {
+    max-width: 470px;
+    margin: 0 auto;
+    margin-bottom: 80px;
+  }
+}
+@media (max-width: 767.98px) {
+  .story-blitz .left-container {
+    padding: 0 14px;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+  .story-blitz .right-container {
+    display: none;
+  }
+  .blitz-homepage .story-blitz h1 {
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 27px;
+  }
+}
+
+/* ---------------------------------------------- Section 14 Partner Banner ----------------------------------------------------------- */
+.blitz-homepage .section-partner {
+  margin: 104px auto;
+  text-align: center;
+}
+.blitz-homepage .section-partner h1 {
+  margin: 0 auto;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 36px;
+  color: #292c2d;
+  margin-bottom: 32px;
+}
+.blitz-homepage .section-partner h1 span {
+  color: #f0524d;
+}
+.blitz-homepage .section-partner .partner-img .partner-image {
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+}
+@media (max-width: 1279.98px) {
+  .blitz-homepage .section-partner .partner-img .partner-image {
+    width: 100%;
+  }
+}
+@media (max-width: 991.98px) {
+  .blitz-homepage .section-partner h1 {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 24px;
+  }
+  .blitz-homepage .section-partner {
+    margin: 104px auto;
+    margin-top: 40px;
+    margin-bottom: 135px;
+  }
+}
+@media (max-width: 767.98px) {
+  .blitz-homepage .section-partner .d-flex {
+    display: none !important;
+  }
+  .blitz-homepage .section-partner {
+    display: none !important;
+  }
+  .input_1,
+  .input_2 {
+    display: none !important;
+  }
+}
+
+/* ---------------------------------------------- Section 15 Subscription ----------------------------------------------------------- */
+.blitz-subscription .container-left {
+  flex: 0 0 50%;
+  max-width: 50%;
+}
+.blitz-subscription .container-right {
+  flex: 0 0 50%;
+  max-width: 50%;
+}
+.blitz-homepage .blitz-subscription h1 {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 54px;
+  text-transform: capitalize;
+  color: #de4b46;
+  margin: 56px 0px;
+  margin-top: 104px;
+  margin-bottom: 0;
+}
+
+.blitz-homepage .blitz-subscription .box-outer {
+  text-align: center;
+  justify-content: center;
+  margin: 0 auto;
+  margin-bottom: 104px;
+  margin-top: 56px;
+}
+.blitz-homepage .blitz-subscription h1 span {
+  color: #292c2d;
+}
+.blitz-homepage .blitz-subscription .box {
+  justify-content: center;
+  align-items: center;
+  padding: 24px;
+  border: 1px solid #d9dcdc;
+  box-sizing: border-box;
+  backdrop-filter: blur(10px);
+  border-radius: 8px;
+  width: 85% !important;
+  margin: 0 auto;
+}
+.blitz-homepage .blitz-subscription .box .box-left {
+  text-align: center;
+  justify-content: center;
+  border-right: 1px solid #d9dcdc;
+  padding: 16px;
+}
+.blitz-homepage .blitz-subscription .box .box-right {
+  text-align: left;
+  padding: 16px;
+  border-left: 1px solid #d9dcdc;
+}
+.blitz-homepage .blitz-subscription .box .box-right p {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #434547;
+  margin: 24px 0px;
+}
+.blitz-homepage .blitz-subscription .box .box-left h1 {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 54px;
+  text-transform: capitalize;
+  color: #de4b46;
+  margin: 8px 0px;
+  margin-top: 0;
+  margin-bottom: 24px;
+}
+.blitz-homepage .blitz-subscription .box .box-left h1 span {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #434547;
+}
+.blitz-homepage .blitz-subscription .box .box-left input {
+  border-radius: 1.5rem;
+  padding-left: 2rem;
+}
+.blitz-homepage .blitz-subscription .box .box-left button {
+  width: 100%;
+  margin-top: 16px;
+  margin-bottom: 16px;
+}
+.blitz-homepage .blitz-subscription .box .box-left p {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  text-align: center;
+  color: #434547;
+  margin: 8px 0px;
+}
+.blitz-homepage .testimonial-section .testimonials-first {
+  margin-bottom: 40px !important;
+}
+.blitz-homepage .blitz-subscription .box-container {
+  padding: 0;
+}
+@media (max-width: 1279.98px) {
+  .blitz-homepage .blitz-subscription .box {
+    width: 95% !important;
+  }
+}
+@media (max-width: 991.98px) {
+  .blitz-homepage .blitz-subscription h1 {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 36px;
+    margin: 48px 0px;
+    margin-top: 80px;
+    margin-bottom: 0;
+  }
+  .blitz-homepage .blitz-subscription .box {
+    width: 470px !important;
+  }
+  .blitz-subscription .container-left {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+  .blitz-subscription .container-right {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+  .blitz-homepage .blitz-subscription .box {
+    padding: 24px 16px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+  }
+  .blitz-homepage .blitz-subscription .box .box-left {
+    border-bottom: 1px solid #d9dcdc;
+  }
+  .blitz-homepage .blitz-subscription .box .box-left {
+    padding: 12px 16px;
+    border-right: none !important;
+  }
+  .blitz-homepage .blitz-subscription .box .box-right {
+    padding: 12px 16px;
+    border-left: none !important;
+  }
+  .blitz-homepage .blitz-subscription .box .box-right p {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #434547;
+    margin: 20px 0px;
+  }
+}
+@media (max-width: 767.98px) {
+  .blitz-homepage .blitz-input-mobile .input,
+  .blitz-homepage .blitz-input-mobile .btn {
+    width: 100%;
+  }
+  .blitz-homepage .blitz-input-mobile .input input {
+    border-radius: 40px;
+    margin-top: 16px;
+  }
+  .blitz-homepage .blitz-input-mobile .btn {
+    margin-top: 16px;
+  }
+}
+@media (max-width: 575.98px) {
+  .blitz-homepage .blitz-subscription .box {
+    width: 100% !important;
+    padding: 0;
+  }
+  .blitz-homepage .blitz-subscription .box .box-left {
+    padding-top: 24px;
+    padding-bottom: 24px;
+  }
+  .blitz-homepage .blitz-subscription .box .box-right {
+    padding-top: 24px;
+    padding-bottom: 24px;
+  }
+  .blitz-homepage .blitz-subscription h1 {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 27px;
+  }
+  .blitz-homepage .blitz-subscription .box .box-left h1 {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 36px;
+  }
+  .blitz-homepage .blitz-subscription .box .box-left input {
+    padding-left: 1rem;
+  }
+  .blitz-homepage .blitz-subscription .box .box-left p {
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 18px;
+  }
+  .blitz-homepage .blitz-subscription .box .box-right p {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 22px;
+  }
+  .section-ai-coders {
+    margin-top: 80px !important;
+  }
+  .blitz-homepage .testimonial-section .testimonials .testimonial-card {
+    width: 300px;
+    padding: 16px;
+  }
+  .blitz-homepage .testimonial-section .testimonials .testimonial-card p {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 22px;
+  }
+  .blitz-homepage .testimonial-section .testimonials .testimonial-card .author {
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 18px;
+  }
+  .blitz-homepage
+    .testimonial-section
+    .testimonials
+    .testimonial-card
+    .location {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 18px;
+  }
+  .blitz-homepage .testimonial-section .testimonial-next {
+    margin-top: 0 !important;
+  }
+  .blitz-homepage .testimonial-section .testimonials-first {
+    margin-bottom: 0px !important;
+  }
+}
+
+@media (max-width: 380.98px) {
+  .blitz-homepage .flex-ai .webapp .col-web-apps-home .card-app {
+    height: 350px !important;
+  }
+  .blitz-homepage .section-ai-coders .webapp .col-web-apps-home .card-app {
+    height: 350px !important;
+  }
+  .blitz-homepage .testimonial-section .testimonials .testimonial-card {
+    width: 300px;
+    padding: 16px;
+  }
+}
+.blitz-input-mobile-right {
+  display: none;
+}
+.section-partner-mobile {
+  display: none;
+}
+.section-partner-mobile2 {
+  display: none;
+}
+@media (max-width: 767.98px) {
+  .section-partner-mobile {
+    display: block;
+    margin-top: 80px;
+    margin-bottom: 80px;
+    text-align: center;
+  }
+  .blitz-homepage .section-partner-mobile h1 {
+    margin: 0 auto;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 24px;
+    color: #292c2d;
+    margin-bottom: 32px;
+  }
+  .blitz-homepage .section-partner-mobile h1 span {
+    color: #f0524d;
+  }
+  .section-partner-mobile .partner-img {
+    margin: 0 auto;
+    width: 100%;
+    height: 100%;
+  }
+  .section-partner-mobile .partner-img .partner-image {
+    margin: 0 auto;
+    width: 100%;
+    height: 100%;
+  }
+  .blitz-homepage .section-intro .video {
+    margin-top: 40px;
+  }
+  .blitz-homepage .aicrowd-partner {
+    display: none;
+  }
+  .section-partner-mobile2 {
+    display: block;
+    margin-top: 40px;
+    margin-bottom: 80px;
+    text-align: center;
+  }
+  .blitz-homepage .section-partner-mobile2 h1 {
+    margin: 0 auto;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 24px;
+    color: #292c2d;
+    margin-bottom: 32px;
+  }
+  .blitz-homepage .section-partner-mobile2 h1 span {
+    color: #f0524d;
+  }
+  .section-partner-mobile2 .partner-img {
+    margin: 0 auto;
+    width: 100%;
+    height: 100%;
+  }
+  .section-partner-mobile2 .partner-img .partner-image {
+    margin: 0 auto;
+    width: 100%;
+    height: 100%;
+  }
+  input::placeholder {
+    font-weight: 400 !important;
+    font-size: 14px !important;
+    line-height: 22px !important;
+    padding-right: 24px;
+  }
+}
+@media (max-width: 575.98px) {
+  .blitz-homepage .section-intro .video {
+    margin-top: 0px;
+  }
+}
+/* ------------------------  --------------------------- BLITZ FLEX AI SM  -------------------------  ---------------------------------------- */
+
+.flex-ai-sm #window {
+  width: 100%;
+  padding: 0 14px;
+}
+.flex-ai-sm #slide-container {
+  width: 100%;
+}
+
+/* Height of carousel */
+.flex-ai-sm #slide-container {
+  height: 100%;
+
+  position: relative;
+}
+
+.flex-ai-sm .slide {
+  width: 100%;
+  min-height: 200px;
+}
+
+.flex-ai-sm .slides {
+  display: block;
+}
+
+/* Style of arrows */
+.flex-ai-sm .arrow {
+  color: #de4b46;
+  font-size: 26px;
+
+  padding: 16px;
+  background-color: rgba(0, 0, 0, 0);
+  transition: background-color 0.3s ease;
+}
+
+.flex-ai-sm .arrow:hover {
+  cursor: pointer;
+}
+
+.flex-ai-sm #next {
+  border-radius: 4px 0px 0px 4px;
+  color: #de4b46;
+
+  position: absolute;
+  right: 0px;
+
+  z-index: 999;
+}
+
+.flex-ai-sm #previous {
+  border-radius: 0px 4px 4px 0px;
+  color: #de4b46;
+
+  position: absolute;
+  left: 0px;
+
+  z-index: 999;
+}
+
+.flex-ai-sm #text-bar {
+  background-color: transparent;
+  width: 100%;
+  height: 36px;
+  position: absolute;
+  top: 100%;
+  transform: translate(0%, -100%);
+  text-align: center;
+  height: 36px;
+  line-height: 36px;
+}
+
+.flex-ai-sm .text-bar {
+  padding: 0px;
+  margin: 0px;
+  color: white;
+  position: relative;
+  display: inline-block;
+}
+
+.flex-ai-sm #dotsContainer {
+  width: 100%;
+  height: 20px;
+  text-align: center;
+}
+
+.flex-ai-sm .dots {
+  width: 8px;
+  height: 8px;
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 100%;
+  display: inline-block;
+  margin: 8px 2px;
+}
+
+.flex-ai-sm .activeDot {
+  background-color: #de4b46;
+}
+.flex-ai-sm {
+  display: none !important;
+}
+.p-247 {
+  padding-left: 247px;
+}
+
+@media (max-width: 575.98px) {
+  .flex-ai-lg {
+    display: none !important;
+  }
+  .flex-ai-sm {
+    display: block !important;
+  }
+  .blitz-homepage .flex-ai-sm .webapp .col-web-apps-home .card-app {
+    height: 380px !important;
+  }
+  .p-247 {
+    padding-left: 0px;
+  }
+  .m-150 {
+    margin-left: 150px;
+  }
+}
+@media (max-width: 355.98px) {
+  .blitz-homepage .flex-ai-sm .webapp .col-web-apps-home .card-app {
+    height: 320px !important;
+  }
+}
+.section-partner-sm {
+  display: none !important;
+}
+@media (max-width: 767.98px) {
+  .section-partner-sm {
+    display: block !important;
+    margin-top: 80px;
+    margin-bottom: 80px;
+    text-align: center;
+  }
+  .blitz-homepage .section-partner-sm h1 {
+    margin: 0 auto;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 24px;
+    color: #292c2d;
+    margin-bottom: 32px;
+  }
+  .blitz-homepage .section-partner-sm h1 span {
+    color: #f0524d;
+  }
+
+  .section-partner-sm .partner-img {
+    margin: 0 auto;
+    width: 100%;
+    height: 100%;
+  }
+  .section-partner-sm .partner-img img {
+    width: 100%;
+    height: 100%;
+  }
+
+  .section-partner-sm .list-view {
+    width: 100%;
+    background-color: transparent;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .section-partner-sm .list-view > .item {
+    width: 100%;
+    margin-bottom: 0px;
+    height: 100px;
+    position: relative;
+    overflow-x: auto;
+    overflow-y: hidden;
+  }
+
+  .section-partner-sm .list-view > .item > .wrapper {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    font-size: 0;
+    width: 200%;
+  }
+
+  .section-partner-sm .list-view > .item > .wrapper > * {
+    font-size: initial;
+  }
+
+  .section-partner-sm .list-view > .item > .wrapper > .content {
+    width: 50%;
+    height: 100%;
+    display: inline-block;
+    vertical-align: top;
+  }
+
+  .section-partner-sm .list-view > .item > .wrapper > .left {
+    width: 50%;
+    height: 100%;
+    display: inline-block;
+    vertical-align: top;
+  }
+  .section-partner-sm ::-webkit-scrollbar {
+    display: none !important;
+  }
+}
+@media (max-width: 575.98px) {
+  .section-partner-sm .list-view > .item {
+    width: 100%;
+    margin-bottom: 0px;
+    height: 150px;
+    position: relative;
+    overflow-x: scroll;
+    overflow-y: hidden;
+  }
+}
+
+.testimonial-section .slide {
+  width: 100%;
+  height: 100%;
+  animation: scroll 60s linear infinite;
+}
+
+.testimonial-section .slide-track {
+  width: 100%;
+  display: flex;
+  gap: 20px !important;
+  overflow: hidden;
+}
+
+.testimonial-section .slider {
+  padding: 0px;
+}
+
+.testimonial-section .testimonial-card {
+  margin-right: 0px !important;
+}
+@media (max-width: 575.98px) {
+  .testimonial-section .testimonials-2 {
+    margin-top: 24px !important;
+  }
+  .blitz-homepage .testimonial-section {
+    margin-top: 80px !important;
+    margin-bottom: 80px !important;
+  }
+  .testimonial-section .slide-track {
+    gap: 10px !important;
+  }
+}
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translatex(-1000%);
+  }
+}
+
+/* ------------------------  --------------------------- BLITZ FLEX AI SM  -------------------------  ---------------------------------------- */
+/* ------------------------  --------------------------- BLITZ HOMEPAGE CSS  -------------------------  ---------------------------------------- */
+
+
+/* Custom added while integration */
+.percentile-text {
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  text-align: center;
+  top: 35%;
+  font-size: 14px;
+}
+.blitz-table .tr-active {
+  background-color: #F8F9F9 !important;
+}
+.blitz-table .table-leaderboard .btn-sm {
+  padding-top: 7px;
+}

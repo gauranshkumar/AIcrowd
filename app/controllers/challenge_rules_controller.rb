@@ -30,6 +30,12 @@ class ChallengeRulesController < ApplicationController
       ChallengeParticipant
         .where(challenge_id: @challenge.id, participant_id: current_participant.id)
         .first_or_create
+
+      # Check for Blitz redicts
+      if !@challenge_participant.registered && ChallengeProblems.where('challenge_id = ? OR problem_id = ?', @challenge.id, @challenge.id).present?
+        redirect_to blitz_url
+      end
+
       @challenge_participant.challenge_rules_accepted_version = @challenge_rules.version
     end
 

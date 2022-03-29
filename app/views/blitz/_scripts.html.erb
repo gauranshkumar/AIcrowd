@@ -1,0 +1,91 @@
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+<script type="text/javascript">
+  google.charts.load('current', {'packages':['corechart']});
+  google.charts.setOnLoadCallback(drawPercentileChart);
+
+  function drawPercentileChart() {
+    $('.percentile-pie').each(function() {
+        var element = this;
+        var value = parseInt(this.getAttribute('value'));
+        var data = google.visualization.arrayToDataTable([
+          ['Title', 'Rank'],
+          ['Percentile Rank', value],
+          ['', 100 - value],
+        ]);
+
+        var colorPalette = ['#d9dcdc', '#DED503', '#A3C90B', '#55BA16', '#09AA21'];
+        var options = {
+          pieHole: 0.5,
+          forceIFrame: true,
+          legend: 'none',
+          pieSliceText: 'none',
+          tooltip: { trigger: 'none' },
+          slices: {
+            0: { color: colorPalette[Math.ceil(value/25)] },
+            1: { color: colorPalette[0] }
+          },
+          enableInteractivity: false,
+          chartArea: {'width': '100%', 'height': '80%'},
+        };
+
+        var chart = new google.visualization.PieChart(element);
+        chart.draw(data, options);
+
+        if(value > 0) {
+          $(element).find('iframe').after(
+              `<span class="percentile-text" style="color:${colorPalette[Math.ceil(value/25)]}">${value}%</span>`
+          );
+        } else {
+          $(element).find('iframe').after(
+              `<span class="percentile-text" style="color:${colorPalette[Math.ceil(value/25)]}">?</span>`
+          );
+        }
+    });
+  }
+</script>
+<script src="https://code.highcharts.com/highcharts.js"></script>
+<script src="https://code.highcharts.com/highcharts-more.js"></script>
+<script type="text/javascript">
+$(document).ready(function() {
+  var data = jQuery.parseJSON($('.spider-chart')[0].getAttribute('value'));
+  $('.spider-chart').highcharts({
+    chart: {
+      polar: true,
+      type: 'line',
+      style: {
+        fontFamily: "Georgia, serif",
+        fontSize: '12px'
+      }
+    },
+    title: {
+      text: ''
+    },
+    colors: ['#f0534e', '#ffffff'],
+    pane: {
+      size: '90%'
+    },
+    xAxis: {
+      categories: Object.keys(data),
+      lineWidth: 0
+    },
+    yAxis: {
+      gridLineInterpolation: 'polygon',
+      lineWidth: 0,
+    },
+
+    tooltip: {
+      shared: true,
+      pointFormat: '<span style="color:{series.color}"><b>{point.y:,.0f}%</b><br/>'
+    },
+    legend: {
+      enabled: false
+    },
+    series: [{    
+      data: Object.values(data),
+    }],
+    credits: {
+      enabled: false
+    },
+  });
+});
+</script>

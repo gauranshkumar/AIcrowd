@@ -84,6 +84,10 @@ class DatasetFilesController < ApplicationController
       challenge = @meta_challenge
     end
 
+    if @is_blitz
+      return true
+    end
+
     unless policy(challenge).has_accepted_participation_terms?
       redirect_to [challenge, ParticipationTerms.current_terms]
       return

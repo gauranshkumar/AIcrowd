@@ -1,16 +1,20 @@
-<% if is_current_page_meta_challenge_child(challenge) %>
-  <% meta_challenge = detect_meta_challenge(challenge) %>
-  <% cache_if cache_enabled?, [challenge, meta_challenge] do %>
-    <div class="navigation btn-primary p-2">
-      <div class="container-fluid">
-        <span>
+<% if is_current_page_meta_challenge_child(challenge) || @is_blitz %>
+  <div class="navigation btn-primary p-2">
+    <div class="container-fluid">
+      <span>
+      <% if @is_blitz %>
+        <%= link_to blitz_dashboard_path, {:style=>'color:white;'} do %>
+          <span class="fa fa-chevron-left mr-2"></span>Back to <b>Blitz Dashboard</b>
+        <% end %>
+      <% else %>
+        <% meta_challenge = detect_meta_challenge(challenge) %>
         <%= link_to challenge_path(meta_challenge.slug), {:style=>'color:white;'} do %>
           <span class="fa fa-chevron-left mr-2"></span>Back to <b><%= meta_challenge.challenge %></b>
         <% end %>
-        </span>
-      </div>
+      <% end %>
+      </span>
     </div>
-  <% end %>
+  </div>
 <% end %>
 <% cache_if cache_enabled?, [challenge] do %>
   <!-- masthead - challenge -->
@@ -72,9 +76,11 @@
 <% end %>
 
   <!-- organizer/stats/options -->
-  <%= render partial: 'shared/challenges/masthead_extra',
-      locals: { challenge: challenge, challenge_rounds: challenge_rounds, vote: vote, follow: follow } %>
-    <!-- /organizer/stats/options -->
+  <% if !@is_blitz %>
+    <%= render partial: 'shared/challenges/masthead_extra',
+        locals: { challenge: challenge, challenge_rounds: challenge_rounds, vote: vote, follow: follow } %>
+      <!-- /organizer/stats/options -->
+  <% end %>
   </div>
 </div>
 <!-- /masthead - challenge -->

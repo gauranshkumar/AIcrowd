@@ -3,19 +3,34 @@ module Participants
     VALUE_OF_VISIT      = 1.freeze
     VALUE_OF_SUBMISSION = 10.freeze
 
-    def initialize(participant:)
+    def initialize(participant:, blitz: nil)
       @participant = participant
+      @blitz = false;
+      if blitz.present?
+        @blitz = true;
+      end
     end
 
     def call
-      activity = aicrowd_visits.map do |key, value|
-        {
-          date:                 key,
-          val:                  activity_value(aicrowd_visits[key].to_i, aicrowd_submissions[key].to_i, gitlab_contributions[key].to_i),
-          visits:               aicrowd_visits[key].to_i,
-          submissions:          aicrowd_submissions[key].to_i,
-          gitlab_contributions: gitlab_contributions[key].to_i
-        }
+      if @blitz
+        activity = aicrowd_visits.map do |key, value|
+          {
+            date:                 key,
+            val:                  activity_value(aicrowd_visits[key].to_i, aicrowd_submissions[key].to_i, gitlab_contributions[key].to_i),
+            visits:               aicrowd_visits[key].to_i,
+            submissions:          aicrowd_submissions[key].to_i
+          }
+        end
+      else
+        activity = aicrowd_visits.map do |key, value|
+          {
+            date:                 key,
+            val:                  activity_value(aicrowd_visits[key].to_i, aicrowd_submissions[key].to_i, gitlab_contributions[key].to_i),
+            visits:               aicrowd_visits[key].to_i,
+            submissions:          aicrowd_submissions[key].to_i,
+            gitlab_contributions: gitlab_contributions[key].to_i
+          }
+        end
       end
 
       activity_data = activity.sort_by { |entry| entry[:date] }
@@ -36,7 +51,11 @@ module Participants
     end
 
     def aicrowd_submissions
-      @aicrowd_submissions ||= participant.submissions.group_by_day(:created_at, range: time_range).count
+      if @blitz
+        @aicrowd_submissions ||= participant.submissions.where(challenge_id: BlitzPuzzle.all.pluck(:challenge_id)).group_by_day(:created_at, range: time_range).count
+      else
+        @aicrowd_submissions ||= participant.submissions.group_by_day(:created_at, range: time_range).count
+      end
     end
 
     def gitlab_contributions
@@ -56,9 +75,12 @@ module Participants
     end
 
     def time_range
-      time_range_end = Time.current + 1.day
-
-      1.year.ago.midnight..time_range_end
+      if @blitz
+        return 3.month.ago.midnight..Time.current.midnight
+      else
+        time_range_end = Time.current + 1.day
+        return 1.year.ago.midnight..time_range_end
+      end
     end
   end
 end

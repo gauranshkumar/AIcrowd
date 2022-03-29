@@ -1,0 +1,111 @@
+<div class="blitz-head">
+    <h3 class="heading">this week&prime;s puzzle</h3>
+</div>
+<div class="blitz-cards-wide">
+    <div class="row">
+    <div class="card-container">
+        <% @ongoing_data.each do |data| %>
+        <%
+            puzzle = data['puzzle']
+            registered = data['registered']
+            percentile = data['percentile']
+            is_upcoming = puzzle.start_date > Time.now
+        %>
+        <div class="card-app">
+            <div class="row">
+                <div class="img-container card-container-img">
+                    <div class="img-box">
+                        <%= image_tag puzzle.challenge.landing_square_image_file_url, class: "app-img" %>
+                    </div>
+                </div>
+                <div class="card-container-body">
+                    <div class="card-body">
+                        <%= render partial: "tags", locals: {puzzle: puzzle} %>
+                        <h5 class="card-title">
+                            <%= link_to puzzle.challenge.challenge, blitz_puzzle_path(puzzle.challenge) %>
+                        </h5>
+                        <p class="card-text"><%= puzzle.challenge.tagline %></p>
+                        <div class="d-flex">
+                            <div class="days">
+                                <span class="text">S</span>
+                                <span class="circle circle-green">
+                                    <img src="/assets/img/blitz/check.svg" class="fa fa-check"/>
+                                </span>
+                            </div>
+                            <div class="days">
+                                <span class="text">M</span>
+                                <span class="circle circle-green">
+                                    <img src="/assets/img/blitz/check.svg" class="fa fa-check"/>
+                                </span>
+                            </div>
+                            <div class="days">
+                                <span class="text">T</span>
+                                <span class="circle circle-green">
+                                    <img src="/assets/img/blitz/check.svg" class="fa fa-check"/>
+                                </span>
+                            </div>
+                            <div class="days">
+                                <span class="text">W</span>
+                                <span class="circle circle-green">
+                                    <img src="/assets/img/blitz/check.svg" class="fa fa-check"/>
+                                </span>
+                            </div>
+                            <div class="days">
+                                <span class="text">T</span>
+                                <span class="circle circle-green">
+                                    <img src="/assets/img/blitz/check.svg" class="fa fa-check"/>
+                                </span>
+                            </div>
+                            <div class="days">
+                                <span class="text">F</span>
+                                <span class="circle circle-green">
+                                    <img src="/assets/img/blitz/check.svg" class="fa fa-check"/>
+                                </span>
+                            </div>
+                            <div class="days">
+                                <span class="text">S</span>
+                                <span class="circle circle-grey">
+                                    <img src="/assets/img/blitz/_.svg" class="fa fa-question"/>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="percentile card-container-percentile">
+                    <div class="d-block large-head mt-0">
+                        <span class="large-head mt-5" style="margin-top: 100px">Percentile</span>
+                        <div class="large-stats-pie d-block percentile-pie" value="<%= percentile %>">
+                        </div>
+                    </div>
+                </div>
+                <div class="button-box card-container-button">
+                    <% if is_upcoming %>
+                        <div>
+                            <button type="button" class="btn btn-secondary btn-width btn1 disabled">
+                                Coming Soon <i class="fa fa-lock"></i>
+                            </button>
+                        </div>
+                    <% elsif !registered %>
+                        <div>
+                            <button type="button" class="btn btn-primary mt-btn2 btn-width btn2">
+                                Participate
+                            </button>
+                        </div>
+                    <% else %>
+                        <div>
+                            <%= link_to "My Submissions", challenge_submissions_path(puzzle.challenge), class: "btn btn-primary mt-btn2 btn-width btn2" %>
+                        </div>
+                        <div>
+                            <button type="button" class="btn btn-secondary btn-width btn1">
+                                View App
+                            </button>
+                        </div>
+                    <% end %>
+                </div>
+            </div>
+        </div>
+        <% end %>
+    </div>
+    <!-- /blog post -->
+    </div>
+</div>

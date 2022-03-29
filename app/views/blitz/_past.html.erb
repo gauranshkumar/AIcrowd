@@ -1,0 +1,57 @@
+<div class="card-container-past">
+    <div class="blitz-head">
+        <h3 class="heading"><%= title %></h3>
+    </div>
+    <% if puzzles.count > 0 %>
+        <% puzzles.first(2).each do |data| %>
+            <%
+                puzzle = data['puzzle']
+                percentile = data['percentile']
+                registered = data['registered']
+            %>
+            <div class="card-app">
+                <div class="row">
+                    <div class="col-lg-3 col-md-3 img-container">
+                        <%= image_tag puzzle.challenge.landing_square_image_file_url, class: "app-img" %>
+                    </div>
+                    <div class="col-lg-9 col-md-9">
+                        <div class="card-body">
+                            <%= render partial: "tags", locals: {puzzle: puzzle, past: true} %>
+                            <h5 class="card-title">
+                                <%= link_to puzzle.challenge.challenge, blitz_puzzle_path(puzzle.challenge) %>
+                            </h5>
+                            <p class="card-text truncate w-100"><%= puzzle.challenge.tagline %></p>
+                        </div>
+                        <div class="card-footer">
+                            <div class="row w-100">
+                                <div class="col-lg-7">
+                                    <% if percentile >= 0 %>
+                                        <span class="mr-5 stats-pie">68%</span>
+                                    <% else %>
+                                        <span><img src="/assets/img/blitz/bar<%= puzzle.difficulty %>.svg" class="bar"><%= ["Beginner", "Easy", "Medium"][puzzle.difficulty-1] %></span>
+                                    <% end %>
+                                </div>
+                                <div class="col-lg-5">
+                                    <div class="button-blitz float-right">
+                                        <% if registered %>
+                                            <%= link_to "My Submissions", challenge_submissions_path(puzzle.challenge), class: "btn btn-sm btn-secondary mr-2" %>
+                                            <button type="button" class="btn btn-sm btn-secondary">View App</button>
+                                        <% else %>
+                                            <%= link_to "Participate", blitz_puzzle_path(puzzle.challenge), class: "btn btn-sm btn-primary mr-2" %>
+                                        <% end %>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        <% end %>
+    <% end %>
+    <% if puzzles.count < minimum %>
+        <div class="col-12 d-flex flex-column justify-content-center align-items-center card-app text-truncate" style="height:<%= (2-puzzles.count)*170 %>px">
+            <img src="/assets/img/blitz/placeholder_image_blitz.png" style="width: 200%" />
+            <span class="d-block m-4 position-absolute text-center">Your solved puzzles will appear here.<br/>Check out the <a class="font-weight-bold text-primary">Puzzles Library</a> <i class="fa fa-long-arrow-right"></i></span>
+        </div>
+    <% end %>
+</div>

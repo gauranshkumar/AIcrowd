@@ -1,0 +1,16 @@
+<div class="tags">
+    <%= link_to(blitz_puzzles_url(:category => puzzle.blitz_category.name)) do %>
+        <span class="badge badge-outline-new text-muted border ml-0">
+            <i class="fa <%= puzzle.blitz_category.icon %> mr-1" aria-hidden="true"></i><%= puzzle.blitz_category.name %>
+        </span>
+    <% end %>
+    <% if !defined?(past) %>
+        <span class="badge badge-success ml-0" data-toggle="tooltip" data-placement="top" title="Ends on <%= (puzzle.end_date - 1).to_date %>">
+            <% if puzzle.start_date > Time.now %>
+                Coming soon: <%= ((puzzle.start_date - Time.current)/(60 * 60 * 24)).ceil %> days
+            <% else %>
+                Ongoing: <%= ((puzzle.end_date - Time.current)/(60 * 60 * 24)).ceil %> days left
+            <% end %>
+        </span>
+    <% end %>
+</div>
