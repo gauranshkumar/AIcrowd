@@ -2244,6 +2244,18 @@ input:focus {
 .blitz-homepage .faq-section {
   margin-bottom: 104px;
 }
+.blitz-homepage .faq-section .desc-container4 a {
+  color: #434547;
+}
+.blitz-homepage .faq-section .desc-container4 a:hover {
+  color: #434547;
+}
+.blitz-homepage .faq-section a {
+  color: #434547;
+}
+.blitz-homepage .faq-section a:hover {
+  color: #434547;
+}
 .blitz-homepage .faq-section .desc-container {
   margin-bottom: 56px;
   margin-top: 16px;
@@ -2260,8 +2272,8 @@ input:focus {
   text-align: left;
   font-style: normal;
   font-weight: 600;
-  font-size: 18px;
-  line-height: 27px;
+  font-size: 16px;
+  line-height: 24px;
   color: #292c2d;
   background: #ffffff;
 }
@@ -2312,8 +2324,8 @@ input:focus {
   text-align: left;
   font-style: normal;
   font-weight: 400;
-  font-size: 18px;
-  line-height: 27px;
+  font-size: 16px;
+  line-height: 24px;
   color: #5d5f60;
   margin: 16px 0px;
   margin-bottom: 0;
@@ -2473,6 +2485,7 @@ input:focus {
   margin-top: 10px;
   position: unset;
   width: unset;
+  display: block;
 }
 .blitz-homepage .unlock .box {
   max-width: 567px;
@@ -2611,7 +2624,10 @@ input:focus {
     display: none !important;
   }
 }
-
+.blitz-homepage .section-partner-mobile .partner-box {
+  flex: 0 0 25%;
+  max-width: 25%;
+}
 /* ---------------------------------------------- Section 15 Subscription ----------------------------------------------------------- */
 .blitz-subscription .container-left {
   flex: 0 0 50%;
@@ -3206,7 +3222,6 @@ input:focus {
 /* ------------------------  --------------------------- BLITZ FLEX AI SM  -------------------------  ---------------------------------------- */
 /* ------------------------  --------------------------- BLITZ HOMEPAGE CSS  -------------------------  ---------------------------------------- */
 
-
 /* Custom added while integration */
 .percentile-text {
   position: absolute;
@@ -3219,8 +3234,11 @@ input:focus {
   font-size: 14px;
 }
 .blitz-table .tr-active {
-  background-color: #F8F9F9 !important;
+  background-color: #f8f9f9 !important;
 }
 .blitz-table .table-leaderboard .btn-sm {
   padding-top: 7px;
+}
+.blitz-homepage button {
+  cursor: pointer;
 }
