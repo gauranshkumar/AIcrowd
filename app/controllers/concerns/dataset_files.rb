@@ -5,7 +5,7 @@ module Concerns
     private
 
     def set_dataset_files
-      @dataset_files = policy_scope(DatasetFile).where(challenge_id: @challenge.id)
+      @dataset_files = policy_scope(DatasetFile).where(challenge_id: @challenge.id).order(:title)
       @dataset_files = @dataset_files.map do |dataset_file|
         next dataset_file if dataset_file.hosting_location != 'Own S3'
 
@@ -25,7 +25,7 @@ module Concerns
     end
 
     def set_dataset_folders
-      @dataset_folders = policy_scope(DatasetFolder).where(challenge_id: @challenge.id)
+      @dataset_folders = policy_scope(DatasetFolder).where(challenge_id: @challenge.id).order(:title)
       @dataset_folders.each do |dataset_folder|
         result = Rails.cache.fetch(dataset_folder_cache_key(dataset_folder), expires_in: 5.minutes) do
           Aws::FetchDatasetFolderService.new(dataset_folder: dataset_folder).call
