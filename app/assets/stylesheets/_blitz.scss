@@ -2249,6 +2249,12 @@ input:focus {
   margin-bottom: 56px;
   margin-top: 16px;
 }
+.blitz-homepage .faq-section .desc-container4 a {
+  color: #434547;
+}
+.blitz-homepage .faq-section .desc-container4 a:hover {
+  color: #434547;
+}
 .blitz-homepage .faq-section .faq-heading {
   margin-top: 45px;
   margin-bottom: 15px;
@@ -2261,8 +2267,8 @@ input:focus {
   text-align: left;
   font-style: normal;
   font-weight: 600;
-  font-size: 18px;
-  line-height: 27px;
+  font-size: 16px;
+  line-height: 24px;
   color: #292c2d;
   background: #ffffff;
 }
@@ -2313,8 +2319,8 @@ input:focus {
   text-align: left;
   font-style: normal;
   font-weight: 400;
-  font-size: 18px;
-  line-height: 27px;
+  font-size: 16px;
+  line-height: 24px;
   color: #5d5f60;
   margin: 16px 0px;
   margin-bottom: 0;
@@ -2421,7 +2427,12 @@ input:focus {
     }
   }
 }
-
+.blitz-homepage .faq-section a {
+  color: #434547;
+}
+.blitz-homepage .faq-section a:hover {
+  color: #434547;
+}
 /* ---------------------------------------------- Section 12 Container Unlock Black ----------------------------------------------------------- */
 
 /* ---------------------------------------------- Section 13 Story of Blitz ----------------------------------------------------------- */
@@ -2612,7 +2623,10 @@ input:focus {
     display: none !important;
   }
 }
-
+.blitz-homepage .section-partner-mobile .partner-box {
+  flex: 0 0 25%;
+  max-width: 25%;
+}
 /* ---------------------------------------------- Section 15 Subscription ----------------------------------------------------------- */
 .blitz-subscription .container-left {
   flex: 0 0 50%;
@@ -3224,7 +3238,4 @@ input:focus {
 }
 .blitz-table .table-leaderboard .btn-sm {
   padding-top: 7px;
-}
-.blitz-homepage button {
-  cursor: pointer;
 }
