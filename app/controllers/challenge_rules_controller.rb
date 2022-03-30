@@ -26,14 +26,10 @@ class ChallengeRulesController < ApplicationController
     if current_participant.present?
       authorize @challenge
 
-      @challenge_participant =
-      ChallengeParticipant
-        .where(challenge_id: @challenge.id, participant_id: current_participant.id)
-        .first_or_create
+      @challenge_participant = ChallengeParticipant.where(challenge_id: @challenge.id, participant_id: current_participant.id).first_or_create
 
-      # Check for Blitz redicts
-      if !@challenge_participant.registered && ChallengeProblems.where('challenge_id = ? OR problem_id = ?', @challenge.id, @challenge.id).present?
-        redirect_to blitz_url, notice: 'Welcome to Blitz, the puzzle you are browsing is part of the Blitz Library.'
+      if Challenge.where("challenge ilike '%blitz%'").pluck(:id).include?(@challenge.id) && !@challenge_participant.registered
+        redirect_to blitz_url, notice: 'The puzzle is part of the Blitz Library, stay tuned for the launch. 🎉'
       end
 
       @challenge_participant.challenge_rules_accepted_version = @challenge_rules.version

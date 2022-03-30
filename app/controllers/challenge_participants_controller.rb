@@ -9,11 +9,6 @@ class ChallengeParticipantsController < ApplicationController
 
     authorize @challenge_participant
 
-    # Check for Blitz redicts
-    if ChallengeProblems.where('challenge_id = ? OR problem_id = ?', @challenge.id, @challenge.id).present?
-      redirect_to blitz_url
-    end
-
     if @challenge_participant.save
       accept_non_exclusive_challenge_rules(@challenge, current_participant)
       accept_participation_terms(current_participant)

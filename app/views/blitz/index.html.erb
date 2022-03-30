@@ -1,11 +1,12 @@
 <%
-signup_msg = 'placeholder="Sign-Up for 14 day Free Trial"'.html_safe
-if current_participant.present?
-  signup_msg = ('placeholder="Hi ' + current_participant.name + ', start your 14 day Free Trial" disabled').html_safe
-end
-if @is_subscribed
-  signup_msg = 'placeholder="Hi, you are already subscribed to Blitz" disabled'.html_safe
-end
+signup_msg = 'placeholder="Sign-Up For The Waitlist"'.html_safe
+# TODO: Undo for the waitlist launch
+# if current_participant.present?
+#   signup_msg = ('placeholder="Hi ' + current_participant.name + ', start your 14 day Free Trial" disabled').html_safe
+# end
+# if @is_subscribed
+#   signup_msg = 'placeholder="Hi, you are already subscribed to Blitz" disabled'.html_safe
+# end
 %>
 <div class="content">
 <% if @is_subscribed %>
@@ -264,7 +265,9 @@ end
                   <div class="card-app">
                     <div class="card-body">
                       <div class="img-container">
-                        <img class="app-img" src="/assets/img/blitz/blitz-img.svg" />
+                        <a href="/challenges/ai-blitz-xiii">
+                          <img class="app-img" src="/assets/img/blitz/blitz-img.svg" />
+                        </a>
                       </div>
 
                       <h5 class="card-title">
@@ -288,8 +291,9 @@ end
                 <div class="col-web-apps-home">
                   <div class="card-app">
                     <div class="card-body">
-                      <img class="app-img" src="https://images.aicrowd.com/images/challenges/image_file/699/sm_win.jpg" />
-
+                      <a href="/challenges/ai-blitz-6">
+                        <img class="app-img" src="https://images.aicrowd.com/images/challenges/image_file/699/sm_win.jpg" />
+                      </a>
                       <h5 class="card-title">
                         <a href="/challenges/ai-blitz-6">AIcrowd Blitz ⚡ Chess</a>
                       </h5>
@@ -311,8 +315,9 @@ end
                 <div class="col-web-apps-home">
                   <div class="card-app">
                     <div class="card-body">
-                      <img class="app-img" src="https://images.aicrowd.com/images/challenges/image_file/843/blitz_9__7.1__linkpreview_copy_4.jpg" />
-
+                      <a href="/challenges/ai-blitz-9">
+                        <img class="app-img" src="https://images.aicrowd.com/images/challenges/image_file/843/blitz_9__7.1__linkpreview_copy_4.jpg" />
+                      </a>
                       <h5 class="card-title">
                         <a href="/challenges/ai-blitz-9">AIcrowd Blitz ⚡ Hello NLP</a>
                       </h5>
@@ -338,7 +343,7 @@ end
           <section class="unlock">
             <div class="container-fluid">
               <div class="text-center box">
-                <h1>Unlock This Week’s Puzzle. Join Blitz Now.</h1>
+                <h1>Unlock Puzzles. Join Blitz Waitlist Now.</h1>
                 <div class="blitz-input-mobile">
                   <form action="">
                     <div class="input">
@@ -579,40 +584,26 @@ end
                     <div class="col-web-apps-home cards-ai px-0 slide">
                       <div class="card-app">
                         <div class="card-body">
+                          <a href="https://music-demixing-player.aws-internal.k8s.aicrowd.com/" target="_blank">
+                            <img class="app-img" src="https://images.aicrowd.com/uploads/ckeditor/pictures/401/content_image.png"/>
+                          </a>
                           <h5 class="card-title">
-                            <img
-                              class="app-img"
-                              src="assets/img/blitz/webapp1.svg"
-                            />
-                            <a href="#">NIPS, Minecraft, and VizDoom</a>
+                            <a href="https://music-demixing-player.aws-internal.k8s.aicrowd.com/" target="_blank">Music Demixing Player</a>
                           </h5>
-                          <p class="card-text">Challenge Name</p>
+                          <p class="card-text">Demonstrate your models with ML apps</p>
                         </div>
-
                         <div class="card-footer">
-                          <a href="#">
+                          <a href="https://music-demixing-player.aws-internal.k8s.aicrowd.com/" target="_blank">
                             <div class="position-avatar">
-                              <img
-                                class="avatar"
-                                src="assets/img/user-avatar-default.svg"
-                              />
-                              <span>By spMohanty</span>
+                              <span><b>Live Demo</b></span>
                             </div>
                             <div class="position">
-                              <span class="mr-2"
-                                ><i
-                                  class="fa fa-eye mr-1"
-                                  aria-hidden="true"
-                                ></i>
-                                23</span
-                              >
-                              <span
-                                ><i
-                                  class="fa fa-heart-o mr-1"
-                                  aria-hidden="true"
-                                ></i>
-                                23</span
-                              >
+                              <span class="mr-2">
+                                <i class="fa fa-heart-o mr-1" aria-hidden="true"></i>39
+                              </span>
+                              <span>
+                                <i class="las la-rocket mr-1"></i>1563
+                              </span>
                             </div>
                           </a>
                         </div>
@@ -625,40 +616,23 @@ end
                     <div class="col-web-apps-home cards-ai px-0 slide">
                       <div class="card-app">
                         <div class="card-body">
+                          <a href="https://www.youtube.com/watch?v=GHo8B4JMC38" target="_href">
+                            <img class="app-img" src="assets/img/blitz/minerl.png" />
+                          </a>
                           <h5 class="card-title">
-                            <img
-                              class="app-img"
-                              src="assets/img/blitz/webapp1.svg"
-                            />
-                            <a href="#">NIPS, Minecraft, and VizDoom</a>
+                            <a href="https://www.youtube.com/watch?v=GHo8B4JMC38" target="_href">Minecraft</a>
                           </h5>
-                          <p class="card-text">Challenge Name</p>
+                          <p class="card-text">Watch videos of your models</p>
                         </div>
 
                         <div class="card-footer">
-                          <a href="#">
+                          <a href="https://www.youtube.com/watch?v=GHo8B4JMC38" target="_href">
                             <div class="position-avatar">
-                              <img
-                                class="avatar"
-                                src="assets/img/user-avatar-default.svg"
-                              />
-                              <span>By spMohanty</span>
+                              <span><b>Video</b></span>
                             </div>
                             <div class="position">
-                              <span class="mr-2"
-                                ><i
-                                  class="fa fa-eye mr-1"
-                                  aria-hidden="true"
-                                ></i>
-                                23</span
-                              >
-                              <span
-                                ><i
-                                  class="fa fa-heart-o mr-1"
-                                  aria-hidden="true"
-                                ></i>
-                                23</span
-                              >
+                              <span class="mr-2"><i class="fa fa-eye mr-1" aria-hidden="true"></i> 12k</span>
+                              <span><i class="fa fa-heart-o mr-1" aria-hidden="true"></i>197</span>
                             </div>
                           </a>
                         </div>
@@ -672,37 +646,20 @@ end
                       <div class="card-app">
                         <div class="card-body">
                           <h5 class="card-title">
-                            <img
-                              class="app-img"
-                              src="assets/img/blitz/webapp1.svg"
-                            />
-                            <a href="#">Devesh Minecraft, and VizDoom</a>
+                            <video class="app-img" src="assets/img/blitz/flatland.mp4" autoplay muted loop></video>
+                            <a href="https://www.aicrowd.com/challenges/flatland-3/submissions/168184">Visualise Train Networks</a>
                           </h5>
-                          <p class="card-text">Challenge Name</p>
+                          <p class="card-text">Cool GIF to share along with your performance</p>
                         </div>
 
                         <div class="card-footer">
-                          <a href="#">
+                          <a href="https://www.aicrowd.com/challenges/flatland-3/submissions/168184">
                             <div class="position-avatar">
-                              <img
-                                class="avatar"
-                                src="assets/img/user-avatar-default.svg"
-                              />
-                              <span>By spMohanty</span>
+                              <span><b>View GIF</b></span>
                             </div>
                             <div class="position">
                               <span class="mr-2"
-                                ><i
-                                  class="fa fa-eye mr-1"
-                                  aria-hidden="true"
-                                ></i>
-                                23</span
-                              >
-                              <span
-                                ><i
-                                  class="fa fa-heart-o mr-1"
-                                  aria-hidden="true"
-                                ></i>
+                                ><i class="fa fa-eye mr-1" aria-hidden="true"></i>
                                 23</span
                               >
                             </div>
@@ -735,8 +692,7 @@ end
               <div class="text-center container-desc">
                 <p class="desc">
                   Share your AI portfolio with friends in few simple clicks.
-                  Host your solution for anyone to use. Unlock this week’s AI
-                  puzzles. Sign-up right now.
+                  Host your solution for anyone to use. Unlock new AI puzzles. Sign-up for the waitlist right now.
                 </p>
                 <div class="blitz-input-mobile">
                   <form action="">
@@ -745,7 +701,7 @@ end
 
                     </div>
                     <div class="button">
-                      <button type="button" class="btn btn-sm btn-primary">Try Blitz Now <i class="las la-arrow-right ml-2"></i></button>
+                      <button type="button" class="btn btn-sm btn-primary">Join Now <i class="las la-arrow-right ml-2"></i></button>
                     </div>
                   </form>
                 </div>
@@ -753,7 +709,7 @@ end
                   <form>
                     <input type="text" <%= signup_msg %> class="input_1" />
                     <button type="submit" class="input_2">
-                      Try Blitz Now <i class="las la-arrow-right ml-2"></i>
+                      Join Now <i class="las la-arrow-right ml-2"></i>
                     </button>
                   </form>
                 </div>
@@ -767,1189 +723,48 @@ end
                 <h1 class="header-blitz">AI Community’s Love ️For Blitz</h1>
                 <div class="hr hr-new text-center"><hr /></div>
               </div>
-              <!-- <div class="testimonials testimonials-first" style="margin-bottom: 40px"> -->
-
-                <!-- <div class="wrap">
-                  <ul class="carousel is-set">
-                    <li class="carousel-seat">
-                      <div class="testimonial-card">
-                        <div class="test-background">
-                          <img
-                            src="assets/img/blitz/testimonial-thunder.svg"
-                            alt=""
-                            srcset=""
-                          />
-                        </div>
-                        <p>
-                          Velit bibendum mauris quisque eget pellentesque
-                          aliquam. Sit at faucibus nunc, auctor sit in urna,
-                          suspendisse duis. Pellentesque egestas auctor ac
-                          nascetur vitae ullamcorper diam in.
-                        </p>
-                        <img
-                          class="avatar"
-                          src="assets/img/user-avatar-default.svg"
-                        />
-                        <span class="author">By spMohanty</span>
-                        <span class="location d-block">City, Country</span>
-                        <div class="mb-5" style="margin-bottom: 24px"></div>
-                      </div>
-                    </li>
-                    <li class="carousel-seat">
-                      <div class="testimonial-card">
-                        <div class="test-background">
-                          <img
-                            src="assets/img/blitz/testimonial-thunder.svg"
-                            alt=""
-                            srcset=""
-                          />
-                        </div>
-                        <p>
-                          Velit bibendum mauris quisque eget pellentesque
-                          aliquam. Sit at faucibus nunc, auctor sit in urna,
-                          suspendisse duis. Pellentesque egestas auctor ac
-                          nascetur vitae ullamcorper diam in.
-                        </p>
-                        <img
-                          class="avatar"
-                          src="assets/img/user-avatar-default.svg"
-                        />
-                        <span class="author">By spMohanty</span>
-                        <span class="location d-block">City, Country</span>
-                        <div class="mb-5" style="margin-bottom: 24px"></div>
-                      </div>
-                    </li>
-                    <li class="carousel-seat">
-                      <div class="testimonial-card">
-                        <div class="test-background">
-                          <img
-                            src="assets/img/blitz/testimonial-thunder.svg"
-                            alt=""
-                            srcset=""
-                          />
-                        </div>
-                        <p>
-                          Velit bibendum mauris quisque eget pellentesque
-                          aliquam. Sit at faucibus nunc, auctor sit in urna,
-                          suspendisse duis. Pellentesque egestas auctor ac
-                          nascetur vitae ullamcorper diam in.
-                        </p>
-                        <img
-                          class="avatar"
-                          src="assets/img/user-avatar-default.svg"
-                        />
-                        <span class="author">By spMohanty</span>
-                        <span class="location d-block">City, Country</span>
-                        <div class="mb-5" style="margin-bottom: 24px"></div>
-                      </div>
-                    </li>
-                    <li class="carousel-seat">
-                      <div class="testimonial-card">
-                        <div class="test-background">
-                          <img
-                            src="assets/img/blitz/testimonial-thunder.svg"
-                            alt=""
-                            srcset=""
-                          />
-                        </div>
-                        <p>
-                          Velit bibendum mauris quisque eget pellentesque
-                          aliquam. Sit at faucibus nunc, auctor sit in urna,
-                          suspendisse duis. Pellentesque egestas auctor ac
-                          nascetur vitae ullamcorper diam in.
-                        </p>
-                        <img
-                          class="avatar"
-                          src="assets/img/user-avatar-default.svg"
-                        />
-                        <span class="author">By spMohanty</span>
-                        <span class="location d-block">City, Country</span>
-                        <div class="mb-5" style="margin-bottom: 24px"></div>
-                      </div>
-                    </li>
-
-                    <li class="carousel-seat">
-                      <div class="testimonial-card">
-                        <div class="test-background">
-                          <img
-                            src="assets/img/blitz/testimonial-thunder.svg"
-                            alt=""
-                            srcset=""
-                          />
-                        </div>
-                        <p>
-                          Velit bibendum mauris quisque eget pellentesque
-                          aliquam. Sit at faucibus nunc, auctor sit in urna,
-                          suspendisse duis. Pellentesque egestas auctor ac
-                          nascetur vitae ullamcorper diam in.
-                        </p>
-                        <img
-                          class="avatar"
-                          src="assets/img/user-avatar-default.svg"
-                        />
-                        <span class="author">By spMohanty</span>
-                        <span class="location d-block">City, Country</span>
-                        <div class="mb-5" style="margin-bottom: 24px"></div>
-                      </div>
-                    </li>
-
-                    <li class="carousel-seat is-ref">
-                      <div class="testimonial-card">
-                        <div class="test-background">
-                          <img
-                            src="assets/img/blitz/testimonial-thunder.svg"
-                            alt=""
-                            srcset=""
-                          />
-                        </div>
-                        <p>
-                          Velit bibendum mauris quisque eget pellentesque
-                          aliquam. Sit at faucibus nunc, auctor sit in urna,
-                          suspendisse duis. Pellentesque egestas auctor ac
-                          nascetur vitae ullamcorper diam in.
-                        </p>
-                        <img
-                          class="avatar"
-                          src="assets/img/user-avatar-default.svg"
-                        />
-                        <span class="author">By spMohanty</span>
-                        <span class="location d-block">City, Country</span>
-                        <div class="mb-5" style="margin-bottom: 24px"></div>
-                      </div>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-              <div class="testimonials testimonial-next">
-                <div class="wrap">
-                  <ul class="carousel is-set">
-                    <li class="carousel-seat">
-                      <div class="testimonial-card">
-                        <div class="test-background">
-                          <img
-                            src="assets/img/blitz/testimonial-thunder.svg"
-                            alt=""
-                            srcset=""
-                          />
-                        </div>
-                        <p>
-                          Velit bibendum mauris quisque eget pellentesque
-                          aliquam. Sit at faucibus nunc, auctor sit in urna,
-                          suspendisse duis. Pellentesque egestas auctor ac
-                          nascetur vitae ullamcorper diam in.
-                        </p>
-                        <img
-                          class="avatar"
-                          src="assets/img/user-avatar-default.svg"
-                        />
-                        <span class="author">By spMohanty</span>
-                        <span class="location d-block">City, Country</span>
-                        <div class="mb-5" style="margin-bottom: 24px"></div>
-                      </div>
-                    </li>
-                    <li class="carousel-seat">
-                      <div class="testimonial-card">
-                        <div class="test-background">
-                          <img
-                            src="assets/img/blitz/testimonial-thunder.svg"
-                            alt=""
-                            srcset=""
-                          />
-                        </div>
-                        <p>
-                          Velit bibendum mauris quisque eget pellentesque
-                          aliquam. Sit at faucibus nunc, auctor sit in urna,
-                          suspendisse duis. Pellentesque egestas auctor ac
-                          nascetur vitae ullamcorper diam in.
-                        </p>
-                        <img
-                          class="avatar"
-                          src="assets/img/user-avatar-default.svg"
-                        />
-                        <span class="author">By spMohanty</span>
-                        <span class="location d-block">City, Country</span>
-                        <div class="mb-5" style="margin-bottom: 24px"></div>
-                      </div>
-                    </li>
-                    <li class="carousel-seat">
-                      <div class="testimonial-card">
-                        <div class="test-background">
-                          <img
-                            src="assets/img/blitz/testimonial-thunder.svg"
-                            alt=""
-                            srcset=""
-                          />
-                        </div>
-                        <p>
-                          Velit bibendum mauris quisque eget pellentesque
-                          aliquam. Sit at faucibus nunc, auctor sit in urna,
-                          suspendisse duis. Pellentesque egestas auctor ac
-                          nascetur vitae ullamcorper diam in.
-                        </p>
-                        <img
-                          class="avatar"
-                          src="assets/img/user-avatar-default.svg"
-                        />
-                        <span class="author">By spMohanty</span>
-                        <span class="location d-block">City, Country</span>
-                        <div class="mb-5" style="margin-bottom: 24px"></div>
-                      </div>
-                    </li>
-                    <li class="carousel-seat">
-                      <div class="testimonial-card">
-                        <div class="test-background">
-                          <img
-                            src="assets/img/blitz/testimonial-thunder.svg"
-                            alt=""
-                            srcset=""
-                          />
-                        </div>
-                        <p>
-                          Velit bibendum mauris quisque eget pellentesque
-                          aliquam. Sit at faucibus nunc, auctor sit in urna,
-                          suspendisse duis. Pellentesque egestas auctor ac
-                          nascetur vitae ullamcorper diam in.
-                        </p>
-                        <img
-                          class="avatar"
-                          src="assets/img/user-avatar-default.svg"
-                        />
-                        <span class="author">By spMohanty</span>
-                        <span class="location d-block">City, Country</span>
-                        <div class="mb-5" style="margin-bottom: 24px"></div>
-                      </div>
-                    </li>
-
-                    <li class="carousel-seat">
-                      <div class="testimonial-card">
-                        <div class="test-background">
-                          <img
-                            src="assets/img/blitz/testimonial-thunder.svg"
-                            alt=""
-                            srcset=""
-                          />
-                        </div>
-                        <p>
-                          Velit bibendum mauris quisque eget pellentesque
-                          aliquam. Sit at faucibus nunc, auctor sit in urna,
-                          suspendisse duis. Pellentesque egestas auctor ac
-                          nascetur vitae ullamcorper diam in.
-                        </p>
-                        <img
-                          class="avatar"
-                          src="assets/img/user-avatar-default.svg"
-                        />
-                        <span class="author">By spMohanty</span>
-                        <span class="location d-block">City, Country</span>
-                        <div class="mb-5" style="margin-bottom: 24px"></div>
-                      </div>
-                    </li>
-
-                    <li class="carousel-seat is-ref">
-                      <div class="testimonial-card">
-                        <div class="test-background">
-                          <img
-                            src="assets/img/blitz/testimonial-thunder.svg"
-                            alt=""
-                            srcset=""
-                          />
-                        </div>
-                        <p>
-                          Velit bibendum mauris quisque eget pellentesque
-                          aliquam. Sit at faucibus nunc, auctor sit in urna,
-                          suspendisse duis. Pellentesque egestas auctor ac
-                          nascetur vitae ullamcorper diam in.
-                        </p>
-                        <img
-                          class="avatar"
-                          src="assets/img/user-avatar-default.svg"
-                        />
-                        <span class="author">By spMohanty</span>
-                        <span class="location d-block">City, Country</span>
-                        <div class="mb-5" style="margin-bottom: 24px"></div>
-                      </div>
-                    </li>
-                  </ul>
-                </div> -->
-              <!-- </div> -->
               <section class="testimonial-section" >
                 <div class=" testimonials mb-0">
                   <div class="slider">
                     <div class="slide-track">
-                      <div class="slide">
-                        <div class="testimonial-card">
-                          <div class="test-background">
-                            <img
-                              src="assets/img/blitz/testimonial-thunder.svg"
-                              alt=""
-                              srcset=""
-                            />
+                      <% @testimonials.first(7).each_with_index do |testimonial, index| %>
+                        <div class="slide">
+                          <div class="testimonial-card">
+                            <div class="test-background">
+                              <img src="/assets/img/blitz/testimonial-thunder.svg" /></div><p><%= testimonial[:message] %></p>
+                              <%= link_to participant_url(testimonial[:username]) do %>
+                                <%= participant_avatar Participant.find(testimonial[:username]) %>
+                                <span class="author">By <%= testimonial[:name] %></span>
+                                <span class="location d-block"><%= testimonial[:organisation] %></span>
+                              <% end %>
+                              <div class="mb-5" style="margin-bottom: 24px"></div>
                           </div>
-                          <p>
-                            Velit bibendum mauris quisque eget pellentesque aliquam.
-                            Sit at faucibus nunc, auctor sit in urna, suspendisse
-                            duis. Pellentesque egestas auctor ac nascetur vitae
-                            ullamcorper diam in.
-                          </p>
-                          <img
-                            class="avatar"
-                            src="assets/img/user-avatar-default.svg"
-                          />
-                          <span class="author">By spMohanty</span>
-                          <span class="location d-block">City, Country</span>
-                          <div class="mb-5" style="margin-bottom: 24px"></div>
                         </div>
-                      </div>
-                      <div class="slide">
-                        <div class="testimonial-card">
-                          <div class="test-background">
-                            <img
-                              src="assets/img/blitz/testimonial-thunder.svg"
-                              alt=""
-                              srcset=""
-                            />
-                          </div>
-                          <p>
-                            Velit bibendum mauris quisque eget pellentesque aliquam.
-                            Sit at faucibus nunc, auctor sit in urna, suspendisse
-                            duis. Pellentesque egestas auctor ac nascetur vitae
-                            ullamcorper diam in.
-                          </p>
-                          <img
-                            class="avatar"
-                            src="assets/img/user-avatar-default.svg"
-                          />
-                          <span class="author">By spMohanty</span>
-                          <span class="location d-block">City, Country</span>
-                          <div class="mb-5" style="margin-bottom: 24px"></div>
-                        </div>
-                      </div>
-                      <div class="slide">
-      <div class="testimonial-card">
-                          <div class="test-background">
-                            <img
-                              src="assets/img/blitz/testimonial-thunder.svg"
-                              alt=""
-                              srcset=""
-                            />
-                          </div>
-                          <p>
-                            Velit bibendum mauris quisque eget pellentesque aliquam.
-                            Sit at faucibus nunc, auctor sit in urna, suspendisse
-                            duis. Pellentesque egestas auctor ac nascetur vitae
-                            ullamcorper diam in.
-                          </p>
-                          <img
-                            class="avatar"
-                            src="assets/img/user-avatar-default.svg"
-                          />
-                          <span class="author">By spMohanty</span>
-                          <span class="location d-block">City, Country</span>
-                          <div class="mb-5" style="margin-bottom: 24px"></div>
-                        </div>
-                      </div>
-                      <div class="slide">
-      <div class="testimonial-card">
-                          <div class="test-background">
-                            <img
-                              src="assets/img/blitz/testimonial-thunder.svg"
-                              alt=""
-                              srcset=""
-                            />
-                          </div>
-                          <p>
-                            Velit bibendum mauris quisque eget pellentesque aliquam.
-                            Sit at faucibus nunc, auctor sit in urna, suspendisse
-                            duis. Pellentesque egestas auctor ac nascetur vitae
-                            ullamcorper diam in.
-                          </p>
-                          <img
-                            class="avatar"
-                            src="assets/img/user-avatar-default.svg"
-                          />
-                          <span class="author">By spMohanty</span>
-                          <span class="location d-block">City, Country</span>
-                          <div class="mb-5" style="margin-bottom: 24px"></div>
-                        </div>
-                      </div>
-                      <div class="slide">
-                        <div class="testimonial-card">
-                          <div class="test-background">
-                            <img
-                              src="assets/img/blitz/testimonial-thunder.svg"
-                              alt=""
-                              srcset=""
-                            />
-                          </div>
-                          <p>
-                            Velit bibendum mauris quisque eget pellentesque aliquam.
-                            Sit at faucibus nunc, auctor sit in urna, suspendisse
-                            duis. Pellentesque egestas auctor ac nascetur vitae
-                            ullamcorper diam in.
-                          </p>
-                          <img
-                            class="avatar"
-                            src="assets/img/user-avatar-default.svg"
-                          />
-                          <span class="author">By spMohanty</span>
-                          <span class="location d-block">City, Country</span>
-                          <div class="mb-5" style="margin-bottom: 24px"></div>
-                        </div>
-                      </div>
-                      <div class="slide">
-                        <div class="testimonial-card">
-                          <div class="test-background">
-                            <img
-                              src="assets/img/blitz/testimonial-thunder.svg"
-                              alt=""
-                              srcset=""
-                            />
-                          </div>
-                          <p>
-                            Velit bibendum mauris quisque eget pellentesque aliquam.
-                            Sit at faucibus nunc, auctor sit in urna, suspendisse
-                            duis. Pellentesque egestas auctor ac nascetur vitae
-                            ullamcorper diam in.
-                          </p>
-                          <img
-                            class="avatar"
-                            src="assets/img/user-avatar-default.svg"
-                          />
-                          <span class="author">By spMohanty</span>
-                          <span class="location d-block">City, Country</span>
-                          <div class="mb-5" style="margin-bottom: 24px"></div>
-                        </div>
-                      </div>
-                      <div class="slide">
-                        <div class="testimonial-card">
-                          <div class="test-background">
-                            <img
-                              src="assets/img/blitz/testimonial-thunder.svg"
-                              alt=""
-                              srcset=""
-                            />
-                          </div>
-                          <p>
-                            Velit bibendum mauris quisque eget pellentesque aliquam.
-                            Sit at faucibus nunc, auctor sit in urna, suspendisse
-                            duis. Pellentesque egestas auctor ac nascetur vitae
-                            ullamcorper diam in.
-                          </p>
-                          <img
-                            class="avatar"
-                            src="assets/img/user-avatar-default.svg"
-                          />
-                          <span class="author">By spMohanty</span>
-                          <span class="location d-block">City, Country</span>
-                          <div class="mb-5" style="margin-bottom: 24px"></div>
-                        </div>
-                      </div>
-                      <div class="slide">
-                        <div class="testimonial-card">
-                          <div class="test-background">
-                            <img
-                              src="assets/img/blitz/testimonial-thunder.svg"
-                              alt=""
-                              srcset=""
-                            />
-                          </div>
-                          <p>
-                            Velit bibendum mauris quisque eget pellentesque aliquam.
-                            Sit at faucibus nunc, auctor sit in urna, suspendisse
-                            duis. Pellentesque egestas auctor ac nascetur vitae
-                            ullamcorper diam in.
-                          </p>
-                          <img
-                            class="avatar"
-                            src="assets/img/user-avatar-default.svg"
-                          />
-                          <span class="author">By spMohanty</span>
-                          <span class="location d-block">City, Country</span>
-                          <div class="mb-5" style="margin-bottom: 24px"></div>
-                        </div>
-                      </div>
-                      <div class="slide">
-      <div class="testimonial-card">
-                          <div class="test-background">
-                            <img
-                              src="assets/img/blitz/testimonial-thunder.svg"
-                              alt=""
-                              srcset=""
-                            />
-                          </div>
-                          <p>
-                            Velit bibendum mauris quisque eget pellentesque aliquam.
-                            Sit at faucibus nunc, auctor sit in urna, suspendisse
-                            duis. Pellentesque egestas auctor ac nascetur vitae
-                            ullamcorper diam in.
-                          </p>
-                          <img
-                            class="avatar"
-                            src="assets/img/user-avatar-default.svg"
-                          />
-                          <span class="author">By spMohanty</span>
-                          <span class="location d-block">City, Country</span>
-                          <div class="mb-5" style="margin-bottom: 24px"></div>
-                        </div>
-                      </div>
-                      <div class="slide">
-      <div class="testimonial-card">
-                          <div class="test-background">
-                            <img
-                              src="assets/img/blitz/testimonial-thunder.svg"
-                              alt=""
-                              srcset=""
-                            />
-                          </div>
-                          <p>
-                            Velit bibendum mauris quisque eget pellentesque aliquam.
-                            Sit at faucibus nunc, auctor sit in urna, suspendisse
-                            duis. Pellentesque egestas auctor ac nascetur vitae
-                            ullamcorper diam in.
-                          </p>
-                          <img
-                            class="avatar"
-                            src="assets/img/user-avatar-default.svg"
-                          />
-                          <span class="author">By spMohanty</span>
-                          <span class="location d-block">City, Country</span>
-                          <div class="mb-5" style="margin-bottom: 24px"></div>
-                        </div>
-                      </div>
-                      <div class="slide">
-                        <div class="testimonial-card">
-                          <div class="test-background">
-                            <img
-                              src="assets/img/blitz/testimonial-thunder.svg"
-                              alt=""
-                              srcset=""
-                            />
-                          </div>
-                          <p>
-                            Velit bibendum mauris quisque eget pellentesque aliquam.
-                            Sit at faucibus nunc, auctor sit in urna, suspendisse
-                            duis. Pellentesque egestas auctor ac nascetur vitae
-                            ullamcorper diam in.
-                          </p>
-                          <img
-                            class="avatar"
-                            src="assets/img/user-avatar-default.svg"
-                          />
-                          <span class="author">By spMohanty</span>
-                          <span class="location d-block">City, Country</span>
-                          <div class="mb-5" style="margin-bottom: 24px"></div>
-                        </div>
-                      </div>
-                      <div class="slide">
-                        <div class="testimonial-card">
-                          <div class="test-background">
-                            <img
-                              src="assets/img/blitz/testimonial-thunder.svg"
-                              alt=""
-                              srcset=""
-                            />
-                          </div>
-                          <p>
-                            Velit bibendum mauris quisque eget pellentesque aliquam.
-                            Sit at faucibus nunc, auctor sit in urna, suspendisse
-                            duis. Pellentesque egestas auctor ac nascetur vitae
-                            ullamcorper diam in.
-                          </p>
-                          <img
-                            class="avatar"
-                            src="assets/img/user-avatar-default.svg"
-                          />
-                          <span class="author">By spMohanty</span>
-                          <span class="location d-block">City, Country</span>
-                          <div class="mb-5" style="margin-bottom: 24px"></div>
-                        </div>
-                      </div>
-                      <div class="slide">
-                        <div class="testimonial-card">
-                          <div class="test-background">
-                            <img
-                              src="assets/img/blitz/testimonial-thunder.svg"
-                              alt=""
-                              srcset=""
-                            />
-                          </div>
-                          <p>
-                            Velit bibendum mauris quisque eget pellentesque aliquam.
-                            Sit at faucibus nunc, auctor sit in urna, suspendisse
-                            duis. Pellentesque egestas auctor ac nascetur vitae
-                            ullamcorper diam in.
-                          </p>
-                          <img
-                            class="avatar"
-                            src="assets/img/user-avatar-default.svg"
-                          />
-                          <span class="author">By spMohanty</span>
-                          <span class="location d-block">City, Country</span>
-                          <div class="mb-5" style="margin-bottom: 24px"></div>
-                        </div>
-                      </div>
-                      <div class="slide">
-                        <div class="testimonial-card">
-                          <div class="test-background">
-                            <img
-                              src="assets/img/blitz/testimonial-thunder.svg"
-                              alt=""
-                              srcset=""
-                            />
-                          </div>
-                          <p>
-                            Velit bibendum mauris quisque eget pellentesque aliquam.
-                            Sit at faucibus nunc, auctor sit in urna, suspendisse
-                            duis. Pellentesque egestas auctor ac nascetur vitae
-                            ullamcorper diam in.
-                          </p>
-                          <img
-                            class="avatar"
-                            src="assets/img/user-avatar-default.svg"
-                          />
-                          <span class="author">By spMohanty</span>
-                          <span class="location d-block">City, Country</span>
-                          <div class="mb-5" style="margin-bottom: 24px"></div>
-                        </div>
-                      </div>
-                      <div class="slide">
-                        <div class="testimonial-card">
-                          <div class="test-background">
-                            <img
-                              src="assets/img/blitz/testimonial-thunder.svg"
-                              alt=""
-                              srcset=""
-                            />
-                          </div>
-                          <p>
-                            Velit bibendum mauris quisque eget pellentesque aliquam.
-                            Sit at faucibus nunc, auctor sit in urna, suspendisse
-                            duis. Pellentesque egestas auctor ac nascetur vitae
-                            ullamcorper diam in.
-                          </p>
-                          <img
-                            class="avatar"
-                            src="assets/img/user-avatar-default.svg"
-                          />
-                          <span class="author">By spMohanty</span>
-                          <span class="location d-block">City, Country</span>
-                          <div class="mb-5" style="margin-bottom: 24px"></div>
-                        </div>
-                      </div>
-                      <div class="slide">
-      <div class="testimonial-card">
-                          <div class="test-background">
-                            <img
-                              src="assets/img/blitz/testimonial-thunder.svg"
-                              alt=""
-                              srcset=""
-                            />
-                          </div>
-                          <p>
-                            Velit bibendum mauris quisque eget pellentesque aliquam.
-                            Sit at faucibus nunc, auctor sit in urna, suspendisse
-                            duis. Pellentesque egestas auctor ac nascetur vitae
-                            ullamcorper diam in.
-                          </p>
-                          <img
-                            class="avatar"
-                            src="assets/img/user-avatar-default.svg"
-                          />
-                          <span class="author">By spMohanty</span>
-                          <span class="location d-block">City, Country</span>
-                          <div class="mb-5" style="margin-bottom: 24px"></div>
-                        </div>
-                      </div>
-                      <div class="slide">
-                        <div class="testimonial-card">
-                          <div class="test-background">
-                            <img
-                              src="assets/img/blitz/testimonial-thunder.svg"
-                              alt=""
-                              srcset=""
-                            />
-                          </div>
-                          <p>
-                            Velit bibendum mauris quisque eget pellentesque aliquam.
-                            Sit at faucibus nunc, auctor sit in urna, suspendisse
-                            duis. Pellentesque egestas auctor ac nascetur vitae
-                            ullamcorper diam in.
-                          </p>
-                          <img
-                            class="avatar"
-                            src="assets/img/user-avatar-default.svg"
-                          />
-                          <span class="author">By spMohanty</span>
-                          <span class="location d-block">City, Country</span>
-                          <div class="mb-5" style="margin-bottom: 24px"></div>
-                        </div>
-                      </div>
-                      <div class="slide">
-                        <div class="testimonial-card">
-                          <div class="test-background">
-                            <img
-                              src="assets/img/blitz/testimonial-thunder.svg"
-                              alt=""
-                              srcset=""
-                            />
-                          </div>
-                          <p>
-                            Velit bibendum mauris quisque eget pellentesque aliquam.
-                            Sit at faucibus nunc, auctor sit in urna, suspendisse
-                            duis. Pellentesque egestas auctor ac nascetur vitae
-                            ullamcorper diam in.
-                          </p>
-                          <img
-                            class="avatar"
-                            src="assets/img/user-avatar-default.svg"
-                          />
-                          <span class="author">By spMohanty</span>
-                          <span class="location d-block">City, Country</span>
-                          <div class="mb-5" style="margin-bottom: 24px"></div>
-                        </div>
-                      </div>
+                      <% end %>
                     </div>
                   </div>
                 </div>
-                <div class=" testimonials testimonials-2  " >
+                <div class="testimonials testimonials-2">
                   <div class="slider"  >
                     <div class="slide-track p-247" >
-                      <div class="slide m-150" >
-                        <div class="testimonial-card">
-                          <div class="test-background">
-                            <img
-                              src="assets/img/blitz/testimonial-thunder.svg"
-                              alt=""
-                              srcset=""
-                            />
+                      <% @testimonials.last(7).each_with_index do |testimonial, index| %>
+                        <div class="slide <% if index == 0 %>m-150<% end %>">
+                          <div class="testimonial-card">
+                            <div class="test-background">
+                              <img src="/assets/img/blitz/testimonial-thunder.svg" /></div><p><%= testimonial[:message] %></p>
+                              <%= link_to participant_url(testimonial[:username]) do %>
+                                <%= participant_avatar Participant.find(testimonial[:username]) %>
+                                <span class="author">By <%= testimonial[:name] %></span>
+                                <span class="location d-block"><%= testimonial[:organisation] %></span>
+                              <% end %>
+                              <div class="mb-5" style="margin-bottom: 24px"></div>
                           </div>
-                          <p>
-                            Velit bibendum mauris quisque eget pellentesque aliquam.
-                            Sit at faucibus nunc, auctor sit in urna, suspendisse
-                            duis. Pellentesque egestas auctor ac nascetur vitae
-                            ullamcorper diam in.
-                          </p>
-                          <img
-                            class="avatar"
-                            src="assets/img/user-avatar-default.svg"
-                          />
-                          <span class="author">By spMohanty</span>
-                          <span class="location d-block">City, Country</span>
-                          <div class="mb-5" style="margin-bottom: 24px"></div>
                         </div>
-                      </div>
-                      <div class="slide">
-                        <div class="testimonial-card" style="margin-right: 20px;">
-                          <div class="test-background">
-                            <img
-                              src="assets/img/blitz/testimonial-thunder.svg"
-                              alt=""
-                              srcset=""
-                            />
-                          </div>
-                          <p>
-                            Velit bibendum mauris quisque eget pellentesque aliquam.
-                            Sit at faucibus nunc, auctor sit in urna, suspendisse
-                            duis. Pellentesque egestas auctor ac nascetur vitae
-                            ullamcorper diam in.
-                          </p>
-                          <img
-                            class="avatar"
-                            src="assets/img/user-avatar-default.svg"
-                          />
-                          <span class="author">By spMohanty</span>
-                          <span class="location d-block">City, Country</span>
-                          <div class="mb-5" style="margin-bottom: 24px"></div>
-                        </div>
-                      </div>
-                      <div class="slide">
-      <div class="testimonial-card">
-                          <div class="test-background">
-                            <img
-                              src="assets/img/blitz/testimonial-thunder.svg"
-                              alt=""
-                              srcset=""
-                            />
-                          </div>
-                          <p>
-                            Velit bibendum mauris quisque eget pellentesque aliquam.
-                            Sit at faucibus nunc, auctor sit in urna, suspendisse
-                            duis. Pellentesque egestas auctor ac nascetur vitae
-                            ullamcorper diam in.
-                          </p>
-                          <img
-                            class="avatar"
-                            src="assets/img/user-avatar-default.svg"
-                          />
-                          <span class="author">By spMohanty</span>
-                          <span class="location d-block">City, Country</span>
-                          <div class="mb-5" style="margin-bottom: 24px"></div>
-                        </div>
-                      </div>
-                      <div class="slide">
-      <div class="testimonial-card">
-                          <div class="test-background">
-                            <img
-                              src="assets/img/blitz/testimonial-thunder.svg"
-                              alt=""
-                              srcset=""
-                            />
-                          </div>
-                          <p>
-                            Velit bibendum mauris quisque eget pellentesque aliquam.
-                            Sit at faucibus nunc, auctor sit in urna, suspendisse
-                            duis. Pellentesque egestas auctor ac nascetur vitae
-                            ullamcorper diam in.
-                          </p>
-                          <img
-                            class="avatar"
-                            src="assets/img/user-avatar-default.svg"
-                          />
-                          <span class="author">By spMohanty</span>
-                          <span class="location d-block">City, Country</span>
-                          <div class="mb-5" style="margin-bottom: 24px"></div>
-                        </div>
-                      </div>
-                      <div class="slide">
-                        <div class="testimonial-card">
-                          <div class="test-background">
-                            <img
-                              src="assets/img/blitz/testimonial-thunder.svg"
-                              alt=""
-                              srcset=""
-                            />
-                          </div>
-                          <p>
-                            Velit bibendum mauris quisque eget pellentesque aliquam.
-                            Sit at faucibus nunc, auctor sit in urna, suspendisse
-                            duis. Pellentesque egestas auctor ac nascetur vitae
-                            ullamcorper diam in.
-                          </p>
-                          <img
-                            class="avatar"
-                            src="assets/img/user-avatar-default.svg"
-                          />
-                          <span class="author">By spMohanty</span>
-                          <span class="location d-block">City, Country</span>
-                          <div class="mb-5" style="margin-bottom: 24px"></div>
-                        </div>
-                      </div>
-                      <div class="slide">
-                        <div class="testimonial-card">
-                          <div class="test-background">
-                            <img
-                              src="assets/img/blitz/testimonial-thunder.svg"
-                              alt=""
-                              srcset=""
-                            />
-                          </div>
-                          <p>
-                            Velit bibendum mauris quisque eget pellentesque aliquam.
-                            Sit at faucibus nunc, auctor sit in urna, suspendisse
-                            duis. Pellentesque egestas auctor ac nascetur vitae
-                            ullamcorper diam in.
-                          </p>
-                          <img
-                            class="avatar"
-                            src="assets/img/user-avatar-default.svg"
-                          />
-                          <span class="author">By spMohanty</span>
-                          <span class="location d-block">City, Country</span>
-                          <div class="mb-5" style="margin-bottom: 24px"></div>
-                        </div>
-                      </div>
-                      <div class="slide">
-                        <div class="testimonial-card">
-                          <div class="test-background">
-                            <img
-                              src="assets/img/blitz/testimonial-thunder.svg"
-                              alt=""
-                              srcset=""
-                            />
-                          </div>
-                          <p>
-                            Velit bibendum mauris quisque eget pellentesque aliquam.
-                            Sit at faucibus nunc, auctor sit in urna, suspendisse
-                            duis. Pellentesque egestas auctor ac nascetur vitae
-                            ullamcorper diam in.
-                          </p>
-                          <img
-                            class="avatar"
-                            src="assets/img/user-avatar-default.svg"
-                          />
-                          <span class="author">By spMohanty</span>
-                          <span class="location d-block">City, Country</span>
-                          <div class="mb-5" style="margin-bottom: 24px"></div>
-                        </div>
-                      </div>
-                      <div class="slide">
-                        <div class="testimonial-card">
-                          <div class="test-background">
-                            <img
-                              src="assets/img/blitz/testimonial-thunder.svg"
-                              alt=""
-                              srcset=""
-                            />
-                          </div>
-                          <p>
-                            Velit bibendum mauris quisque eget pellentesque aliquam.
-                            Sit at faucibus nunc, auctor sit in urna, suspendisse
-                            duis. Pellentesque egestas auctor ac nascetur vitae
-                            ullamcorper diam in.
-                          </p>
-                          <img
-                            class="avatar"
-                            src="assets/img/user-avatar-default.svg"
-                          />
-                          <span class="author">By spMohanty</span>
-                          <span class="location d-block">City, Country</span>
-                          <div class="mb-5" style="margin-bottom: 24px"></div>
-                        </div>
-                      </div>
-                      <div class="slide">
-      <div class="testimonial-card">
-                          <div class="test-background">
-                            <img
-                              src="assets/img/blitz/testimonial-thunder.svg"
-                              alt=""
-                              srcset=""
-                            />
-                          </div>
-                          <p>
-                            Velit bibendum mauris quisque eget pellentesque aliquam.
-                            Sit at faucibus nunc, auctor sit in urna, suspendisse
-                            duis. Pellentesque egestas auctor ac nascetur vitae
-                            ullamcorper diam in.
-                          </p>
-                          <img
-                            class="avatar"
-                            src="assets/img/user-avatar-default.svg"
-                          />
-                          <span class="author">By spMohanty</span>
-                          <span class="location d-block">City, Country</span>
-                          <div class="mb-5" style="margin-bottom: 24px"></div>
-                        </div>
-                      </div>
-                      <div class="slide">
-      <div class="testimonial-card">
-                          <div class="test-background">
-                            <img
-                              src="assets/img/blitz/testimonial-thunder.svg"
-                              alt=""
-                              srcset=""
-                            />
-                          </div>
-                          <p>
-                            Velit bibendum mauris quisque eget pellentesque aliquam.
-                            Sit at faucibus nunc, auctor sit in urna, suspendisse
-                            duis. Pellentesque egestas auctor ac nascetur vitae
-                            ullamcorper diam in.
-                          </p>
-                          <img
-                            class="avatar"
-                            src="assets/img/user-avatar-default.svg"
-                          />
-                          <span class="author">By spMohanty</span>
-                          <span class="location d-block">City, Country</span>
-                          <div class="mb-5" style="margin-bottom: 24px"></div>
-                        </div>
-                      </div>
-                      <div class="slide">
-                        <div class="testimonial-card">
-                          <div class="test-background">
-                            <img
-                              src="assets/img/blitz/testimonial-thunder.svg"
-                              alt=""
-                              srcset=""
-                            />
-                          </div>
-                          <p>
-                            Velit bibendum mauris quisque eget pellentesque aliquam.
-                            Sit at faucibus nunc, auctor sit in urna, suspendisse
-                            duis. Pellentesque egestas auctor ac nascetur vitae
-                            ullamcorper diam in.
-                          </p>
-                          <img
-                            class="avatar"
-                            src="assets/img/user-avatar-default.svg"
-                          />
-                          <span class="author">By spMohanty</span>
-                          <span class="location d-block">City, Country</span>
-                          <div class="mb-5" style="margin-bottom: 24px"></div>
-                        </div>
-                      </div>
-                      <div class="slide">
-                        <div class="testimonial-card">
-                          <div class="test-background">
-                            <img
-                              src="assets/img/blitz/testimonial-thunder.svg"
-                              alt=""
-                              srcset=""
-                            />
-                          </div>
-                          <p>
-                            Velit bibendum mauris quisque eget pellentesque aliquam.
-                            Sit at faucibus nunc, auctor sit in urna, suspendisse
-                            duis. Pellentesque egestas auctor ac nascetur vitae
-                            ullamcorper diam in.
-                          </p>
-                          <img
-                            class="avatar"
-                            src="assets/img/user-avatar-default.svg"
-                          />
-                          <span class="author">By spMohanty</span>
-                          <span class="location d-block">City, Country</span>
-                          <div class="mb-5" style="margin-bottom: 24px"></div>
-                        </div>
-                      </div>
-                      <div class="slide">
-                        <div class="testimonial-card">
-                          <div class="test-background">
-                            <img
-                              src="assets/img/blitz/testimonial-thunder.svg"
-                              alt=""
-                              srcset=""
-                            />
-                          </div>
-                          <p>
-                            Velit bibendum mauris quisque eget pellentesque aliquam.
-                            Sit at faucibus nunc, auctor sit in urna, suspendisse
-                            duis. Pellentesque egestas auctor ac nascetur vitae
-                            ullamcorper diam in.
-                          </p>
-                          <img
-                            class="avatar"
-                            src="assets/img/user-avatar-default.svg"
-                          />
-                          <span class="author">By spMohanty</span>
-                          <span class="location d-block">City, Country</span>
-                          <div class="mb-5" style="margin-bottom: 24px"></div>
-                        </div>
-                      </div>
-                      <div class="slide">
-                        <div class="testimonial-card">
-                          <div class="test-background">
-                            <img
-                              src="assets/img/blitz/testimonial-thunder.svg"
-                              alt=""
-                              srcset=""
-                            />
-                          </div>
-                          <p>
-                            Velit bibendum mauris quisque eget pellentesque aliquam.
-                            Sit at faucibus nunc, auctor sit in urna, suspendisse
-                            duis. Pellentesque egestas auctor ac nascetur vitae
-                            ullamcorper diam in.
-                          </p>
-                          <img
-                            class="avatar"
-                            src="assets/img/user-avatar-default.svg"
-                          />
-                          <span class="author">By spMohanty</span>
-                          <span class="location d-block">City, Country</span>
-                          <div class="mb-5" style="margin-bottom: 24px"></div>
-                        </div>
-                      </div>
-                      <div class="slide">
-                        <div class="testimonial-card">
-                          <div class="test-background">
-                            <img
-                              src="assets/img/blitz/testimonial-thunder.svg"
-                              alt=""
-                              srcset=""
-                            />
-                          </div>
-                          <p>
-                            Velit bibendum mauris quisque eget pellentesque aliquam.
-                            Sit at faucibus nunc, auctor sit in urna, suspendisse
-                            duis. Pellentesque egestas auctor ac nascetur vitae
-                            ullamcorper diam in.
-                          </p>
-                          <img
-                            class="avatar"
-                            src="assets/img/user-avatar-default.svg"
-                          />
-                          <span class="author">By spMohanty</span>
-                          <span class="location d-block">City, Country</span>
-                          <div class="mb-5" style="margin-bottom: 24px"></div>
-                        </div>
-                      </div>
-                      <div class="slide">
-      <div class="testimonial-card">
-                          <div class="test-background">
-                            <img
-                              src="assets/img/blitz/testimonial-thunder.svg"
-                              alt=""
-                              srcset=""
-                            />
-                          </div>
-                          <p>
-                            Velit bibendum mauris quisque eget pellentesque aliquam.
-                            Sit at faucibus nunc, auctor sit in urna, suspendisse
-                            duis. Pellentesque egestas auctor ac nascetur vitae
-                            ullamcorper diam in.
-                          </p>
-                          <img
-                            class="avatar"
-                            src="assets/img/user-avatar-default.svg"
-                          />
-                          <span class="author">By spMohanty</span>
-                          <span class="location d-block">City, Country</span>
-                          <div class="mb-5" style="margin-bottom: 24px"></div>
-                        </div>
-                      </div>
-                      <div class="slide">
-                        <div class="testimonial-card">
-                          <div class="test-background">
-                            <img
-                              src="assets/img/blitz/testimonial-thunder.svg"
-                              alt=""
-                              srcset=""
-                            />
-                          </div>
-                          <p>
-                            Velit bibendum mauris quisque eget pellentesque aliquam.
-                            Sit at faucibus nunc, auctor sit in urna, suspendisse
-                            duis. Pellentesque egestas auctor ac nascetur vitae
-                            ullamcorper diam in.
-                          </p>
-                          <img
-                            class="avatar"
-                            src="assets/img/user-avatar-default.svg"
-                          />
-                          <span class="author">By spMohanty</span>
-                          <span class="location d-block">City, Country</span>
-                          <div class="mb-5" style="margin-bottom: 24px"></div>
-                        </div>
-                      </div>
-                      <div class="slide">
-                        <div class="testimonial-card">
-                          <div class="test-background">
-                            <img
-                              src="assets/img/blitz/testimonial-thunder.svg"
-                              alt=""
-                              srcset=""
-                            />
-                          </div>
-                          <p>
-                            Velit bibendum mauris quisque eget pellentesque aliquam.
-                            Sit at faucibus nunc, auctor sit in urna, suspendisse
-                            duis. Pellentesque egestas auctor ac nascetur vitae
-                            ullamcorper diam in.
-                          </p>
-                          <img
-                            class="avatar"
-                            src="assets/img/user-avatar-default.svg"
-                          />
-                          <span class="author">By spMohanty</span>
-                          <span class="location d-block">City, Country</span>
-                          <div class="mb-5" style="margin-bottom: 24px"></div>
-                        </div>
-                      </div>
+                      <% end %>
                     </div>
                   </div>
                 </div>  
-                </section>
+              </section>
             </div>
           </section>
           <section class="section-pink">
@@ -1969,7 +784,7 @@ end
                   <p>
                     Got a question about Blitz features and trial? We’re here to
                     help. <br />Have more queries? Drop a mail at
-                    <u> connect@aicrowd.com </u>
+                    <u><a href="mailto:connect@aicrowd.com">connect@aicrowd.com</a></u>
                   </p>
                 </div>
                 <div class="row faq-background">
@@ -2153,7 +968,7 @@ end
             <div class="container-fluid">
               <div class="container-dark">
                 <h1>
-                  Want To Unlock This Week’s Problems? Start Your Free Trial Now
+                  Want To Get Notified About The Launch?<br/>Join The Waitlist Now
                 </h1>
               </div>
               <div class="text-center container-desc">
@@ -2250,7 +1065,7 @@ end
                     <div class="container-left ">
                       <div class="box-container">
                       <div class="box-left">
-                        <h1>$6.9 <span>/ month</span></h1>
+                        <h1>$6.99 <span>/ month</span></h1>
                         <input
                           type="text"
                           class="form-control"
@@ -2263,7 +1078,7 @@ end
                         </button>
 
                         <p class="mb-0">
-                          Sign-Up for 14 day Free Trial, No Credit Card Required
+                          Sign-Up For The Waitlist, No Credit Card Required
                         </p>
                       </div>
                     </div>
@@ -2648,7 +1463,7 @@ end
     new_seat.addClass("is-ref").css("order", 1);
     for (var i = 2, ref = seats.length; i <= ref; i++) {
       new_seat = next(new_seat).css("order", i);
-      console.log(new_seat);
+      # console.log(new_seat);
     }
 
     carousel.removeClass("is-set");

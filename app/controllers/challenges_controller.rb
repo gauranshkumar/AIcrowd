@@ -255,7 +255,7 @@ class ChallengesController < ApplicationController
     if request.fullpath.start_with?('/blitz/puzzles')
       @is_blitz = true
       blitz_puzzle = BlitzPuzzle.where(challenge_id: @challenge.id).first
-      if !blitz_puzzle.present? || (blitz_puzzle.start_date > Time.now && !current_participant.admin?)
+      if !blitz_puzzle.present? || (blitz_puzzle.start_date.present? && blitz_puzzle.start_date > Time.now && !current_participant.admin?)
         raise ActionController::RoutingError.new('Not Found')
       end
     end

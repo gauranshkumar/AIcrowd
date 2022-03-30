@@ -37,7 +37,10 @@ module ParticipantsHelper
   end
 
   def participant_avatar(participant, base_class='avatar')
-    classes = base_class + ' ' + rating_tier_class(participant)
+    if participant.nil?
+      return image_tag '/assets/img/user-avatar-default.svg', class: base_class
+    end
+    classes = base_class #+ ' ' + rating_tier_class(participant)
     image_url = participant.image_url
     unless base_class.include?('original')
       image_url = image_url.gsub('.com/images', '.com/100x100/images')
