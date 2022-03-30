@@ -3,6 +3,7 @@ class BlitzController < ApplicationController
   before_action :authenticate_participant!, except: [:index]
 
   def index
+    @testimonials = get_testimonials
   end
 
   def set_is_subscribed
@@ -139,6 +140,95 @@ class BlitzController < ApplicationController
       })
     end
     return recommendation_data
+  end
+
+  def get_testimonials
+    return [
+      {
+        "name": "Jakub",
+        "message": "Blitz is a great tool for people building their careers in AI. If anyone wants to learn AI, I would highly recommend AIcrowd Blitz. You can constantly learn new concepts and apply them. ",
+        "organisation": "Data Scientist DeepSense AI",
+        "username": "jakub_bartczuk"
+      },
+      {
+        "name": "Aman",
+        "message": "Blitz boosted my learning by actively tackling real AI problems. It also provides theoretical knowledge. ",
+        "organisation": "Lead Data Scientist ",
+        "username": "aman_patkar"
+      },
+      {
+        "name": "Mothy",
+        "message": "I love the format of Blitz puzzle. They are compact but diverse. I was able to solve problems from a lot of domains in a short time. ",
+        "organisation": "ML Engineer @ Quantiphi",
+        "username": "g_mothy"
+      },
+      {
+        "name": "Eric",
+        "message": "As a practical learner, Blitz puzzles provided me the oppurtunity to solve problems from different domains of AI.The community is also very helpful and active. ",
+        "organisation": "Student @ 42",
+        "username": "eric_parisot"
+      },
+      {
+        "name": "GlaDOS",
+        "message": "For our university project, we picked Blitz puzzles. This was a unique experience and we learnt a lot in the process. As a newcomer in AI, Blitz problems are simple to solve.",
+        "organisation": "Students @ Bielefeld University",
+        "username": "kita"
+      },
+      {
+        "name": "Konstantin",
+        "message": "I was fascinated by Blitz because of its quirky and unique puzzles. It's a fun way to improve your AI skills in a short time",
+        "organisation": "PhD in Mathematics, The Arctic University of Norway",
+        "username": "konstantin_diachkov"
+      },
+      {
+        "name": "Tverdov",
+        "message": "The uniqueness of Blitz puzzles created motivation to learn & solve AI problems. It's more fun to solve AI problems when you can see your solutions work.",
+        "organisation": "Program Manager @ Luxoft",
+        "username": "ktverdov"
+      },
+      {
+        "name": "Dennis",
+        "message": "I enjoyed exploring different sub-domain of AI by solving Blitz puzzles. Blitz puzzles challenged me to solve complex AI problems. ",
+        "organisation": "Linux System Administrator",
+        "username": "denis_tsaregorodtsev"
+      },
+      {
+        "name": "Devesh",
+        "message": "AIcrowd is a unique Data Science platform as I was able to find problems for all domains. It saves me time and I am able to solve diverse puzzles, all in one place. ",
+        "organisation": "Student @ BITS Pilani",
+        "username": "devesh_darshan"
+      },
+      {
+        "name": "Mark",
+        "message": "Between my PhD and work, I did not find time to improve my skill. Blitz puzzles were interesting and fit into my schedule. ",
+        "organisation": "PhD candidate @ Moscow University",
+        "username": "markpotanin"
+      },
+      {
+        "name": "Martin",
+        "message": "Compared to other AI challenges, I found Blitz to be a fair levelled ground. The submission & scoring mechanisms are very simple and clever. Its a very enjoyable site to use.",
+        "organisation": "Strategy and Architecture @ GM Technology",
+        "username": "mkeywood"
+      },
+      {
+        "name": "Robert",
+        "message": "The Blitz Jigsaw puzzle was a bucket list item for me. Every puzzle makes you look at concepts in a different way, they are not generic. I used technique from bioinformatic to solve the jigsaw puzzle.",
+        "organisation": "Principal Investigator @ SomaLogics",
+        "username": "kirkdco"
+      },
+      {
+        "name": "Sean",
+        "message": "I started learning AI during lockdown. With Blitz I was able to continue improving my skills despite my busy schedule. The puzzle are fun & convinient to solve",
+        "organisation": "ML Intern @ NVIDIA",
+        "username": "sean_benhur"
+      },
+      {
+        "name": "Vadim",
+        "message": "I love learning a new skill. Apart from school, I spend my time learning AI by solving Blitz problems. It benefited me a lot! ",
+        "organisation": "High School Student",
+        "username": "toefl"
+      }
+    ]
   end
 
 end
