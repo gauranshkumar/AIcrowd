@@ -48,6 +48,8 @@ module MetaTagsHelper
       end
     elsif controller_name == 'landing_page' && controller.action_name == 'index' && Setting&.first&.home_page_social_image?
       return Setting.first.home_page_social_image.url
+    elsif controller_name == 'blitz'
+      return 'https://www.aicrowd.com/assets/img/blitz/blitz_link_preview.jpg'
     else
       content_for_meta_image
     end
@@ -87,6 +89,8 @@ module MetaTagsHelper
       'Tasks'
     when 'blogs'
       'Blog'
+    when 'blitz'
+      'Blitz'
     end
   end
 
