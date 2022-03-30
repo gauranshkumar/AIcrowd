@@ -267,6 +267,7 @@ Rails.application.routes.draw do
 
   resources :team_members, path: "our_team", only: [:index]
   match '/blitz', to: 'blitz#index', via: :get
+  match '/blitz/waitlist', to: 'blitz#waitlist', via: :post
   match '/blitz/dashboard', to: 'blitz#dashboard', via: :get
   match '/blitz/puzzles', to: 'blitz#puzzles', via: :get
   resource :blitz do

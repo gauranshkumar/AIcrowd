@@ -1,9 +1,14 @@
 class BlitzController < ApplicationController
   before_action :set_is_subscribed
-  before_action :authenticate_participant!, except: [:index]
+  before_action :authenticate_participant!, except: [:index, :waitlist]
 
   def index
     @testimonials = get_testimonials
+  end
+
+  def waitlist
+    BlitzWaitlist.where(participant_id: current_participant&.id || -1, email: params[:email]).first_or_create
+    redirect_to blitz_url, notice: 'Successfully signed up for the waitlist! 🎉'
   end
 
   def set_is_subscribed

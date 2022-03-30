@@ -1,0 +1,2 @@
+class BlitzWaitlist < ApplicationRecord
+end
