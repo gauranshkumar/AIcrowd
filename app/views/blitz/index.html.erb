@@ -8,18 +8,18 @@ signup_msg = 'placeholder="Sign-Up For The Waitlist" required'.html_safe
 #   signup_msg = 'placeholder="Hi, you are already subscribed to Blitz" disabled'.html_safe
 # end
 %>
-<div class="content">
-<% if @is_subscribed %>
-  <div class="navigation btn-primary p-2 fixed-top position-sticky">
-    <div class="container-fluid">
-      <span>
-        <a style="color:white;" href="/blitz/dashboard">
-          You are already subscribed, go to <b>Blitz Dashboard</b><span class="fa fa-chevron-right ml-2"></span>
-        </a>
-      </span>
-    </div>
-  </div>
-<% end %>
+    <div class="content">
+      <% if @is_subscribed %>
+        <div class="navigation btn-primary p-2 fixed-top position-sticky">
+          <div class="container-fluid">
+            <span>
+              <a style="color:white;" href="/blitz/dashboard">
+                You are already subscribed, go to <b>Blitz Dashboard</b><span class="fa fa-chevron-right ml-2"></span>
+              </a>
+            </span>
+          </div>
+        </div>
+      <% end %>
 
       <!-- main content -->
       <main>
@@ -768,7 +768,7 @@ signup_msg = 'placeholder="Sign-Up For The Waitlist" required'.html_safe
                 <div class="hr text-center"><hr /></div>
                 <div class="desc-container4 text-center">
                   <p>
-                    Got a question about Blitz features and trial? We’re here to
+                    Got a question about Blitz? We’re here to
                     help. <br />Have more queries? Drop a mail at
                     <u><a href="mailto:connect@aicrowd.com">connect@aicrowd.com</a></u>
                   </p>
@@ -1448,7 +1448,6 @@ signup_msg = 'placeholder="Sign-Up For The Waitlist" required'.html_safe
     new_seat.addClass("is-ref").css("order", 1);
     for (var i = 2, ref = seats.length; i <= ref; i++) {
       new_seat = next(new_seat).css("order", i);
-      # console.log(new_seat);
     }
 
     carousel.removeClass("is-set");
@@ -1461,8 +1460,6 @@ signup_msg = 'placeholder="Sign-Up For The Waitlist" required'.html_safe
   window.setInterval(function () {
     progress();
   }, 2000);
-
-
 
   var index = 0;
   var locations = ["", "", ""];

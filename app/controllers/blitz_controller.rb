@@ -8,7 +8,7 @@ class BlitzController < ApplicationController
 
   def waitlist
     BlitzWaitlist.where(participant_id: current_participant&.id || -1, email: params[:email]).first_or_create
-    redirect_to blitz_url, notice: 'Successfully signed up for the waitlist! 🎉'
+    redirect_to blitz_url, notice: 'Congratulations, you are in. You’ll hear from us soon! 🎉'
   end
 
   def set_is_subscribed
