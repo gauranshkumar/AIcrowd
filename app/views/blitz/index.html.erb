@@ -1,5 +1,5 @@
 <%
-signup_msg = 'placeholder="Sign-Up For The Waitlist"'.html_safe
+signup_msg = 'placeholder="Sign-Up For The Waitlist" required'.html_safe
 # TODO: Undo for the waitlist launch
 # if current_participant.present?
 #   signup_msg = ('placeholder="Hi ' + current_participant.name + ', start your 14 day Free Trial" disabled').html_safe
@@ -35,33 +35,21 @@ signup_msg = 'placeholder="Sign-Up For The Waitlist"'.html_safe
                     Your Perfect <span>AI</span><br>Learning Companion.<br>
                   <h2>Solve AI Puzzles. Build a Stellar ML Portfolio.</h2>
                   <div class="blitz-input-mobile-right">
-                    <form action="">
+                    <form action="/blitz/waitlist" method="post">
                       <div class="input">
-                        <input type="email" class="form-control" id="" aria-describedby="" <%= signup_msg %>>
+                        <input type="email" name="email" class="form-control" <%= signup_msg %>>
                       </div>
                       <div class="button">
-                        <% if @is_subscribed %>
-                          <%= link_to blitz_dashboard_url, class: "btn btn-sm btn-primary" do %>
-                            Go to Dashboard <i class="las la-arrow-right ml-2"></i>
-                          <% end %>
-                        <% else %>
-                          <button type="button" class="btn btn-sm btn-primary">Join Now <i class="las la-arrow-right ml-2"></i></button>
-                        <% end %>
+                        <button type="submit" class="btn btn-sm btn-primary">Join Now <i class="las la-arrow-right ml-2"></i></button>
                       </div>
                     </form>
                   </div>
                   <div class="blitz-input">
-                    <form>
-                      <input type="text" <%= signup_msg %> class="input_1"/>
-                      <% if @is_subscribed %>
-                        <%= link_to blitz_dashboard_url, class: "input_2", type: "submit" do %>
-                          <span class="d-flex">Dashboard <i class="las la-arrow-right ml-1"></i></span>
-                        <% end %>
-                      <% else %>
-                        <button type="submit" class="input_2">
-                          Join Now <i class="las la-arrow-right ml-2"></i>
-                        </button>
-                      <% end %>
+                    <form action="/blitz/waitlist" method="post">
+                      <input type="email" name="email" <%= signup_msg %> class="input_1">
+                      <button type="submit" class="input_2">
+                        Join Now <i class="las la-arrow-right ml-2"></i>
+                      </button>
                     </form>
                   </div>
 
@@ -76,13 +64,12 @@ signup_msg = 'placeholder="Sign-Up For The Waitlist"'.html_safe
                     </video>
                   </div>
                   <div class="blitz-input-mobile">
-                    <form action="">
+                    <form action="/blitz/waitlist" method="post">
                       <div class="input">
-                        <input type="email" class="form-control" id="" aria-describedby="" <%= signup_msg %>>
-
+                        <input type="email" name="email" class="form-control" <%= signup_msg %>>
                       </div>
                       <div class="button">
-                        <button type="button" class="btn btn-sm btn-primary">Join Now <i class="las la-arrow-right ml-2"></i></button>
+                        <button type="submit" class="btn btn-sm btn-primary">Join Now <i class="las la-arrow-right ml-2"></i></button>
                       </div>
                     </form>
                   </div>
@@ -345,19 +332,19 @@ signup_msg = 'placeholder="Sign-Up For The Waitlist"'.html_safe
               <div class="text-center box">
                 <h1>Unlock Puzzles. Join Blitz Waitlist Now.</h1>
                 <div class="blitz-input-mobile">
-                  <form action="">
+                  <form action="/blitz/waitlist" method="post">
                     <div class="input">
-                      <input type="email" class="form-control" id="" aria-describedby="" <%= signup_msg %>>
+                      <input type="email" name="email" class="form-control" <%= signup_msg %>>
 
                     </div>
                     <div class="button">
-                      <button type="button" class="btn btn-sm btn-primary">Join Now <i class="las la-arrow-right ml-2"></i></button>
+                      <button type="submit" class="btn btn-sm btn-primary">Join Now <i class="las la-arrow-right ml-2"></i></button>
                     </div>
                   </form>
                 </div>
                 <div class="blitz-input">
-                  <form>
-                    <input type="text" <%= signup_msg %> class="input_1" />
+                  <form action="/blitz/waitlist" method="post">
+                    <input type="email" name="email" <%= signup_msg %> class="input_1" />
                     <button type="submit" class="input_2">
                       Join Now <i class="las la-arrow-right ml-2"></i>
                     </button>
@@ -695,19 +682,18 @@ signup_msg = 'placeholder="Sign-Up For The Waitlist"'.html_safe
                   Host your solution for anyone to use. Unlock new AI puzzles. Sign-up for the waitlist right now.
                 </p>
                 <div class="blitz-input-mobile">
-                  <form action="">
+                  <form action="/blitz/waitlist" method="post">
                     <div class="input">
-                      <input type="email" class="form-control" id="" aria-describedby="" <%= signup_msg %>>
-
+                      <input type="email" name="email" class="form-control" <%= signup_msg %>>
                     </div>
                     <div class="button">
-                      <button type="button" class="btn btn-sm btn-primary">Join Now <i class="las la-arrow-right ml-2"></i></button>
+                      <button type="submit" class="btn btn-sm btn-primary">Join Now <i class="las la-arrow-right ml-2"></i></button>
                     </div>
                   </form>
                 </div>
                 <div class="blitz-input">
-                  <form>
-                    <input type="text" <%= signup_msg %> class="input_1" />
+                  <form action="/blitz/waitlist" method="post">
+                    <input type="email" name="email" <%= signup_msg %> class="input_1" />
                     <button type="submit" class="input_2">
                       Join Now <i class="las la-arrow-right ml-2"></i>
                     </button>
@@ -977,19 +963,18 @@ signup_msg = 'placeholder="Sign-Up For The Waitlist"'.html_safe
                   dashboard, detailed expert solution & deploy your AI model.
                 </p>
                 <div class="blitz-input-mobile">
-                  <form action="">
+                  <form action="/blitz/waitlist" method="post">
                     <div class="input">
-                      <input type="email" class="form-control" id="" aria-describedby="" <%= signup_msg %>>
-
+                      <input type="email" name="email" class="form-control" id="" aria-describedby="" <%= signup_msg %>>
                     </div>
                     <div class="button">
-                      <button type="button" class="btn btn-sm btn-primary">Join AIcrowd Blitz <i class="las la-arrow-right ml-2"></i></button>
+                      <button type="submit" class="btn btn-sm btn-primary">Join AIcrowd Blitz <i class="las la-arrow-right ml-2"></i></button>
                     </div>
                   </form>
                 </div>
                 <div class="blitz-input">
-                  <form>
-                    <input type="text" <%= signup_msg %> class="input_1" />
+                  <form action="/blitz/waitlist" method="post">
+                    <input type="email" name="email" <%= signup_msg %> class="input_1" />
                     <button type="submit" class="input_2">
                       Join AIcrowd Blitz <i class="las la-arrow-right ml-2"></i>
                     </button>
@@ -1066,16 +1051,17 @@ signup_msg = 'placeholder="Sign-Up For The Waitlist"'.html_safe
                       <div class="box-container">
                       <div class="box-left">
                         <h1>$6.99 <span>/ month</span></h1>
-                        <input
-                          type="text"
-                          class="form-control"
-                          <%= signup_msg %>
-                          aria-label=""
-                          aria-describedby=""
-                        />
-                        <button type="button" class="btn btn-primary">
-                          Start Free Trial Now
-                        </button>
+                        <form action="/blitz/waitlist" method="post">
+                          <input
+                            type="email"
+                            name="email"
+                            class="form-control"
+                            <%= signup_msg %>
+                          />
+                          <button type="submit" class="btn btn-primary">
+                            Join The Waitlist
+                          </button>
+                        </form>
 
                         <p class="mb-0">
                           Sign-Up For The Waitlist, No Credit Card Required
