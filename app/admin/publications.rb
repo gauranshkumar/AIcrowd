@@ -83,7 +83,10 @@ ActiveAdmin.register Publication do
               # collection: Challenge.all.map { |challenge|
               #               [challenge.challenge, challenge.id]
               #             }
-      f.input :publication_date
+      f.li '', class: "input" do
+        f.label :publication_date, class: 'label'
+        f.date_field :publication_date
+      end
       f.input :no_of_citations
       f.input :aicrowd_contributed
       f.input :sequence
