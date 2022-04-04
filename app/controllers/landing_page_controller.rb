@@ -402,11 +402,11 @@ class LandingPageController < ApplicationController
           statText: 'Completed Challenges',
         },
         {
-          count: '55k',
+          count: '57k',
           statText: 'Community Members',
         },
         {
-          count: '$550k',
+          count: '$772k',
           statText: 'Awarded in Prizes',
         },
         {
