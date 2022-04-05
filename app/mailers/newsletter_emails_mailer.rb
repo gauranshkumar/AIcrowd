@@ -15,7 +15,7 @@ class NewsletterEmailsMailer < ApplicationMailer
     # 50 is maximum allowed emails in SES SMTP
     allowed_count = 50 - all_cc_emails.count - 1
     all_bcc_emails.each_slice(allowed_count).to_a.each do |bcc_emails|
-      mail(to: @newsletter_email.participant.email, cc: all_cc_emails, bcc: bcc_emails, subject: subject, reply_to: newsletter_email.participant.email)
+      mail(to: @newsletter_email.participant.email, cc: all_cc_emails.join(','), bcc: bcc_emails.join(','), subject: subject, reply_to: newsletter_email.participant.email)
     end
   end
 
@@ -36,6 +36,6 @@ class NewsletterEmailsMailer < ApplicationMailer
     not_existing_emails = newsletter_emails - existing_emails
     allowed_emails      = Participant.where(email: existing_emails, agreed_to_organizers_newsletter: true).pluck(:email)
 
-    (not_existing_emails + allowed_emails).join(',')
+    not_existing_emails + allowed_emails
   end
 end
