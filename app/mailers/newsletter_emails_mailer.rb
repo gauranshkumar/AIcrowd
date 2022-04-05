@@ -8,8 +8,15 @@ class NewsletterEmailsMailer < ApplicationMailer
     @challenge        = newsletter_email.challenge
 
     subject = "[#{@challenge&.challenge}] #{@newsletter_email.subject}"
-
-    mail(to: @newsletter_email.participant.email, cc: allowed_emails(@newsletter_email, :cc), bcc: allowed_emails(@newsletter_email, :bcc), subject: subject, reply_to: newsletter_email.participant.email)
+    
+    all_cc_emails = allowed_emails(@newsletter_email, :cc)
+    all_bcc_emails = allowed_emails(@newsletter_email, :bcc)
+    
+    # 50 is maximum allowed emails in SES SMTP
+    allowed_count = 50 - all_cc_emails.count - 1
+    all_bcc_emails.each_slice(allowed_count).to_a.each do |bcc_emails|
+      mail(to: @newsletter_email.participant.email, cc: all_cc_emails, bcc: bcc_emails, subject: subject, reply_to: newsletter_email.participant.email)
+    end
   end
 
   def declined_email(newsletter_email)
