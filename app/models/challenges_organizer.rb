@@ -1,4 +1,5 @@
 class ChallengesOrganizer < ApplicationRecord
+  default_scope { order(order: :desc) }
   belongs_to :challenge, class_name: 'Challenge'
   belongs_to :organizer, class_name: 'Organizer'
 
