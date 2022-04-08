@@ -266,7 +266,7 @@ class ChallengesController < ApplicationController
     # We'll need refactor to select2 with API endpoint when we'll have a lot of organizers.
     @organizers_for_select = Organizer.pluck(:organizer, :id)
     if current_participant.organizer_ids.present? and !current_participant.admin?
-      @organizers_for_select = Organizer.where(id: current_participant.organizer_ids).pluck(:organizer, :id)
+      @organizers_for_select = Organizer.where(id: current_participant.organizer_ids + @challenge.organizer_ids).pluck(:organizer, :id)
     end
   end
 
